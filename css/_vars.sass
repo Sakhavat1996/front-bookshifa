@@ -1,0 +1,92 @@
+// Base fonts
+$l-b:  'l-b',   Arial,   sans-serif
+$l-m:  'l-m',   Arial,   sans-serif
+$p-m:  'p-m',   Arial,   sans-serif
+$p-r:  'p-r',   Arial,   sans-serif
+$i-r:  'i-r',   Arial,   sans-serif
+
+// Base colors
+
+$white:                   #ffffff
+$blue:                    #1C77FF
+$blue1:                   #336CFB
+$blue2:                   #4098FF
+$blue3:                   #70a9FF
+$blue_opacity:            #F0F5FF
+$background:              #F3F5F9
+$background2:             #F0F5FF
+$black:                   #000000
+$black2:                  #333333
+$gray:                    #DADADA
+$gray2:                   #F6F6F6
+$gray3:                   #DCEAFF
+$gray4:                   #bebebe
+$gray5:                   #dedede
+$gray6:                   #d9d9d9
+$red:                     #DE4747
+$text:                    #5C6E93
+$border:                  #DCEAFF
+$border2:                 #C4E6FF
+$footer_color:            #8E8E8E
+$red1:                    #DC2626
+$green:                   #03A213
+
+
+// Base Flex
+=flex_1
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+=flex_2
+	display: flex
+	align-items: center
+	justify-content: center
+
+=flex_3
+	display: flex
+	flex-direction: column
+	justify-content: center
+
+=flex_4
+	display: flex
+	justify-content: flex-end	
+	align-items: center	
+
+=flex_5
+	display: flex
+	flex-direction: column
+
+=btn_default
+	background: none
+	outline: none
+	border: none
+	cursor: pointer
+
+
+// Base mixin
+=l-b
+	font-family: $l-b
+	font-weight: 400
+
+=l-m
+	font-family: $l-m
+	font-weight: 400
+
+=p-m
+	font-family: $p-m
+	font-weight: 400
+
+=p-r
+	font-family: $p-r
+	font-weight: 400
+
+@mixin z-index($count)
+	position: relative
+	$target: 0
+	$index: $count
+	@while $index > 0
+		&:nth-child(#{$target})
+			z-index: $index
+		$target: $target + 1
+		$index: $index - 1

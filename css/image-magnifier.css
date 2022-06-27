@@ -1,0 +1,10 @@
+div.image-zoom { float: left; }
+div.image-zoom div { background-repeat: no-repeat; }
+div.image-zoom div.blur > div { background-position: -3px 0; }
+div.image-zoom div.blur > div > div { background-position: 0 -3px; }
+div.image-zoom div.blur > div > div > div { background-position: 3px 0; }
+div.image-zoom div.blur > div > div > div > div { background-position: 0 3px; }
+div.image-zoom div.box { border-width: 4px; display: none; position: relative; }
+div.image-zoom div.popup { border-width: 4px; display: none; float: left; position: relative; }
+div.image-zoom div.thumbnail { border-width: 4px; cursor: move; float: left; }
+div.image-zoom.inner div.popup { margin: -4px 0 0 -4px; }

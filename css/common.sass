@@ -1,0 +1,1098 @@
+@import '_fonts'
+@import '_vars'
+@import '_header'
+@import '_footer'
+@import '_index'
+@import '_inner_content'
+@import '_recept'
+@import '_patients'
+@import '_profile'
+@import '_responsive'
+
+body
+  background-color: $background
+
+section
+  min-height: 100vh
+  +flex_5
+
+footer
+  margin-top: auto
+
+button
+  +btn_default
+
+.modal
+  .modal-dialog
+    +flex_2
+    flex-direction: column
+    min-height: 100%
+    .modal-content
+      border: none
+      border-radius: 10px
+
+  &.newPatient
+    .modal-dialog
+      max-width: 700px
+      .modal-content
+        padding: 10px 50px 50px
+        form
+          margin-top: 40px
+          .form-first
+            display: grid
+            grid-gap: 20px
+            input
+              width: 100%
+              height: 50px
+              background: $gray2
+              border: 1px solid $gray
+              border-radius: 10px
+              padding: 0 15px
+              +p-m
+              font-size: 20px
+              line-height: 30px
+              &::placeholder
+                color: rgba(103, 103, 103, 0.68)
+            
+            .block-first
+              display: grid
+              grid-template-columns: 1fr 1fr
+              grid-gap: 15.5px
+            
+            .block-second
+              display: grid
+              grid-template-columns: 1fr 1fr
+              grid-gap: 10px
+              align-items: center
+              margin-top: 15px
+              p
+                display: none
+                +p-m
+                font-size: 20px
+                line-height: 30px
+                color: $blue
+            
+            .advise
+              +flex_2
+              +l-m
+              font-size: 15px
+              line-height: 19px
+              color: $blue
+
+          .form-second
+            display: grid
+            grid-gap: 15px
+            p.label
+              +p-m
+              font-size: 15px
+              line-height: 22px
+              color: $blue
+            
+            .select-box
+              display: flex
+              align-items: center
+              grid-gap: 10px
+              span
+                +p-m
+                font-size: 25px
+                line-height: 30px
+                color: $blue
+              select
+                position: relative
+                width: 100%
+                height: 50px
+                background: url('../img/down.svg') no-repeat 92% $gray2
+                border: 1px solid $gray
+                border-radius: 10px
+                text-align: center
+                +p-m
+                font-size: 20px
+                line-height: 30px
+                color: rgba(46, 46, 46, 0.9)
+                
+          .form-third
+            display: grid
+            grid-gap: 15px
+            margin-top: 15px
+            p.label
+              +p-m
+              font-size: 15px
+              line-height: 22px
+              color: $blue
+            
+            .radio-box
+              display: grid
+              grid-gap: 15.5px
+              grid-template-columns: 1fr 1fr
+              .custom-label 
+                display: block
+                position: relative
+                height: 50px
+                background: $gray2
+                border: 1px solid $gray
+                border-radius: 10px
+                cursor: pointer
+                +flex_2
+                +l-m
+                font-size: 20px
+                line-height: 25px
+                color: $blue
+                -webkit-user-select: none
+                -moz-user-select: none
+                -ms-user-select: none
+                user-select: none
+
+                input
+                  position: absolute
+                  opacity: 0
+                  cursor: pointer
+                  &:checked ~ .checkmark 
+                    background-color: #2196F3
+                  &:checked ~ .checkmark:after 
+                    display: block
+
+                .checkmark 
+                  position: absolute
+                  top: 17.5px
+                  right: 17.5px
+                  height: 15px
+                  width: 15px
+                  background-color: #C4C4C4
+                  border-radius: 50%
+                  &::after
+                    content: ""
+                    position: absolute
+                    display: none
+                    top: 4.5px
+                    right: 3.5px
+                    width: 7px
+                    height: 7px
+                    border-radius: 50%
+                    background: white
+
+  &.typeModal
+    .pattern-container
+      +flex_5
+      grid-gap: 20px
+      background: $white
+      margin-top: 22px
+      padding: 15px
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+      border-radius: 20px
+      .pattern-header
+        +flex_1
+        position: relative
+        .question-pattern
+          position: absolute
+          left: 0
+          top: 0
+        p
+          +p-m
+          font-size: 20px
+          line-height: 30px
+          color: $black2
+          max-width: 200px
+          margin: 0 auto
+          word-break: break-word
+          text-align: center
+
+        
+        button
+          position: absolute
+          right: 0
+          top: 0
+          background: none
+          +flex_2
+          grid-gap: 15px
+          min-width: 150px
+          min-height: 36px
+          height: unset
+          padding: 5px 15px
+          +p-m
+          font-size: 15px
+          line-height: 22px
+          color: $blue2
+          border: 2px solid $blue2
+          border-radius: 20px
+          transition: all .5s
+          &:hover
+            color: $white
+            background: $blue2
+            img
+              filter: brightness(0) invert(1)
+
+      .pattern-boxes
+        display: grid
+        grid-template-columns: repeat(5,1fr)
+        grid-gap: 25px
+        padding: 0 35px
+        a
+          +flex_5
+          grid-gap: 17.5px
+          align-items: center
+          transition: all .3s
+          &.choose
+            border: 3px solid $blue2
+            padding: 25px 20px 5px
+            box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.15)
+            border-radius: 10px
+          img
+            max-width: 120px
+            max-height: 140px
+          p
+            +p-m
+            font-size: 15px
+            line-height: 18px
+            color: $black2
+            text-align: center
+            word-break: break-word
+
+    .modal-dialog 
+      .modal-content
+        padding: 25px
+        .same-style-box
+          position: relative
+          display: grid
+          grid-gap: 35px
+          padding: 28px 26px
+          background: $white
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+          border-radius: 15px
+          .close
+            top: 15px
+            right: 15px
+            background: none
+            border: 0
+            opacity: 1
+            min-height: unset
+            height: unset
+        
+        .add-new-form
+          margin: 0 auto 4px
+          padding: 0 25px
+          max-width: 333px
+          +flex_2
+          grid-gap: 7px
+
+        .type-footer
+          +flex_1
+          button
+            margin: 0
+            &.back-to-first-modal
+              display: flex
+              align-items: center
+              grid-gap: 15px
+              background: none
+              border-radius: 0
+              +p-m
+              font-size: 16px
+              line-height: 24px
+              color: $blue2
+  
+  &.smsModal
+    .modal-dialog
+      .modal-content
+        max-width: 820px
+        .modal-body
+          .sms-box
+            +flex_5
+            align-items: center
+            grid-gap: 7px
+            margin-top: 10px
+            button
+              margin: 0
+              max-width: 400px
+            p
+              +p-r
+              font-size: 24px
+              line-height: 30px
+              color: $black2
+          
+          .sms-recept-container
+            background: $white
+            +flex_5
+            grid-gap: 4px
+            padding: 14px 0
+            box-shadow: 0px 2px 12px rgba(167, 167, 167, 0.3)
+            border-radius: 10px
+            >p
+              +p-r
+              font-size: 20px
+              line-height: 26px
+              color: $black2
+              text-align: center
+              word-break: break-all
+              padding: 0 17px
+            .sms-choose-container
+              width: 100%
+              padding: 12px 17px
+              max-height: 240px
+              .simplebar-track.simplebar-vertical
+                right: 2px
+                top: 10px
+              .simplebar-content
+                .sms-recept-checkbox 
+                  position: relative
+                  width: 100%
+                  &:not(:last-child)
+                    margin-bottom: 16px
+                  label 
+                    background: $white
+                    +flex_1
+                    grid-gap: 10px
+                    flex-direction: unset !important
+                    width: 100%
+                    padding: 9px
+                    padding-left: 45px
+                    +p-r
+                    color: $black2
+                    border-radius: 10px
+                    border: 2px solid $white
+                    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15)
+                    font-size: 20px
+                    line-height: 26px
+                    cursor: pointer
+                    transition: all .3s
+                    &:hover
+                      border: 2px solid $blue2
+                      
+                    &::after , &::before
+                      content: ""
+                      display: inline-block
+                      position: absolute
+                      left: 9px
+                      top: 12px
+                    
+                    &::after
+                      width: 14px
+                      height: 14px
+                      background-image: url('../img/check.svg')
+                      background-size: contain
+                      background-position: center
+                      background-repeat: no-repeat
+                      left: 15px
+                      top: 18px
+                      display: none
+
+                    &::before
+                      width: 26px
+                      height: 26px
+                      border-radius: 10px
+                      background: $gray6
+                    
+                    p.date
+                      display: flex
+                      align-items: center
+                      grid-gap: 4px
+                      font-size: 16px
+                      line-height: 20px
+
+                  input
+                    width: 0
+                    height: 0
+                    visibility: hidden
+                    position: absolute
+                    &:checked 
+                      & + label 
+                        border: 2px solid $blue2
+                      & + label::after 
+                        display: inline-block
+                      & + label::before
+                        background: $white
+                        border: 1px solid $blue2
+
+.inner-container
+  .entrance-box
+    display: grid
+    grid-template-columns: auto auto
+    grid-gap: 41px
+    width: 100%
+    margin: unset
+    margin-bottom: 25px
+    p.title
+      grid-column-start: 1
+      grid-column-end: 3
+    .code , .copy
+      width: 100%
+
+.entrance-box
+  width: 900px
+  margin: 0 auto
+  background: $white
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25)
+  border-radius: 10px
+  padding: 15px 25px 20px
+  margin-top: 58px
+  display: grid
+  grid-gap: 23px
+  p.title
+    +l-m
+    font-size: 25px
+    line-height: 30px
+    color: $blue1
+    text-align: center
+    +flex_2
+  
+  .code
+    width: 400px
+    height: 50px
+    margin: 0 auto
+    background: $white
+    box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.25)
+    border-radius: 10px
+    +flex_2
+    +l-m
+    font-size: 25px
+    line-height: 30px
+    color: rgba(46, 46, 46, 0.9)
+
+    p,input
+      width: 100%
+      background: none
+      text-align: center
+
+  .copy
+    margin-top: 4px
+    height: 50px
+    padding: 0 15px
+    +flex_2
+    +l-m
+    font-size: 20px
+    line-height: 25px
+    color: $white
+    border-radius: 10px
+    background: $blue
+    width: max-content
+    margin: 0 auto
+
+form
+  .addModal
+    .modal-dialog
+      .modal-content
+        .modal-body
+          .files-box
+            display: grid
+            grid-gap: 100px
+            label
+              +flex_1
+              grid-gap: 22px
+              flex-direction: unset !important
+              background: #FFFFFF
+              min-height: 48px
+              border-radius: 10px
+              border: 3px solid $blue2
+              color: $black
+              cursor: pointer
+              padding: 3px 4px 3px 20px
+              word-break: break-word
+
+              .choose_btn
+                background: $blue2
+                width: 248px
+                min-height: 34px
+                +flex_2
+                grid-gap: 11px
+                +p-m
+                font-size: 20px
+                line-height: 30px
+                color: $white
+                border-radius: 10px
+                flex: none
+
+              .text-file
+                +flex_1
+                width: 100%
+                input
+                  background: unset
+                  min-height: unset
+                  height: unset
+                  border: none
+                  padding: 0
+                  +p-m
+                  font-size: 15px
+                  line-height: 22px
+                  color: $black
+                  &::placeholder
+                    color: rgba(0, 0, 0, 0.4)
+                
+                button
+                  background: none
+                  display: none
+                  height: 20px
+                  width: 20px
+                  min-height: unset
+                  background: none
+                  margin: 0
+                  padding: 0
+              input[type='file']
+                display: none !important
+
+          .next-add-box
+            display: flex
+            align-items: center
+            grid-gap: 30px
+            button
+              display: flex
+              align-items: center
+              grid-gap: 15px
+              background: none
+              +p-m
+              font-size: 18px
+              line-height: 27px
+              color: $blue2
+              margin: 0
+            
+            .question
+              cursor: pointer
+              position: relative
+              &:hover
+                .question-absolute-box
+                  opacity: 1
+                  visibility: visible
+              .question-absolute-box
+                position: absolute
+                right: -13px
+                top: 26px
+                opacity: 0
+                visibility: hidden
+                transition: opacity .3s
+                padding-top: 13px
+                .inner-question
+                  background: $white
+                  +flex_5
+                  align-items: flex-end
+                  grid-gap: 9px
+                  width: 312px
+                  padding: 21px 16px 12px
+                  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25)
+                  border-radius: 14px
+                  p
+                    +p-m
+                    font-size: 14px
+                    line-height: 21px
+                    color: $black2
+                    text-align: center
+                  button
+                    background: $blue2
+                    +flex_2
+                    width: 96px
+                    height: 36px
+                    min-height: unset
+                    color: $white
+                    +p-m
+                    font-size: 12px
+                    line-height: 15px
+                    border-radius: 10px
+
+.modal-header , .modal-body
+  padding: 0
+  border: 0
+
+.modal-header
+  +flex_2
+  .modal-title
+    +p-r
+    font-size: 24px
+    line-height: 36px
+    color: $black2
+
+.modal-body
+  button
+    min-height: 50px
+    padding: 0 15px
+    +flex_2
+    +p-r
+    font-size: 18px
+    line-height: 27px
+    color: $white
+    border-radius: 10px
+    background: $blue
+    max-width: max-content
+    margin-left: auto
+
+.close
+  position: absolute
+  width: 42px
+  height: 42px
+  opacity: 1
+  padding: 0 !important
+  right: 16px
+  top: 16px
+  margin: 0 !important
+
+.same-big-box
+  flex: 1
+  background: $white
+  box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.25)
+  border-radius: 10px
+  +flex_5
+  grid-gap: 14px
+  align-items: center
+  padding: 16px 35px 30px
+  height: 100%
+  .title-box
+    +l-m
+    font-size: 20px
+    line-height: 25px
+    color: $blue
+    text-align: center
+  
+  .img-box
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    margin-top: auto
+    margin-bottom: 20px
+  
+  .box-btns
+    display: grid
+    grid-gap: 19px
+
+  .link-box
+    min-height: 56px
+    +flex_2
+    padding: 9px 
+    width: 100%
+    background: $blue
+    +p-m
+    font-size: 15px
+    line-height: 19px
+    color: $white
+    border-radius: 5px
+    margin-top: auto
+    text-align: center
+
+.info-room
+  .list-same
+    padding: 32px 0 48px
+  
+.list-same
+  max-width: 890px
+  margin: 0 auto
+  display: grid
+  grid-gap: 16px
+  padding: 55px 0 105px
+  p.title-list
+    +flex_2
+    +l-m
+    font-size: 25px
+    line-height: 31px
+    color: $blue
+    padding: 15px 0
+
+  
+  button
+    min-width: 150px
+    min-height: 50px
+    +flex_2
+    background: $blue
+    +l-m
+    font-size: 20px
+    line-height: 25px
+    color: $white
+    border-radius: 10px
+  .list-add-box
+    background: $white
+    flex-direction: column
+    height: 180px
+    box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.25)
+    border-radius: 10px
+    padding: 27px 25px 18px
+    p
+      +l-m
+      font-size: 20px
+      line-height: 25px
+      color: $blue
+  .item-list
+    background: $white
+    display: grid
+    grid-gap: 29px
+    box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.25)
+    border-radius: 10px
+    padding: 10px 40px 35px 30px
+    .item-head
+      +flex_1
+      +l-m
+      font-size: 20px
+      line-height: 25px
+      color: $blue
+      padding: 12.5px 0
+      .same-head-box
+        display: flex
+        grid-gap: 10px
+
+    .item-foot
+      +flex_1
+      grid-gap: 10px
+      .diagnosis-box
+        display: flex
+        grid-gap: 12px
+        +l-m
+        font-size: 25px
+        line-height: 31px
+        color: $blue
+        p
+          word-break: break-all
+
+      
+      .inner-link
+        width: 150px
+        height: 50px
+        flex: none
+        +flex_2
+        border-radius: 10px
+        background-color: $blue
+        +l-m
+        font-size: 20px
+        line-height: 25px
+        color: $white
+
+.edit-box
+  .same_btns
+    display: flex
+    align-items: center
+    grid-gap: 40px
+    margin: 20px 0
+    &.hide
+      display: none
+    button
+      min-height: 50px
+      padding: 0 15px
+      +flex_2
+      +p-m
+      font-size: 20px
+      line-height: 23px
+      color: $blue
+      border-radius: 10px
+      background: $white
+      width: max-content
+      &.blue_btn
+        color: $white
+        background: $blue2
+      
+      &.cancel_btn
+        border: 1px solid $blue
+
+.info-room
+  .inner-container 
+    .inner-main-box 
+      .inner-item
+        #editcontent
+          resize: none
+          +p-m
+          font-size: 20px
+          line-height: 30px
+          color: $black
+          background: $blue_opacity
+          border: 2px solid $blue3
+          border-radius: 10px
+          word-break: break-all
+          padding: 17px 30px
+        
+        .item-head
+          display: grid
+          grid-template-columns: 1fr
+          align-items: center
+          grid-gap: 16px
+          span
+            word-break: break-all
+
+            &.editable
+              border: 2px solid $blue
+              color: $black
+              padding: 5px 10px
+              background: $blue_opacity
+              border-radius: 10px
+              margin-left: 10px
+          
+          button
+            width: 100%
+            margin-top: -12px
+            +p-m
+            font-size: 15px
+            line-height: 22px
+            color: $blue2
+            
+            .box_renew
+              +flex_2
+              grid-gap: 9px
+              
+              &.hide
+                display: none
+            
+        .pdf-container 
+          .pdf-link 
+            .doc-img
+              position: relative
+              >a
+                margin-top: auto
+                margin-bottom: auto
+              .delete
+                position: absolute
+                +flex_2
+                width: 100%
+                height: 24px
+                width: 24px
+                right: 4px
+                top: 4px
+                border: 1px solid $red
+                border-radius: 5px
+                transition: all .3s
+                svg
+                  path
+                    transition: all .3s
+                &:hover
+                  background: $red
+                  svg
+                    path
+                      fill: $white
+
+               
+
+.sureModal
+  .modal-dialog
+    max-width: 550px
+    height: 100%
+    +flex_2
+    flex-direction: column
+    margin: 0 auto
+    .modal-content
+      padding: 35px 50px
+      .modal-header 
+        .modal-title
+          +p-m
+          font-size: 20px
+          line-height: 30px
+          color: $blue2
+          text-align: center
+      
+      .modal-body
+        +flex_5
+        grid-gap: 65px
+        .sure_btns
+          width: 100%
+          display: grid
+          grid-template-columns: 1fr 1fr
+          grid-gap: 50px
+          margin-top: 50px
+          button
+            +flex_2
+            border-radius: 15px
+            height: 50px
+            +p-m
+            font-size: 20px
+            line-height: 30px
+            width: 100%
+            color: $white
+            &.close
+              border: 1px solid $blue2
+              color: $blue2
+              position: relative
+              top: unset
+              right: unset
+              background: white
+        
+        .edit_recept
+          +flex_5
+          grid-gap: 20px
+          p
+            +p-m
+            font-size: 15px
+            line-height: 22px
+            color: $blue2
+            text-align: center
+        
+          button
+            margin: 0 auto
+            +flex_2
+            border-radius: 15px
+            height: 50px
+            +p-m
+            font-size: 20px
+            line-height: 30px
+            width: 100%
+            color: $white
+            width: max-content
+
+.new-heading-box
+  +flex_1
+  width: 100%
+  flex-wrap: wrap
+  margin: 15px 0 5px
+  grid-gap: 10px
+
+  .breadcrumbs
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    grid-gap: 5px
+    +p-m
+    font-size: 16px
+    line-height: 22px
+    .current-point
+      color: $blue2
+    .old-point , span
+      color: $gray4
+    
+  .send-message
+    background: $white
+    display: flex
+    grid-gap: 5px
+    align-items: center
+    padding: 0 13px
+    +p-m
+    font-size: 20px
+    line-height: 30px
+    border: 2px solid $blue2
+    border-radius: 10px
+    transition: all .3s
+    color: $blue2
+    p
+      word-break: break-word
+    svg
+      path 
+        transition: all .3s
+    &:hover
+      color: $white
+      background: $blue2
+      svg
+        path
+          fill: $white
+          stroke: $white
+
+.message-container
+  position: relative
+  max-width: 1350px
+  margin: -20px auto 25px
+  width: 100%
+  z-index: 0
+  .message-box
+    +z-index(100)
+    width: 100%
+    padding: 25px 0 4px
+    border-radius: 0 0 15px 15px
+    +flex_2
+    grid-gap: 16px
+    margin-bottom: -20px
+    p
+      +p-m
+      font-size: 15px
+      line-height: 22px
+      color: $white
+      position: relative
+      +flex_2
+      flex-wrap: wrap
+      max-width: 900px
+      &::after
+        content: ''
+        position: absolute
+        background-position: center
+        background-size: contain
+        background-repeat: no-repeat
+        right: -33px
+        top: 0
+        width: 18px
+        height: 18px
+      
+      a.span-message
+        text-align: center
+        word-break: break-word
+        &::first-letter
+          text-transform: uppercase
+
+    button
+      position: absolute
+      right: 25px
+      top: 29px
+
+    &.success-message
+      background-color: $green
+      box-shadow: 0px 3px 20px rgba(34, 185, 21, 0.3)
+      p
+        &::after
+          background-image: url('../img/okey.svg')
+    
+    &.fail-message
+      background-color: $red1
+      box-shadow: 0px 3px 20px rgba(185, 21, 21, 0.3)
+      p
+        &::after
+          background-image: url('../img/danger.svg')
+// message-box
+@media (min-width: 576px)
+  form
+    .addModal
+      &.noteModal
+        .modal-dialog
+          max-width: 900px
+          .modal-content
+            padding: 10px 50px 25px
+            .modal-body
+              margin-top: 50px
+              label
+                margin: 0
+      
+      &.addPatient
+        .modal-dialog
+          max-width: 700px
+          .modal-content
+            padding: 10px 50px 25px
+            .modal-body
+              margin-top: 25px
+              label
+                margin: 0
+              input
+                width: 100%
+                height: 50px
+                background: $gray2
+                border: 1px solid $gray
+                border-radius: 10px
+                padding: 0 15px
+                +p-m
+                font-size: 20px
+                line-height: 30px
+                &::placeholder
+                  color: rgba(103, 103, 103, 0.68)
+      
+      .modal-dialog
+        max-width: 900px
+        .modal-content
+          padding: 25px 50px
+          .modal-body
+            display: grid
+            grid-gap: 25px
+            margin-top: 25px
+            label
+              margin: 0
+              &:not(.custom-label)
+                +p-m
+                font-size: 25px
+                line-height: 32px
+                color: $black2
+                +flex_5
+                input
+                  padding: 10px 15px
+                  width: 100%
+                  height: 50px
+                  border: 2px solid $gray3
+                  border-radius: 10px
+                  +p-m
+                  font-size: 14px
+                  line-height: 21px
+                  color: $black2
+                  &::placeholder
+                    color: rgba(0, 0, 0, 0.5)
+
+                textarea
+                  padding: 15px
+                  width: 100%
+                  height: 150px
+                  border: 2px solid $gray3
+                  border-radius: 10px
+                  resize: none
+                  +p-m
+                  font-size: 14px
+                  line-height: 21px
+                  color: $black2
+                  &::placeholder
+                    color: rgba(0, 0, 0, 0.5)

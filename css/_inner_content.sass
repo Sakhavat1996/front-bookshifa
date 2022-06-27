@@ -1,0 +1,127 @@
+.inner-container
+  display: grid
+  grid-gap: 18px
+  padding: 36px 0 48px
+  .inner-head
+    +flex_1
+    .same_inner
+      display: flex
+      align-items: center
+      grid-gap: 10px
+      font-size: 20px
+      line-height: 25px
+      +p-m
+      color: $blue1
+      p
+        +p-m
+        font-weight: bold
+
+  .inner-main-box
+    display: grid
+    grid-gap: 40px
+    .inner-item
+      padding: 25px 25px 24px
+      background: $white
+      border-radius: 10px
+      box-shadow: 0 1px 30px rgba(0, 0, 0, 0.25)
+      display: grid
+      grid-gap: 15px
+      .item-title
+        +flex_2
+        +p-m
+        font-size: 22px
+        line-height: 30px
+        color: $black2
+        span
+          margin-left: 5px
+
+      .cabinet-inner
+        display: flex
+        align-items: center
+        grid-gap: 48px
+        overflow: hidden
+        padding: 26px 0
+        .add_cabinet_box
+          min-width: 270px
+          +flex_2
+          position: relative
+          &::after
+            content: ''
+            position: absolute
+            right: 0
+            top: 0
+            width: 4px
+            height: 100%
+            background: $border2
+
+          p
+            padding: 0 5px
+          
+          .add_btn
+            +p-m
+            font-size: 20px
+            line-height: 25px
+            color: $blue
+            display: grid
+            grid-gap: 25px
+            align-items: center
+            
+            .square
+              background: $blue2
+              +flex_2
+              width: 150px
+              height: 150px
+              border-radius: 50%
+              margin: 0 auto
+
+      .pdf-container
+        display: flex
+        grid-gap: 50px
+        overflow: auto hidden
+        .pdf-link
+          display: grid
+          grid-gap: 12px
+          .doc-img
+            width: 165px
+            height: 165px
+            padding: 5px
+            +flex_2
+            background: $white
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1)
+            border-radius: 10px
+            img
+              max-height: 95px
+              max-width: 95px
+
+          .doc-name
+            +flex_2
+            +p-r
+            color: $black
+            font-size: 20px
+            line-height: 24px
+
+      button.sent-sms
+        background: $blue2
+        +flex_2
+        grid-gap: 10px
+        min-height: 50px
+        max-width: max-content
+        +p-r
+        font-size: 20px
+        line-height: 30px
+        color: $white
+        padding: 10px 40px
+        border-radius: 10px
+        margin: 8px auto 0
+        p
+          word-break: break-all
+
+      .add-notes
+        padding: 17px 30px
+        border: 1px solid $border
+        border-radius: 10px
+        +p-m
+        font-size: 20px
+        line-height: 30px
+        color: rgba(51, 51, 51, 0.95)
+        word-break: break-all

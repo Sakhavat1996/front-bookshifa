@@ -1,0 +1,48 @@
+footer
+  background: $white
+  padding-top: 50px
+  .footer_main_container
+    +flex_5
+    grid-gap: 30px
+    .footer_logo
+      +p-m
+      font-size: 40px
+      line-height: 60px
+      color: $blue2
+    
+    ul
+      display: grid
+      grid-template-rows: 1fr 1fr 1fr
+      grid-auto-flow: column
+      grid-gap: 14px
+      li
+        a
+          +flex_1
+          grid-gap: 12px
+          width: max-content
+          +p-m
+          font-size: 15px
+          line-height: 19px
+          color: $footer_color 
+          img
+            max-width: 26.5px
+            max-height: 26.5px
+        
+        &:nth-last-child(3n+1)
+          a
+            color: $blue2
+        
+        &:nth-of-type(6)
+          a
+            img
+              margin-top: -2px
+    
+    .footer_author
+      +flex_2
+      margin-top: 40px
+      padding: 14px 0
+      border-top: 1px solid $blue2
+      +p-m
+      font-size: 20px
+      line-height: 30px
+      color: $blue2

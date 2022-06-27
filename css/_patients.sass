@@ -1,0 +1,173 @@
+.patients-main-container
+  padding: 40px 0 60px
+  display: grid
+  grid-gap: 43px
+  .patients-first-line
+    display: grid
+    grid-template-columns: 1fr 1fr
+    width: 900px
+    margin: 0 auto
+    .same-patient-box
+      background: $white
+      border-radius: 10px
+      padding-top: 15px
+      padding-bottom: 25px
+      height: 220px
+      border: 2px solid $blue2
+      border-radius: 15px
+      &:first-child
+        border-right: 0
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+      
+      &:last-child
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+
+      p
+        +l-m
+        font-size: 20px
+        line-height: 25px
+        color: $blue
+        +flex_2
+      
+      .add_btn_box
+        min-width: 200px
+        width: unset !important
+        grid-gap: 20px !important
+        button
+          padding: 0 5px
+          &:last-child
+            border: 2px solid $blue2 !important
+            background: $white !important
+            color: $blue2 !important
+          
+    
+    .add-patient-box
+      +flex_5
+      justify-content: space-between
+      .add_btn_box
+        display: grid
+        width: 280px
+        grid-gap: 14px
+        margin: 0 auto
+        button
+          height: 100%
+          +p-m
+          font-size: 20px
+          line-height: 25px
+          color: $white
+          background: $blue
+          border-radius: 10px
+          height: 50px
+    
+    .add-diagnosis-box
+      +flex_5
+      justify-content: space-between
+      padding-left: 50px
+      padding-right: 50px
+      form
+        display: grid
+        grid-gap: 20px
+        input
+          +p-m
+          height: 50px
+          padding: 0 15px
+          background: $white
+          border: 2px solid $border
+          border-radius: 10px
+        button
+          margin: 0 auto
+          width: max-content
+          padding: 0 15px
+          +p-m
+          font-size: 20px
+          line-height: 25px
+          color: $white
+          background: $blue
+          border-radius: 10px
+          height: 50px
+    
+  .patients-search
+    display: grid
+    grid-gap: 15px
+    width: 900px
+    margin: 0 auto
+    p
+      +l-m
+      font-size: 25px
+      line-height: 31px
+      color: $blue
+      +flex_2
+    
+    form
+      display: flex
+      input
+        width: 100%
+        height: 50px
+        background: $white
+        border-radius: 10px 0px 0px 10px
+        padding: 0 25px
+        +l-m
+        font-size: 20px
+        line-height: 25px
+        color: $black
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25)
+
+        &::placeholder
+          color: rgba(0, 0, 0, 0.5)
+      
+      button
+        width: 60px
+        height: 50px
+        +flex_2
+        background: $blue
+        border-radius: 0 10px 10px 0
+  
+  .patients-result
+    display: grid
+    grid-gap: 25px
+    > p
+      +l-m
+      font-size: 25px
+      line-height: 31px
+      color: $blue
+      +flex_2
+    
+    .result-box
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 50px 105px
+      .item-result
+        background: $white
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25)
+        border-radius: 10px
+        padding-top: 10px
+        padding-bottom: 25px
+        height: 220px
+        padding: 25px
+        .result-data
+          display: grid
+          grid-gap: 20px
+          p
+            +l-m
+            font-size: 20px
+            line-height: 25px
+            color: $blue
+            display: flex
+            align-items: center
+            grid-gap: 10px
+        
+        .see_link
+          height: 50px
+          padding: 0 15px
+          background: $blue
+          border-radius: 10px
+          +p-m
+          font-size: 20px
+          line-height: 30px
+          color: $white
+          +flex_2
+          margin-left: auto
+          width: max-content
+          min-width: 140px

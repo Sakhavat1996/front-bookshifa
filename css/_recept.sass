@@ -1,0 +1,99 @@
+.recept-box
+  padding:  15px 50px 120px
+  background: #FFFFFF
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25)
+  border-radius: 10px
+  .recept-title
+    +l-m
+    font-size: 25px
+    line-height: 31px
+    color: $blue1
+    +flex_2
+  
+  .pill-box
+    display: grid
+    grid-gap: 21px
+    margin-top: 60px
+    .pill-container
+      display: grid
+      grid-gap: 24px
+      .pill-list
+        display: grid
+        grid-template-columns: 40px 1.7fr 1fr .8fr 1.5fr
+        grid-gap: 20px
+        p.number
+          +l-m
+          font-size: 30px
+          line-height: 38px
+          color: $blue1
+        
+        input
+          background: #EDEDED
+          border: 2px solid #C1C1C1
+          border-radius: 10px
+          height: 50px
+          +l-m
+          font-size: 20px
+          line-height: 25px
+          color: rgba(46, 46, 46, 0.68)
+          padding: 0 20px 0 23px
+          width: 100%
+          &::placeholder
+            color: rgba(103, 103, 103, 0.68)
+      
+        button.note_btn
+          height: 100%
+          background: $blue
+          border-radius: 10px
+          +l-m
+          font-size: 20px
+          line-height: 25px
+          +flex_2
+          grid-gap: 10px
+          color: $white
+        
+        &.hide
+          display: none
+
+    #addBtn
+      +flex_2
+      flex-direction: column
+      width: max-content
+      +l-m
+      font-size: 20px
+      line-height: 25px
+      color: $blue
+      margin: 0 auto
+  
+  form
+    display: grid
+    grid-gap: 29px
+    width: 100%
+    margin-top: 30px
+    label
+      display: grid
+      width: 100%
+      +p-m
+      font-size: 25px
+      line-height: 38px
+      color: $blue
+      textarea
+        height: 320px
+        background: $gray2
+        border: 2px solid $gray
+        border-radius: 10px
+        resize: none
+        padding: 15px 20px
+    
+    button
+      width: max-content
+      padding: 0 15px
+      height: 50px
+      +flex_2
+      +l-m
+      font-size: 20px
+      line-height: 25px
+      color: $white
+      background: $blue
+      border-radius: 10px
+      margin-left: auto

@@ -1,0 +1,126 @@
+@-webkit-keyframes progress {
+  0% {
+    stroke-dashoffset: 75;
+    /* opacity: 1; */
+ }
+  95% {
+    stroke-dashoffset: 0;
+    /* opacity: 1; */
+ }
+  100% {
+    /* opacity: 0; */
+    stroke-dashoffset: 0;
+ }
+}
+@-moz-keyframes progress {
+  0% {
+    stroke-dashoffset: 75;
+    /* opacity: 1; */
+ }
+  95% {
+    stroke-dashoffset: 0;
+    /* opacity: 1; */
+ }
+  100% {
+    /* opacity: 0; */
+    stroke-dashoffset: 0;
+ }
+}
+@-o-keyframes progress {
+  0% {
+    stroke-dashoffset: 75;
+    /* opacity: 1; */
+ }
+  95% {
+    stroke-dashoffset: 0;
+    /* opacity: 1; */
+ }
+  100% {
+    /* opacity: 0; */
+    stroke-dashoffset: 0;
+ }
+}
+@keyframes progress {
+  0% {
+    stroke-dashoffset: 75;
+    /* opacity: 1; */
+ }
+  95% {
+    stroke-dashoffset: 0;
+    /* opacity: 1; */
+ }
+  100% {
+    /* opacity: 0; */
+    stroke-dashoffset: 0;
+ }
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  /* text-align: center;
+  font-size: 18px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.swiper-pagination-bullet {
+  stroke-dasharray: 75;
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  /* border: 1.5px solid #BABABA; */
+}
+.swiper-pagination-bullet--svg-animation {
+  width: 19px;
+  height: 19px;
+  margin: 0 6px !important;
+  display: inline-block;
+  background-color: transparent;
+}
+.swiper-pagination-bullet--svg-animation svg {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.swiper-pagination-bullet--svg-animation .svg__circle-inner {
+  stroke: #D8D7D7 !important;
+  fill: #D8D7D7;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+.swiper-pagination-bullet-active .svg__circle {
+  stroke: #fff;
+  stroke-dasharray: 75;
+  stroke-dashoffset: 0;
+  -webkit-animation: progress 7s ease-in-out 1 forwards;
+  -moz-animation: progress 7s ease-in-out 1 forwards;
+  -ms-animation: progress 7s ease-in-out 1 forwards;
+  animation: progress 7s ease-in-out 1 forwards;
+}
+
+.swiper-pagination-bullet-active .svg__circle-inner {
+  stroke: #fff !important;
+}
+#swiper {
+  width: 500px;
+  height: 300px;
+}
+#swiper .swiper-container {
+  padding-bottom: 3rem;
+}
+#swiper .swiper-slide {
+  background-color: #eaeaea;
+}
+#swiper .swiper-pagination {
+  position: absolute;
+  bottom: 0;
+}

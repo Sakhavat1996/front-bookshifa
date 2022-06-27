@@ -1,0 +1,111 @@
+.profile-container
+  margin: 40px 0 50px
+  display: grid
+  grid-template-columns: 1fr 360px
+  grid-gap: 40px
+  .profile-box
+    background: $white
+    +flex_5
+    grid-gap: 16px
+    padding: 10px 0 48px
+    box-shadow: 0px 2px 12px rgba(118, 166, 255, 0.15)
+    border-radius: 10px
+    &.profile-password
+      form
+        padding: 0 30px
+    
+    &.profile-information
+      form
+        padding: 0 83.5px
+        .same-row
+          display: grid
+          grid-template-columns: 1fr 1fr
+          grid-gap: 33px
+        
+        .second-row
+          display: grid
+          grid-gap: 7px
+          .group-inputs
+            display: grid
+            grid-template-columns: repeat(3,1fr)
+            grid-gap: 16px
+            input
+              text-align: center
+        
+          .profile-help-box
+            margin-top: 8px
+            p
+              +p-m
+              font-size: 10px
+              line-height: 15px
+              color: $blue2
+              padding-bottom: 15px
+              border-bottom: 5px solid $border
+              text-align: center
+              word-break: break-word
+
+    p
+      &.profile-title
+        +p-m
+        font-size: 20px
+        line-height: 30px
+        color: $blue2
+        text-align: center
+        word-break: break-all
+    
+    form
+      +flex_5
+      height: 100%
+      grid-gap: 23px
+      grid-auto-rows: minmax(min-content, max-content)
+      label
+        +flex_5
+        grid-gap: 7px
+        margin: 0
+        +p-m
+        font-size: 15px
+        line-height: 22px
+        color: $blue2
+        word-break: break-word
+        &.disabled
+          color: $gray4
+      input
+        padding: 8px
+        background: $white
+        border: 2px solid $border
+        border-radius: 10px
+        +p-m
+        font-weight: 400
+        font-size: 15px
+        line-height: 22px
+        color: $black2
+        min-height: 40px
+        height: 40px
+        width: 100%
+        transition: all .3s
+
+        &.active
+          border: 2px solid $blue3
+          background: $background2
+        
+        &.disabled
+          color: $gray4
+          border: 2px solid $gray4
+        
+      button
+        +flex_2
+        grid-gap: 7px
+        padding: 0 10px
+        min-height: 40px
+        min-width: 200px
+        max-width: max-content
+        margin: auto 0 0 auto
+        background: $blue2
+        border-radius: 10px
+        +p-m
+        font-size: 20px
+        line-height: 30px
+        color: $white
+        word-break: break-word
+        img
+          margin-left: 20px
