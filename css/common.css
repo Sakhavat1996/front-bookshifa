@@ -558,7 +558,11 @@ footer .footer_main_container ul li a img {
   max-height: 26.5px;
 }
 
-footer .footer_main_container ul li:nth-last-child(3n+1) a {
+footer .footer_main_container ul li:nth-last-child(3n+1) p {
+  font-family: "p-m", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
   color: #4098FF;
 }
 
@@ -2803,9 +2807,9 @@ footer .footer_main_container .footer_author {
   footer .footer_main_container ul {
     grid-gap: 11px;
   }
-  footer .footer_main_container ul li a {
-    font-size: 10px;
-    line-height: 14px;
+  footer .footer_main_container ul li a, footer .footer_main_container ul li p {
+    font-size: 10px !important;
+    line-height: 14px !important;
   }
   footer .footer_main_container ul li img {
     width: 20px;
