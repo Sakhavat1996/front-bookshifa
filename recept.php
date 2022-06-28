@@ -79,8 +79,8 @@
     <?php
         include("includes/footer.php");
     ?>
-    <form>
-        <div class="modal fade addModal noteModal " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form class="receptForm">
+        <div class="modal fade addModal noteModal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -91,10 +91,11 @@
                     </div>
                     <div class="modal-body">
                             <label>
-                                <textarea></textarea>
+                                <textarea required></textarea>
                             </label>
+                            <input type="hidden">
                             <button type="submit">
-                                Yüklə
+                                Saxla
                             </button>
                     </div>
                 </div>
