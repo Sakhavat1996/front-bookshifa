@@ -128,7 +128,7 @@ $('header .hamburger').on('click',function(){
   $(this).toggleClass('open')
 })
 
-// header-new
+// header-new-toggle-btns
 $('.header-blue-btn').on('click',function(){
   let target = $(this).data('target');
   if($(`.same-absolute#${target}`).hasClass('active')){
