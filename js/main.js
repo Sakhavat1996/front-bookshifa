@@ -247,3 +247,9 @@ $('.profile-information form').on('submit',function(e){
     $('.third-row input').attr('disabled',true);
   }
 })
+// input hide
+$('.receptForm').on('submit',function(e){
+  e.preventDefault();
+  $(this).find('input:hidden').val( $(this).find('textarea').val())
+  $(this).find('.modal').modal('hide');
+})
