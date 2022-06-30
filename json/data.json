@@ -1,0 +1,102 @@
+[
+  [
+    {
+      "type" : "radiobox",
+      "text" : "Covid tutduğunuz heç olubmu?",
+      "inputs" :  [
+         "Hə","Yox"
+      ]
+    },
+    {
+      "type" : "text",
+      "text" : "Textarea"
+    },
+    {
+      "type" : "file",
+      "text" : "Fayl yukle"
+    }
+  ],
+  [
+    {
+      "type" : "radiobox",
+      "text" : "Covid tutduğunuz heç olubmu?",
+      "inputs" :  [
+         "Hə","Yox"
+      ]
+    },
+    {
+      "type" : "file",
+      "text" : "Fayl yukle"
+    },
+    {
+      "type" : "text",
+      "text" : "Textarea"
+    },
+    {
+      "type" : "file",
+      "text" : "Fayl yukle"
+    }
+  ],
+  [
+    {
+      "type" : "radiobox",
+      "text" : "Covid tutduğunuz heç olubmu?",
+      "inputs" :  [
+         "Hə","Yox"
+      ]
+    },
+    {
+      "type" : "text",
+      "text" : "Textarea"
+    },
+    {
+      "type" : "radiobox",
+      "text" : "Covid tutduğunuz heç olubmu?",
+      "inputs" :  [
+         "Hə","Yox"
+      ]
+    },
+    {
+      "type" : "file",
+      "text" : "Fayl yukle"
+    }
+  ],
+  [
+    {
+      "type" : "text",
+      "text" : "Textarea"
+    },
+    {
+      "type" : "radiobox",
+      "text" : "Covid tutduğunuz heç olubmu?",
+      "inputs" :  [
+         "Hə","Yox"
+      ]
+    },
+    {
+      "type" : "text",
+      "text" : "Textarea"
+    },
+    {
+      "type" : "file",
+      "text" : "Fayl yukle"
+    }
+  ],
+  [
+    {
+      "type" : "radiobox",
+      "text" : "Covid tutduğunuz heç olubmu?",
+      "inputs" :  [
+         "Hə","Yox"
+      ]
+    },
+    {
+      "type" : "text",
+      "text" : "Textarea"
+    },
+    {
+      "type" : "file",
+      "text" : "Fayl yukle"
+    }
+  ]
+]

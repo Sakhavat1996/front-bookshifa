@@ -3515,6 +3515,20 @@ section {
           flex-direction: column;
 }
 
+@-webkit-keyframes sp-anime {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes sp-anime {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 footer {
   margin-top: auto;
 }
@@ -3911,11 +3925,50 @@ button {
   word-break: break-word;
 }
 
+.modal.typeModal #overlay {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal.typeModal #overlay .cv-spinner {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal.typeModal #overlay .spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px #ddd solid;
+  border-top: 4px #2e93e6 solid;
+  border-radius: 50%;
+  -webkit-animation: sp-anime 0.8s infinite linear;
+          animation: sp-anime 0.8s infinite linear;
+}
+
 .modal.typeModal .modal-dialog .modal-content {
   padding: 25px;
 }
 
-.modal.typeModal .modal-dialog .modal-content .same-style-box {
+.modal.typeModal .modal-dialog .modal-content .typeModal-static-box {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 19px;
+}
+
+.modal.typeModal .modal-dialog .modal-content .typeModal-static-box .same-style-box {
   position: relative;
   display: -ms-grid;
   display: grid;
@@ -3927,7 +3980,7 @@ button {
   border-radius: 15px;
 }
 
-.modal.typeModal .modal-dialog .modal-content .same-style-box .close {
+.modal.typeModal .modal-dialog .modal-content .typeModal-static-box .same-style-box .close {
   top: 15px;
   right: 15px;
   background: none;
@@ -3937,8 +3990,129 @@ button {
   height: unset;
 }
 
+.modal.typeModal .modal-dialog .modal-content .typeModal-pattern-box > p {
+  margin-bottom: 6px;
+  font-family: "p-m", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #333333;
+  text-align: center;
+  word-break: break-all;
+}
+
+.modal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.modal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size textarea {
+  margin-top: 24px;
+}
+
+.modal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.modal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.text-label {
+  font-size: 24px;
+  font-family: "p-m", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #333333;
+  word-break: break-all;
+}
+
+.modal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox {
+  padding: 16px 25px 20px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 16px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.modal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox > p {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  font-family: "p-m", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #333333;
+  word-break: break-all;
+}
+
+.modal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox .custom-label {
+  display: block;
+  position: relative;
+  height: 50px;
+  border: 1px solid #DCEAFF;
+  border-radius: 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "p-m", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #4098FF;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.modal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox .custom-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.modal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox .custom-label input:checked ~ .checkmark {
+  background-color: #ffffff;
+  border: 1px solid #DCEAFF;
+}
+
+.modal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox .custom-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.modal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox .custom-label .checkmark {
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  height: 28px;
+  width: 28px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
+
+.modal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox .custom-label .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  background: #4098FF;
+}
+
 .modal.typeModal .modal-dialog .modal-content .add-new-form {
-  margin: 0 auto 4px;
+  margin: 0 auto 5px;
   padding: 0 25px;
   max-width: 333px;
   display: -webkit-box;
@@ -4273,7 +4447,15 @@ button {
 form .addModal .modal-dialog .modal-content .modal-body .files-box {
   display: -ms-grid;
   display: grid;
-  grid-gap: 100px;
+  grid-gap: 35px;
+}
+
+form .addModal .modal-dialog .modal-content .modal-body .files-box > p {
+  font-family: "p-m", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #333333;
 }
 
 form .addModal .modal-dialog .modal-content .modal-body .files-box label {
@@ -4532,7 +4714,7 @@ form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question 
   margin-left: auto;
 }
 
-.close {
+.modal:not(.sureModal) .close {
   position: absolute;
   width: 42px;
   height: 42px;
@@ -4541,6 +4723,10 @@ form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question 
   right: 16px;
   top: 16px;
   margin: 0 !important;
+}
+
+.modal .close {
+  opacity: 1;
 }
 
 .same-big-box {
@@ -4938,7 +5124,7 @@ form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question 
   fill: #ffffff;
 }
 
-.sureModal .modal-dialog {
+.modal.sureModal .modal-dialog {
   max-width: 550px;
   height: 100%;
   display: -webkit-box;
@@ -4957,11 +5143,11 @@ form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question 
   margin: 0 auto;
 }
 
-.sureModal .modal-dialog .modal-content {
+.modal.sureModal .modal-dialog .modal-content {
   padding: 35px 50px;
 }
 
-.sureModal .modal-dialog .modal-content .modal-header .modal-title {
+.modal.sureModal .modal-dialog .modal-content .modal-header .modal-title {
   font-family: "p-m", Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -4970,7 +5156,7 @@ form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question 
   text-align: center;
 }
 
-.sureModal .modal-dialog .modal-content .modal-body {
+.modal.sureModal .modal-dialog .modal-content .modal-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4981,7 +5167,7 @@ form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question 
   grid-gap: 65px;
 }
 
-.sureModal .modal-dialog .modal-content .modal-body .sure_btns {
+.modal.sureModal .modal-dialog .modal-content .modal-body .sure_btns {
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -4991,7 +5177,7 @@ form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question 
   margin-top: 50px;
 }
 
-.sureModal .modal-dialog .modal-content .modal-body .sure_btns button {
+.modal.sureModal .modal-dialog .modal-content .modal-body .sure_btns button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5008,10 +5194,11 @@ form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question 
   font-size: 20px;
   line-height: 30px;
   width: 100%;
+  max-width: 100%;
   color: #ffffff;
 }
 
-.sureModal .modal-dialog .modal-content .modal-body .sure_btns button.close {
+.modal.sureModal .modal-dialog .modal-content .modal-body .sure_btns button.close {
   border: 1px solid #4098FF;
   color: #4098FF;
   position: relative;
@@ -5020,7 +5207,7 @@ form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question 
   background: white;
 }
 
-.sureModal .modal-dialog .modal-content .modal-body .edit_recept {
+.modal.sureModal .modal-dialog .modal-content .modal-body .edit_recept {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5031,7 +5218,7 @@ form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question 
   grid-gap: 20px;
 }
 
-.sureModal .modal-dialog .modal-content .modal-body .edit_recept p {
+.modal.sureModal .modal-dialog .modal-content .modal-body .edit_recept p {
   font-family: "p-m", Arial, sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -5040,7 +5227,7 @@ form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question 
   text-align: center;
 }
 
-.sureModal .modal-dialog .modal-content .modal-body .edit_recept button {
+.modal.sureModal .modal-dialog .modal-content .modal-body .edit_recept button {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;

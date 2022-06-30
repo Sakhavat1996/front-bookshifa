@@ -336,46 +336,51 @@
                         <div class="pattern-header">
                             <div class="question-pattern"><img src="img/question.svg" alt=""></div>
                             <p>Şablon seç</p>
-                            <button>Kartı böyüt<img src="img/downblue.svg" alt=""></button>
+                            <button type="button">Kartı böyüt<img src="img/downblue.svg" alt=""></button>
                         </div>
                         <div class="pattern-boxes">
-                            <a href="#" class="pattern-single-box">
+                            <a href="#" class="pattern-single-box" data-id="0">
                                 <img src="img/pattern.svg" alt="">
                                 <p>Şablon 1</p>
                             </a>
-                            <a href="#" class="pattern-single-box">
+                            <a href="#" class="pattern-single-box" data-id="1">
                                 <img src="img/pattern.svg" alt="">
-                                <p>Şablon 1</p>
+                                <p>Şablon 2</p>
                             </a>
-                            <a href="#" class="pattern-single-box">
+                            <a href="#" class="pattern-single-box" data-id="2">
                                 <img src="img/pattern.svg" alt="">
-                                <p>Şablon 1</p>
+                                <p>Şablon 3</p>
                             </a>
-                            <a href="#" class="pattern-single-box">
+                            <a href="#" class="pattern-single-box" data-id="3">
                                 <img src="img/pattern.svg" alt="">
-                                <p>Şablon 1</p>
+                                <p>Şablon 4</p>
                             </a>
-                            <a href="#" class="pattern-single-box">
+                            <a href="#" class="pattern-single-box" data-id="4">
                                 <img src="img/pattern.svg" alt="">
-                                <p>Şablon 1</p>
+                                <p>Şablon 5</p>
                             </a>
                         </div>
                     </div>
                     <div class="modal-body">
-                        <div class="first-box same-style-box">
-                            <label>
-                                Diaqnozun adı
-                                <input type="text" placeholder="Diaqnozun adını burda qeyd edin (məsələn, Sətəlcəm)" required>
-                            </label>
-                            <label>
-                             Diaqnozun mətni*
-                                <textarea  placeholder="Diaqnozun əsas mətni varsa onu burada yaza bilərsiniz"></textarea>
-                            </label>
+                        <div class="typeModal-static-box">
+                            <div class="first-box same-style-box">
+                                <label>
+                                    Diaqnozun adı
+                                    <input type="text" placeholder="Diaqnozun adını burda qeyd edin (məsələn, Sətəlcəm)" required>
+                                </label>
+                                <label>
+                                Diaqnozun mətni*
+                                    <textarea  placeholder="Diaqnozun əsas mətni varsa onu burada yaza bilərsiniz"></textarea>
+                                </label>
+                            </div>
+                            <button class="add-new-form" type="button">
+                                Yeni yazı bölməsi əlavə et
+                                <span>+</span>
+                            </button>
                         </div>
-                        <button class="add-new-form" type="button">
-                            Yeni yazı bölməsi əlavə et
-                            <span>+</span>
-                        </button>
+                        <div class="typeModal-pattern-box">
+                            <p class="pattern-title"></p>
+                        </div>
                         <div class="type-footer">
                             <button class="back-to-first-modal" type="button">
                                 <img src="img/back.svg" alt="">
@@ -386,6 +391,11 @@
                             </button>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div id="overlay">
+                <div class="cv-spinner">
+                    <span class="spinner"></span>
                 </div>
             </div>
         </div>

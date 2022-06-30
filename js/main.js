@@ -163,24 +163,29 @@ $('.message-box .message-close').on('click',function(){
   $(this).parents('.message-box').remove();
 })
 
+// input hide
+$('.receptForm').on('submit',function(e){
+  e.preventDefault();
+  $(this).find('input:hidden').val( $(this).find('textarea').val())
+  $(this).find('.modal').modal('hide');
+})
+
 // new modal js
 var $file = $('input[type="file"]');
-var $text = $('.text-file input');
-var $delete = $('.text-file button')
-$file.on('change',function(e){
+$(document).on('change',$file,function(e){
     var input = e.target;
     var reader = new FileReader();
     reader.onload = function(){
       var name = input.files[0].name;
-      $text.val(name);
-      $delete.show();
+      $(input).parents().find('input[type="text"]').val(name);
+      $(input).parents().find('button.delete').show();
     };
     reader.readAsDataURL(input.files[0]);
 });
 
-$delete.on('click',function(e){
-  $text.val('');
-  $(this).hide();
+$(document).on('click', '.text-file button.delete',function(e){
+  $(e.target).parents().find('input[type="text"]').val('');
+  $(e.target).parents().find('button.delete').hide();
 })
 
 var index = 0;
@@ -247,9 +252,57 @@ $('.profile-information form').on('submit',function(e){
     $('.third-row input').attr('disabled',true);
   }
 })
-// input hide
-$('.receptForm').on('submit',function(e){
-  e.preventDefault();
-  $(this).find('input:hidden').val( $(this).find('textarea').val())
-  $(this).find('.modal').modal('hide');
+
+// get data from JSON
+$('.pattern-boxes .pattern-single-box').on('click',function(){
+  let dataID = parseInt($(this).data('id'));
+  $('.typeModal-static-box').hide();
+  $("#overlay").fadeIn(300);
+  $('.standart-size').fadeOut(400, function() { $('.standart-size').remove(); });;
+  var html = '';
+  $.ajax({
+    url:"json/data.json",
+    method:"GET"
+  }).done((data)=>{
+    data[dataID].map(element => {
+      if(element.type === "text"){
+        tag = `<label class="text-label standart-size"> <p> ${element.text ? element.text : null}</p> <textarea></textarea></label> `
+      }  
+      else if(element.type === "file")  
+          {
+            tag = `<div class="files-box standart-size" for="upload-${dataID}">
+                  <p>Fayl yukle</p>
+                  <label for="upload-${dataID}">
+                      <div class="text-file" for="upload-${dataID}">
+                          <input type="text" disabled="" placeholder="Diaqnoza fayl əlavə et">
+                          <button type="button" class="delete"><img src="img/delete.svg" alt=""></button>
+                      </div>
+                      <div class="choose_btn">
+                          Faylı seç
+                          <img src="img/file.svg" alt="">
+                      </div>
+                      <input type="file" name="" id="upload-${dataID}">
+                  </label>
+            </div>`
+          } 
+      else if(element.type === "radiobox"){
+        let label ='';
+        element.inputs.forEach(item=>{
+          label+= `
+            <label class="custom-label">${item}
+              <input type="radio" name="radio" required="">
+              <span class="checkmark"></span>
+            </label>
+          `
+        })
+        tag = `<div class="radiobox standart-size"><p>${element.text}</p> ${label}</div>`
+      }
+      html += tag
+    });
+    setTimeout(() => {
+      $("#overlay").fadeOut(300);
+      $('.typeModal-pattern-box .pattern-title').text($(this).find('p').text());
+      $('.typeModal-pattern-box').append(html);
+    }, 500);
+  })
 })
