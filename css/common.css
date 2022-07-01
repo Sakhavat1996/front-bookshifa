@@ -2542,8 +2542,8 @@ footer .footer_main_container .footer_author {
     grid-gap: 20px;
   }
   .info-room .inner-container .inner-main-box .inner-item .pdf-container .pdf-link .doc-img {
-    min-width: 60px;
-    min-height: 60px;
+    min-width: 90px;
+    min-height: 90px;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
@@ -2554,7 +2554,7 @@ footer .footer_main_container .footer_author {
     grid-gap: 5px !important;
   }
   .info-room .inner-container .inner-main-box .inner-item .pdf-container .pdf-link .doc-img img {
-    width: 30px;
+    width: 46px;
   }
   .info-room .inner-container .inner-main-box .inner-item .pdf-container .pdf-link .doc-img .delete.active {
     min-height: 15px !important;
