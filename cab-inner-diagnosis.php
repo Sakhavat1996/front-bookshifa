@@ -411,7 +411,7 @@
                 <div class="modal-body">
                     <div class="sure_btns">
                         <button class="yes">Hə</button>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">Xeyir</button>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">Xeyr</button>
                     </div>
                 </div>
             </div>
@@ -428,7 +428,7 @@
                 <div class="modal-body">
                     <div class="sure_btns">
                         <button class="yes">Hə</button>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">Xeyir</button>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">Xeyr</button>
                     </div>
                     <div class="edit_recept">
                         <p>Resepti silmək əvəzinə düzəliş edə bilərsiniz.</p>

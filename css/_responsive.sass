@@ -549,6 +549,9 @@
         .pill-list
           grid-template-columns: 40px 1fr 1fr
           grid-gap: 10px
+          &.patient-recept
+            grid-template-columns: 40px 1fr 1fr
+            grid-gap: 10px
           p.number
             grid-row-start: 1
             grid-row-end: 3
@@ -565,8 +568,18 @@
             height: 40px
             font-size: 15px
             line-height: 19px
+              
+
+          button.delete-recept
+            grid-column-start: 2
+            grid-column-end: 4
+            img
+              width: 36px
+              height: 36px
 
       #addBtn
+        img
+          margin-left: 52px
         p
           display: none
         
@@ -1084,9 +1097,12 @@
     
     .pill-box
       .pill-container 
-        .pill-list
+        .pill-list 
           grid-template-columns: 30px 1fr 1fr
           grid-gap: 7px
+          &.patient-recept
+            grid-template-columns: 30px 1fr 1fr
+            grid-gap: 7px
           p.number
             font-size: 20px
             line-height: 25px
@@ -1101,6 +1117,15 @@
             height: 35px
             font-size: 14px
             line-height: 17px
+          
+          button.delete-recept
+            img
+              width: 30px
+              height: 30px
+
+      #addBtn
+        img
+          margin-left: 35px
 
   .patients-main-container
     .patients-first-line
@@ -1738,6 +1763,11 @@
             img
               width: 14px
               height: 14px
+          
+          button.delete-recept
+            img
+              width: 25px
+              height: 25px
 
   .patients-main-container
     padding: 30px 25px

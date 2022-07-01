@@ -906,9 +906,14 @@ footer .footer_main_container .footer_author {
 .recept-box .pill-box .pill-container .pill-list {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 40px 1.7fr 1fr .8fr 1.5fr auto;
+      grid-template-columns: 40px 1.7fr 1fr .8fr 1.5fr auto;
+  grid-gap: 17px;
+}
+
+.recept-box .pill-box .pill-container .pill-list.patient-recept {
   -ms-grid-columns: 40px 1.7fr 1fr .8fr 1.5fr;
       grid-template-columns: 40px 1.7fr 1fr .8fr 1.5fr;
-  grid-gap: 20px;
 }
 
 .recept-box .pill-box .pill-container .pill-list p.number {
@@ -920,40 +925,41 @@ footer .footer_main_container .footer_author {
 }
 
 .recept-box .pill-box .pill-container .pill-list input {
-  background: #EDEDED;
-  border: 2px solid #C1C1C1;
+  background: #ffffff;
+  border: 2px solid #DCEAFF;
   border-radius: 10px;
   height: 50px;
   font-family: "l-m", Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
-  color: rgba(46, 46, 46, 0.68);
+  color: #333333;
   padding: 0 20px 0 23px;
   width: 100%;
 }
 
 .recept-box .pill-box .pill-container .pill-list input::-webkit-input-placeholder {
-  color: rgba(103, 103, 103, 0.68);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .recept-box .pill-box .pill-container .pill-list input:-ms-input-placeholder {
-  color: rgba(103, 103, 103, 0.68);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .recept-box .pill-box .pill-container .pill-list input::-ms-input-placeholder {
-  color: rgba(103, 103, 103, 0.68);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .recept-box .pill-box .pill-container .pill-list input::placeholder {
-  color: rgba(103, 103, 103, 0.68);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .recept-box .pill-box .pill-container .pill-list button.note_btn {
   height: 100%;
-  background: #1C77FF;
+  background: #4098FF;
+  padding: 5px;
   border-radius: 10px;
-  font-family: "l-m", Arial, sans-serif;
+  font-family: "p-m", Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
@@ -2145,6 +2151,11 @@ footer .footer_main_container .footer_author {
         grid-template-columns: 40px 1fr 1fr;
     grid-gap: 10px;
   }
+  .recept-box .pill-box .pill-container .pill-list.patient-recept {
+    -ms-grid-columns: 40px 1fr 1fr;
+        grid-template-columns: 40px 1fr 1fr;
+    grid-gap: 10px;
+  }
   .recept-box .pill-box .pill-container .pill-list p.number {
     -ms-grid-row: 1;
         grid-row-start: 1;
@@ -2170,6 +2181,18 @@ footer .footer_main_container .footer_author {
     height: 40px;
     font-size: 15px;
     line-height: 19px;
+  }
+  .recept-box .pill-box .pill-container .pill-list button.delete-recept {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  .recept-box .pill-box .pill-container .pill-list button.delete-recept img {
+    width: 36px;
+    height: 36px;
+  }
+  .recept-box .pill-box #addBtn img {
+    margin-left: 52px;
   }
   .recept-box .pill-box #addBtn p {
     display: none;
@@ -2718,6 +2741,11 @@ footer .footer_main_container .footer_author {
         grid-template-columns: 30px 1fr 1fr;
     grid-gap: 7px;
   }
+  .recept-box .pill-box .pill-container .pill-list.patient-recept {
+    -ms-grid-columns: 30px 1fr 1fr;
+        grid-template-columns: 30px 1fr 1fr;
+    grid-gap: 7px;
+  }
   .recept-box .pill-box .pill-container .pill-list p.number {
     font-size: 20px;
     line-height: 25px;
@@ -2732,6 +2760,13 @@ footer .footer_main_container .footer_author {
     height: 35px;
     font-size: 14px;
     line-height: 17px;
+  }
+  .recept-box .pill-box .pill-container .pill-list button.delete-recept img {
+    width: 30px;
+    height: 30px;
+  }
+  .recept-box .pill-box #addBtn img {
+    margin-left: 35px;
   }
   .patients-main-container .patients-first-line {
     -ms-grid-columns: 1fr;
@@ -3433,6 +3468,10 @@ footer .footer_main_container .footer_author {
   .recept-box .pill-box .pill-container .pill-list button.note_btn img {
     width: 14px;
     height: 14px;
+  }
+  .recept-box .pill-box .pill-container .pill-list button.delete-recept img {
+    width: 25px;
+    height: 25px;
   }
   .patients-main-container {
     padding: 30px 25px;

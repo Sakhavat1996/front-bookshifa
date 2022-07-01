@@ -17,6 +17,13 @@ $('#addBtn').on('click',function(){
     class: 'note_btn' ,
     text:'Not əlavə et.'
   });
+  var btn2 = $('<button />', { 
+    class: 'delete-recept' ,
+    id : length + 1
+  });
+  var imgClose = $('<img>',{
+    src : 'img/close.svg'
+  })
   var pill_list = $('<div/>',{
       class:'pill-list'
   })
@@ -25,6 +32,8 @@ $('#addBtn').on('click',function(){
   input2.appendTo(pill_list);
   input3.appendTo(pill_list);
   btn.appendTo(pill_list);
+  imgClose.appendTo(btn2);
+  btn2.appendTo(pill_list);
   pill_list.appendTo('.pill-container');
 })
 
@@ -34,6 +43,11 @@ $(document).on('click','.note_btn',function(){
 
 $(document).on('click','.delete_file',function(){
   let id = parseInt($(this).data('file'));
+  $('.fileModal').modal('show').attr('id',id);
+})
+
+$(document).on('click','.delete-recept',function(){
+  let id = parseInt($(this).attr('id'));
   $('.fileModal').modal('show').attr('id',id);
 })
 
@@ -71,8 +85,9 @@ $('.receptModal button.yes').on('click' , function(){
 $('.fileModal button.yes').on('click' , function(){
   const modal = $(this).parents('.modal');
   let id = parseInt(modal.attr('id'));
-  let $parent = $(`.delete_file[data-file = ${id}]`).parents('.pdf-link')
-  deleteItem($parent , modal);
+  let $parent = $(`.delete_file[data-file = ${id}]`).parents('.pdf-link');
+  let $parent2 = $(`.delete-recept[id=${id}]`).parents('.pill-list');
+  $parent.length ? deleteItem($parent, modal) : deleteItem($parent2, modal) ;
 })
 
 $('.edit_btn').on('click',function(){

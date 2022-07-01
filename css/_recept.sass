@@ -19,8 +19,10 @@
       grid-gap: 24px
       .pill-list
         display: grid
-        grid-template-columns: 40px 1.7fr 1fr .8fr 1.5fr
-        grid-gap: 20px
+        grid-template-columns: 40px 1.7fr 1fr .8fr 1.5fr auto
+        grid-gap: 17px
+        &.patient-recept
+          grid-template-columns: 40px 1.7fr 1fr .8fr 1.5fr
         p.number
           +l-m
           font-size: 30px
@@ -28,24 +30,25 @@
           color: $blue1
         
         input
-          background: #EDEDED
-          border: 2px solid #C1C1C1
+          background: $white
+          border: 2px solid $border
           border-radius: 10px
           height: 50px
           +l-m
           font-size: 20px
           line-height: 25px
-          color: rgba(46, 46, 46, 0.68)
+          color: $black2
           padding: 0 20px 0 23px
           width: 100%
           &::placeholder
-            color: rgba(103, 103, 103, 0.68)
+            color: rgba(0, 0, 0, 0.4)
       
         button.note_btn
           height: 100%
-          background: $blue
+          background: $blue2
+          padding: 5px
           border-radius: 10px
-          +l-m
+          +p-m
           font-size: 20px
           line-height: 25px
           +flex_2

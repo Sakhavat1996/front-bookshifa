@@ -42,7 +42,7 @@
                     </div>
                 </div>
 
-                <div class="recept-box w-100">
+                <div class="recept-box recept-adding w-100">
                     <p class="recept-title">Resept</p>
                     <div class="pill-box">
                       <div class="pill-container">
@@ -54,6 +54,9 @@
                           <button class="note_btn" >
                             Not əlavə edildi.
                             <img src="img/okey.svg" alt="">
+                          </button>
+                          <button class="delete-recept" id="1">
+                            <img src="img/close.svg" alt="">
                           </button>
                         </div>
                         
@@ -124,6 +127,23 @@
             </div>
         </div>
     </form>
+
+    <!-- deleteFileModal -->
+    <div class="modal fade addModal sureModal fileModal"  tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resepti silmək istədiyinizə əminsiniz??</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="sure_btns">
+                        <button class="yes">Hə</button>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">Xeyr</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </section>
 

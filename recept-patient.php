@@ -25,7 +25,7 @@
                     <p class="recept-title">Resept</p>
                     <div class="pill-box">
                       <div class="pill-container">
-                        <div class="pill-list">
+                        <div class="pill-list patient-recept">
                           <p class="number">1</p>
                           <input type="text" value="Paraçetromol">
                           <input type="text" value="1 ədəd">
