@@ -73,17 +73,21 @@
               .files-box 
                 label
                   margin: 0
-
-  .info-room
+  
+  section
     .index-main-container
       grid-gap: 50px
       display: grid
       grid-template-columns: 1fr 1fr
+
     .inner-container
       .inner-main-box 
         .inner-item 
           #editcontent
-            margin: 0 30px !important
+            margin: 0 30px 
+            padding: 10px 15px
+            font-size: 18px !important
+            line-height: 25px !important
             
           .item-title
             grid-gap: 5px
@@ -95,7 +99,8 @@
               margin: 5px 0 0 !important
               
           .add-notes
-            padding: 0 30px
+            padding: 10px 15px
+            margin: 0 30px
             font-size: 18px
             line-height: 25px
 
@@ -332,6 +337,15 @@
       &.noteModal 
         .modal-dialog
           max-width: 700px
+
+      &.downloadModal
+        .modal-dialog
+          .modal-content
+            .modal-body
+              label
+                font-size: 21px !important
+                line-height: 25px !important
+
       .modal-dialog
         max-width: 650px
         .modal-content
@@ -440,74 +454,80 @@
   .same-big-box
     padding: 16px 25px 30px !important
 
-  .inner-container
-    padding: 15px 0 30px
-    .edit-box 
-      .same_btns
-        button
-          min-height: 40px
-          font-size: 18px
-          line-height: 22px
-      
-    .inner-head 
-      flex-direction: column
-      align-items: flex-start
-      grid-gap: 12px
-      .same_inner
-        font-size: 17px
-        line-height: 20px
-
-    .inner-main-box 
-      grid-gap: 30px
-      .inner-item
-        grid-gap: 5px
-        #editcontent
-          font-size: 16px !important
-          line-height: 25px !important
-          padding: 10px !important
-        .item-head
-          display: flex !important
-          flex-direction: column 
-          grid-gap: 15px !important
+  .info-room
+    .inner-container
+      padding: 15px 0 30px
+      .edit-box 
+        .same_btns
           button
-            min-height: 40px !important
-            font-size: 18px !important
-            line-height: 22px !important
-        .add-notes
-          font-size: 16px !important
-          line-height: 20px !important
-          margin-top: 15px
-        .item-title
-          font-size: 20px
-          line-height: 24px
+            min-height: 40px
+            font-size: 18px
+            line-height: 22px
         
-        .pdf-container 
-          grid-gap: 30px
-          .pdf-link 
-            .doc-img
-              width: 100px
-              height: 100px
-              img
-                width: 50px
-            
-            .doc-name
-              font-size: 15px
-              line-height: 19px
-        
-        .cabinet-inner 
-          grid-gap: 25px
-          align-items: flex-start
-          .add_cabinet_box
-            min-width: 180px
-            padding: 0 10px
-            .add_btn
-              font-size: 15px
-              line-height: 19px
-              .square
+      .inner-head 
+        flex-direction: column
+        align-items: flex-start
+        grid-gap: 12px
+        .same_inner
+          font-size: 17px
+          line-height: 20px
+
+      .inner-main-box 
+        grid-gap: 30px
+        .inner-item
+          grid-gap: 5px
+          #editcontent
+            font-size: 15px !important
+            line-height: 19px !important
+            padding: 10px !important
+            margin: 0 20px
+          
+          .item-head
+            display: flex !important
+            flex-direction: column 
+            grid-gap: 15px !important
+            button
+              min-height: 40px !important
+              font-size: 18px !important
+              line-height: 22px !important
+          
+          .add-notes
+            padding: 10px !important
+            font-size: 15px !important
+            line-height: 19px !important
+            margin: 0 20px 0
+          
+          .item-title
+            font-size: 20px
+            line-height: 24px
+          
+          .pdf-container 
+            grid-gap: 30px
+            .pdf-link 
+              .doc-img
                 width: 100px
                 height: 100px
                 img
                   width: 50px
+              
+              .doc-name
+                font-size: 15px
+                line-height: 19px
+          
+          .cabinet-inner 
+            grid-gap: 25px
+            align-items: flex-start
+            .add_cabinet_box
+              min-width: 180px
+              padding: 0 10px
+              .add_btn
+                font-size: 15px
+                line-height: 19px
+                .square
+                  width: 100px
+                  height: 100px
+                  img
+                    width: 50px
 
   .recept-box
     form 
@@ -703,6 +723,29 @@
         .modal-dialog
           max-width: 540px
       
+      &.downloadModal
+        .modal-dialog
+          .modal-content
+            .modal-body
+              grid-gap: 15px
+              label
+                font-size: 17px !important
+                line-height: 21px !important
+                grid-gap: 10px
+                >input
+                  height: 40px
+                  padding: 2px 8px
+                
+                textarea
+                  height: 125px
+                  padding: 10px
+                
+              .next-add-box
+                grid-gap: 0
+                button
+                  font-size: 14px
+                  line-height: 18px
+
       &.addPatient 
         .modal-dialog 
           max-width: 540px
@@ -716,7 +759,19 @@
           
         .modal-content
           padding: 15px 35px 30px
-          .modal-body 
+          .modal-body
+            .files-box 
+              label 
+                padding-left: 12px
+                input
+                  font-size: 14px
+                  line-height: 18px
+                  
+                .choose_btn
+                  font-size: 14px
+                  line-height: 18px
+                  width: 150px
+            
             button
               min-height: 40px
               font-size: 15px
@@ -824,21 +879,34 @@
       .box-btns
         grid-gap: 13px
 
-    .inner-container 
+    .inner-container
+      padding: 15px 0 30px
       .edit-box 
         .same_btns
+          margin: 20px 0 7px
           grid-gap: 20px
           button
             font-size: 15px
             line-height: 20px
-            
+      
+      .inner-head 
+        .same_inner
+          font-size: 16px
+          line-height: 20px
 
       .inner-main-box 
-        .inner-item 
+        .inner-item
+          grid-gap: 0
+          padding: 16px 0 0
+          button.sent-sms
+            margin: 15px auto
+            font-size: 17px
+            line-height: 21px
+            min-height: 40px
           #editcontent
             margin: 15px 20px !important
             font-size: 14px !important
-            line-height: 22px !important
+            line-height: 20px !important
           
           .item-head
             padding: 0 20px !important
@@ -846,6 +914,56 @@
               font-size: 15px !important
               line-height: 20px !important
               min-height: 30px !important
+          
+          .add-notes
+            padding: 25px 16px
+            font-size: 14px !important
+            line-height: 20px !important
+            margin: 15px 20px
+
+          .item-title
+            font-size: 17px
+            line-height: 20px
+          
+          .pdf-container 
+            grid-gap: 20px
+            .pdf-link 
+              .doc-img
+                min-width: 60px
+                min-height: 60px
+                height: max-content
+                width: max-content
+                margin: 0 auto
+                grid-gap: 5px !important
+                img
+                  width: 30px
+                
+                .delete
+                  &.active
+                    min-height: 15px !important
+                    font-size: 12px !important
+                    line-height: 16px !important
+              
+              .doc-name
+                font-size: 13px
+                line-height: 16px
+          
+          .cabinet-inner 
+            .add_cabinet_box
+              min-width: 140px
+              padding: 0 10px
+              &::after
+                width: 3px
+              .add_btn
+                font-size: 13px
+                line-height: 16px
+                p
+                  padding: 0 5px
+                .square
+                  width: 70px
+                  height: 70px
+                  img
+                    width: 40px
 
   section
     .message-container 
@@ -940,70 +1058,6 @@
       font-size: 15px !important
       line-height: 22px !important
       text-align: center
-
-  .inner-container
-    padding: 15px 0 30px
-    .edit-box 
-      .same_btns
-        margin: 20px 0 7px
-    .inner-head 
-      .same_inner
-        font-size: 16px
-        line-height: 20px
-    
-    .inner-main-box 
-      .inner-item
-        grid-gap: 0
-        padding: 16px 0 0
-        .add-notes
-          padding: 25px 16px
-          font-size: 14px !important
-          line-height: 18px !important
-          margin-bottom: 15px
-
-        .item-title
-          font-size: 17px
-          line-height: 20px
-        
-        .pdf-container 
-          grid-gap: 20px
-          .pdf-link 
-            .doc-img
-              min-width: 60px
-              min-height: 60px
-              height: max-content
-              width: max-content
-              margin: 0 auto
-              grid-gap: 5px !important
-              img
-                width: 30px
-              
-              .delete
-                &.active
-                  min-height: 15px !important
-                  font-size: 12px !important
-                  line-height: 16px !important
-            
-            .doc-name
-              font-size: 13px
-              line-height: 16px
-        
-        .cabinet-inner 
-          .add_cabinet_box
-            min-width: 140px
-            padding: 0 10px
-            &::after
-              width: 3px
-            .add_btn
-              font-size: 13px
-              line-height: 16px
-              p
-                padding: 0 5px
-              .square
-                width: 70px
-                height: 70px
-                img
-                  width: 40px
 
   .recept-box
     padding: 16px 26px 19px
@@ -1297,7 +1351,46 @@
               .modal-title
                 font-size: 15px
                 line-height: 22px
-    
+
+      &.downloadModal
+        .modal-dialog
+          .modal-content
+            padding: 15px 20px 25px !important
+            .modal-body
+              margin-top: 20px
+              label
+                +p-m
+                font-size: 15px !important
+                line-height: 20px !important
+                color: $black2
+                grid-gap: 10px
+                >input
+                  border: 2px solid $border
+                  background: $white
+                  font-size: 12px
+                  line-height: 16px
+                  color: $black2
+
+                textarea
+                  height: 120px
+                  border: 2px solid $border
+                  background: $white
+                  font-size: 12px
+                  line-height: 16px
+                  color: $black2
+
+                
+              .next-add-box
+                grid-gap: 10px
+                button
+                  padding: 0
+                  font-size: 14px
+                  line-height: 18px
+      
+      .modal-dialog
+        max-width: 100% !important
+        margin: 0 25px !important
+            
     .modal-header
       .close
         right: 11px
@@ -1436,22 +1529,18 @@
                   resize: none
                   padding: 0 10px
 
-            .files-box
-              display: grid
-              grid-gap: 15px
-              margin: 10px 0
-              label
-                height: 40px
-                background: #FFFFFF
-                box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.25)
-                +p-m
-                font-size: 20px
-                line-height: 30px
-                color: $black
-                cursor: pointer
-                +flex_2
-                input
-                  display: none
+            .files-box 
+              label 
+                padding-left: 10px
+                .text-file
+                  input
+                    font-size: 12px !important
+                    line-height: 16px !important
+                  
+                .choose_btn
+                  font-size: 12px
+                  line-height: 16px
+                  width: 110px
 
             button
               min-height: 40px
@@ -1467,6 +1556,7 @@
         
         button
           right: 11px
+    
     .new-heading-box
       padding: 0 25px
       .breadcrumbs
@@ -1535,80 +1625,85 @@
             min-width: 75px
 
   .info-room 
-    .inner-container 
+    .inner-container
+      padding-left: 25px
+      padding-right: 25px
+      .edit-box 
+        .same_btns
+          display: flex
+          button
+            flex: 1
+            width: 100%
+      
+      .entrance-box
+        padding: 15px
+        grid-template-columns: auto !important
+        grid-gap: 10px !important
+        p.title
+          grid-column: unset !important
+        
+        .code
+          margin-top: 10px
+
+      .inner-head 
+        .same_inner
+          font-size: 15px
+          line-height: 19px
+          flex-wrap: wrap
+          grid-gap: 5px
+
       .inner-main-box 
-        .inner-item 
+        .inner-item
           #editcontent
             font-size: 12px !important
             line-height: 20px !important
+          
+          button.sent-sms
+            margin: 10px auto
+            max-width: calc( 100% - 20px )
+            font-size: 14px
+            line-height: 17px
+            min-height: 30px
+
+          .add-notes
+            padding: 10px 16px 16px !important
+            font-size: 12px !important
+            line-height: 15px !important
+
+          .item-title
+            font-size: 15px
+            line-height: 19px
+
+          .pdf-container 
+            .pdf-link 
+              .doc-name
+                font-size: 10px
+                line-height: 14px
+              .doc-img
+                .delete
+                  &.active
+                    font-size: 10px !important
+                    line-height: 14px !important
+
+          .cabinet-inner 
+            .add_cabinet_box
+              min-width: 80px
+              padding: 0 5px
+              .add_btn
+                font-size: 10px
+                line-height: 14px
+                p
+                  padding: 0 10px
+                  max-width: 80%
+                  margin: 0 auto
+                .square
+                  width: 50px
+                  height: 50px
+                  img
+                    width: 32px
 
   .index-main-container
     padding: 30px 25px
-
-  .inner-container
-    padding-left: 25px
-    padding-right: 25px
-    .edit-box 
-      .same_btns
-        display: flex
-        button
-          flex: 1
-          width: 100%
-    .entrance-box
-      padding: 15px
-      grid-template-columns: auto !important
-      grid-gap: 10px !important
-      p.title
-        grid-column: unset !important
-      
-      .code
-        margin-top: 10px
-
-    .inner-head 
-      .same_inner
-        font-size: 15px
-        line-height: 19px
-        flex-wrap: wrap
-        grid-gap: 5px
-
-    .inner-main-box 
-      .inner-item
-        .add-notes
-          padding: 10px 16px 16px !important
-          font-size: 12px !important
-          line-height: 15px !important
-
-        .item-title
-          font-size: 15px
-          line-height: 19px
-
-        .pdf-container 
-          .pdf-link 
-            .doc-name
-              font-size: 10px
-              line-height: 14px
-            .doc-img
-              .delete
-                &.active
-                  font-size: 10px !important
-                  line-height: 14px !important
-
-        .cabinet-inner 
-          .add_cabinet_box
-            min-width: 80px
-            padding: 0 5px
-            .add_btn
-              font-size: 10px
-              line-height: 14px
-              p
-                padding: 0 10px
-                max-width: 80%
-                margin: 0 auto
-              .square
-                width: 50px
-                height: 50px
-                img
-                  width: 32px
 
   .recept-box
     padding: 16px 13px 19px
@@ -1645,7 +1740,6 @@
             img
               width: 14px
               height: 14px
-
 
   .patients-main-container
     padding: 30px 25px

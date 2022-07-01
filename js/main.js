@@ -192,18 +192,18 @@ var index = 0;
 $('.add-new-form').on('click',function(){
   index++;
   var label1 = $('<label />', { 
-    text:'Diaqnozun adı'
+    text:'Bölmənin adı'
   });
   var inputFirst = $('<input />', { 
     type : 'text',
-    placeholder:'Diaqnozun adını burda qeyd edin (məsələn, Sətəlcəm)',
+    placeholder:'Məsələn; əvvəlki xəstəliklər və s.',
     required: true
   });
   var label2 = $('<label />', { 
-    text:' Diaqnozun mətni*'
+    text:' Bölmənin mətni*'
   });
   var textarea = $('<textarea />', { 
-    placeholder:'Diaqnozun əsas mətni varsa onu burada yaza bilərsiniz',
+    placeholder:'Bölmənin mətnini burda qeyd edin',
     required: true
   });
   var buttonClose = $('<button />', {
