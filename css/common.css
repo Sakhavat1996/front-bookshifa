@@ -154,7 +154,7 @@ header .header_main_container .header_right .avatar img {
 }
 
 header .header_main_container .header_right .sign_in_out {
-  background: #1C77FF;
+  background: #4098FF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -477,6 +477,27 @@ header .responsive-ul li a {
 
 header .responsive-ul li a:hover {
   border-bottom: 1px solid #4098FF;
+}
+
+.dropdown-menu {
+  min-width: 100%;
+  will-change: unset !important;
+  font-size: unset;
+}
+
+.dropdown-menu.show {
+  width: 100%;
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 5px 10px;
+  white-space: nowrap;
+  font-family: "p-r", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+  clear: unset;
 }
 
 .simplebar-track.simplebar-vertical {
@@ -1673,9 +1694,6 @@ footer .footer_main_container .footer_author {
     font-size: 35px;
     line-height: 42px;
   }
-  footer .footer_main_container ul {
-    padding: 0 60px;
-  }
   .inner-container {
     grid-gap: 13px;
     padding: 20px 0 15px;
@@ -2625,6 +2643,16 @@ footer .footer_main_container .footer_author {
   .info-room .inner-container .inner-main-box .inner-item .cabinet-inner .add_cabinet_box .add_btn .square img {
     width: 40px;
   }
+  section .index-main-container {
+    padding: 25px 0;
+    grid-gap: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
   section .message-container .message-box p {
     max-width: 500px;
     padding-top: 40px;
@@ -2695,14 +2723,6 @@ footer .footer_main_container .footer_author {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-  }
-  .index-main-container {
-    padding: 25px 0;
-    grid-gap: 20px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   .same-big-box {
     padding: 12px 20px 20px !important;
@@ -3356,6 +3376,9 @@ footer .footer_main_container .footer_author {
     line-height: 17px;
     min-width: 75px;
   }
+  section .index-main-container {
+    padding: 30px 25px;
+  }
   .info-room .inner-container {
     padding-left: 25px;
     padding-right: 25px;
@@ -3437,9 +3460,6 @@ footer .footer_main_container .footer_author {
   }
   .info-room .inner-container .inner-main-box .inner-item .cabinet-inner .add_cabinet_box .add_btn .square img {
     width: 32px;
-  }
-  .index-main-container {
-    padding: 30px 25px;
   }
   .recept-box {
     padding: 16px 13px 19px;

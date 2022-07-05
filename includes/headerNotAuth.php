@@ -10,7 +10,17 @@
         </div>
         <div class="header_right">
           <a href="/login/az"><button class="sign_in_out">Daxil ol</button></a>
-          <a href="/registration"><button class="sign_in_out">Qeydiyyatdan keçin</button></a>
+          <div class="dropdown">
+            <a class="sign_in_out dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+              Qeydiyyatdan keçin
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Həkim olaraq</a>
+              <a class="dropdown-item" href="#">Pasiyent olaraq</a>
+            </div>
+            
+          </div>
         </div>
       </div>
     </div>
