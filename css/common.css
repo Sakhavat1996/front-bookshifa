@@ -2037,6 +2037,13 @@ footer .footer_main_container .footer_author {
   .same-big-box {
     padding: 16px 25px 30px !important;
   }
+  .info-room .index-main-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .info-room .index-main-container .same-big-box {
+    height: unset;
+  }
   .info-room .inner-container {
     padding: 15px 0 30px;
   }
