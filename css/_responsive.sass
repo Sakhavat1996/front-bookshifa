@@ -517,7 +517,6 @@
   .same-big-box
     padding: 16px 25px 30px !important
     
-
   .info-room
     .index-main-container
       flex-wrap: wrap
@@ -727,7 +726,6 @@
               font-size: 16px
               line-height: 20px
 
-
   footer
     .footer_main_container 
       .footer_logo
@@ -841,7 +839,7 @@
             padding: 20px 30px 35px
             form
               margin-top: 35px
-
+      
       .modal-dialog
         max-width: 540px
           
@@ -865,6 +863,20 @@
               font-size: 15px
               line-height: 18px
 
+            .next-add-box 
+              .question 
+                .question-absolute-box 
+                  .inner-question
+                    width: 250px
+                    padding: 12px
+                    p
+                      font-size: 12px
+                      line-height: 16px
+                    
+                    button
+                      height: 32px
+                      min-width: 95px
+                      max-width: max-content
           form
             label
               &:not(.custom-label)
@@ -923,6 +935,40 @@
 
               button[type="submit"]
                 margin-top: 4px
+
+      &.typeModal 
+        .pattern-container 
+          .example-pattern-guide
+            padding: 12px 20px
+            grid-gap: 1rem
+            >p
+              font-size: 17px
+              line-height: 21px
+            
+            .grid-about
+              grid-template-columns: 1fr
+              grid-gap: 1rem
+              margin-top: 0
+              >p
+                grid-row-start: 2
+              
+              .pattern-examples
+                +flex_2
+                grid-gap: 1rem
+                .p-example
+                  grid-gap: 8px
+                  img
+                    max-width: 75px
+                  
+                  p
+                    font-size: 13px
+                    line-height: 16px
+              
+            .close-absolute-pop-up
+              font-size: 14px
+              line-height: 21px
+              min-width: 95px
+              min-height: 32px
 
   .profile-container
     grid-template-columns: 1fr
@@ -1127,7 +1173,6 @@
             min-width: 90px
             width: max-content
 
-  
   .same-big-box
     padding: 12px 20px 20px !important
     width: 100%
@@ -1480,7 +1525,21 @@
                   font-size: 14px
                   line-height: 18px
       
-      &.typeModal 
+      &.typeModal
+        .pattern-container 
+          .example-pattern-guide
+            padding: 12px 18px
+            >p
+              font-size: 14px
+              line-height: 17px
+            
+            .grid-about
+              .pattern-examples
+                .p-example
+                  p
+                    font-size: 12px
+                    line-height: 15px
+              
         .modal-dialog 
           .modal-content
             padding: 12px 15px 22px

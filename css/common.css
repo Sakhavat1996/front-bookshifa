@@ -2503,6 +2503,21 @@ footer .footer_main_container .footer_author {
     font-size: 15px;
     line-height: 18px;
   }
+  .modal.addModal .modal-dialog .modal-content .modal-body .next-add-box .question .question-absolute-box .inner-question {
+    width: 250px;
+    padding: 12px;
+  }
+  .modal.addModal .modal-dialog .modal-content .modal-body .next-add-box .question .question-absolute-box .inner-question p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .modal.addModal .modal-dialog .modal-content .modal-body .next-add-box .question .question-absolute-box .inner-question button {
+    height: 32px;
+    min-width: 95px;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
   .modal.addModal .modal-dialog .modal-content form label:not(.custom-label) {
     font-size: 17px;
     line-height: 21px;
@@ -2558,6 +2573,52 @@ footer .footer_main_container .footer_author {
   }
   .modal.addModal.smsModal .modal-dialog .modal-content .modal-body button[type="submit"] {
     margin-top: 4px;
+  }
+  .modal.addModal.typeModal .pattern-container .example-pattern-guide {
+    padding: 12px 20px;
+    grid-gap: 1rem;
+  }
+  .modal.addModal.typeModal .pattern-container .example-pattern-guide > p {
+    font-size: 17px;
+    line-height: 21px;
+  }
+  .modal.addModal.typeModal .pattern-container .example-pattern-guide .grid-about {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    margin-top: 0;
+  }
+  .modal.addModal.typeModal .pattern-container .example-pattern-guide .grid-about > p {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+  }
+  .modal.addModal.typeModal .pattern-container .example-pattern-guide .grid-about .pattern-examples {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-gap: 1rem;
+  }
+  .modal.addModal.typeModal .pattern-container .example-pattern-guide .grid-about .pattern-examples .p-example {
+    grid-gap: 8px;
+  }
+  .modal.addModal.typeModal .pattern-container .example-pattern-guide .grid-about .pattern-examples .p-example img {
+    max-width: 75px;
+  }
+  .modal.addModal.typeModal .pattern-container .example-pattern-guide .grid-about .pattern-examples .p-example p {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .modal.addModal.typeModal .pattern-container .example-pattern-guide .close-absolute-pop-up {
+    font-size: 14px;
+    line-height: 21px;
+    min-width: 95px;
+    min-height: 32px;
   }
   .profile-container {
     -ms-grid-columns: 1fr;
@@ -3178,6 +3239,17 @@ footer .footer_main_container .footer_author {
     padding: 0;
     font-size: 14px;
     line-height: 18px;
+  }
+  .modal.addModal.typeModal .pattern-container .example-pattern-guide {
+    padding: 12px 18px;
+  }
+  .modal.addModal.typeModal .pattern-container .example-pattern-guide > p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .modal.addModal.typeModal .pattern-container .example-pattern-guide .grid-about .pattern-examples .p-example p {
+    font-size: 12px;
+    line-height: 15px;
   }
   .modal.addModal.typeModal .modal-dialog .modal-content {
     padding: 12px 15px 22px;
@@ -4123,6 +4195,7 @@ button {
 }
 
 .modal.typeModal {
+  padding-left: 0 !important;
   padding-right: 17px;
 }
 
@@ -4135,7 +4208,6 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  grid-gap: 20px;
   background: #ffffff;
   margin-top: 22px;
   padding: 15px;
@@ -4222,7 +4294,7 @@ button {
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
   grid-gap: 25px;
-  padding: 0 35px;
+  padding: 20px 35px 10px;
   overflow-x: auto;
 }
 
@@ -5088,7 +5160,7 @@ form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question 
 }
 
 form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question .question-absolute-box .inner-question p {
-  font-family: "p-m", Arial, sans-serif;
+  font-family: "p-r", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;

@@ -191,11 +191,11 @@ button
                     background: white
 
   &.typeModal
+    padding-left: 0 !important
     padding-right: 17px
     .pattern-container
       position: relative
       +flex_5
-      grid-gap: 20px
       background: $white
       margin-top: 22px
       padding: 15px
@@ -248,7 +248,7 @@ button
         display: grid
         grid-template-columns: repeat(5,1fr)
         grid-gap: 25px
-        padding: 0 35px
+        padding: 20px 35px 10px
         overflow-x: auto
         a
           +flex_5
@@ -778,7 +778,7 @@ form
                   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25)
                   border-radius: 14px
                   p
-                    +p-m
+                    +p-r
                     font-size: 14px
                     line-height: 21px
                     color: $black2
