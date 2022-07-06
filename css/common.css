@@ -4275,7 +4275,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  grid-gap: 30px;
+  grid-gap: 20px;
   width: 100%;
   left: 0;
   top: 55px;
@@ -4310,6 +4310,7 @@ button {
   -ms-grid-columns: 200px 1fr;
       grid-template-columns: 200px 1fr;
   grid-gap: 45px;
+  margin-top: 10px;
 }
 
 .modal.typeModal .pattern-container .example-pattern-guide .grid-about p {
@@ -4349,6 +4350,32 @@ button {
   color: #333333;
   word-break: break-all;
   text-align: center;
+}
+
+.modal.typeModal .pattern-container .example-pattern-guide .close-absolute-pop-up {
+  min-width: 80px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  min-height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px 9px;
+  background: #4098FF;
+  border-radius: 10px;
+  font-family: "p-m", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+  margin-left: auto;
 }
 
 .modal.typeModal #overlay {
@@ -5023,20 +5050,21 @@ form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question 
   position: relative;
 }
 
-form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question:hover .question-absolute-box {
-  opacity: 1;
-  visibility: visible;
-}
-
 form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question .question-absolute-box {
   position: absolute;
   right: -13px;
-  top: 26px;
+  top: 35px;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
-  padding-top: 13px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question .question-absolute-box.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question .question-absolute-box .inner-question {

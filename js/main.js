@@ -323,6 +323,19 @@ $('.pattern-boxes .pattern-single-box').on('click',function(){
   })
 })
 
+// pattern onclick show guide div
+$(document).on('click', function(e){
+  let accordion = '.absolute-fag-pop';
+  if($(e.target).parents('.question-pattern').length) $(accordion).toggleClass('show');  
+  else if($(e.target).parents(accordion).length || $(accordion).is(e.target) ){
+    return null
+  }
+  else{
+    $(accordion).removeClass('show')
+  }
+})
+
+// input phone number mask
 $("#phone").on("input", function() {
   if (/^0/.test(this.value)) {
     this.value = this.value.replace(/^0/, "")
@@ -331,14 +344,8 @@ $("#phone").on("input", function() {
 
 $('#phone').inputmask('99-999-99-99')
 
-// pattern onclick show guide div
-// $(document).on('click', function(e){
-//   let accordion = '.example-pattern-guide';
-//   if($(e.target).parents('.question-pattern').length) $(accordion).toggleClass('show');  
-//   else if($(e.target).parents(accordion).length && $(accordion).is(e.target) ){
-//     return null
-//   }
-//   else{
-//     $(accordion).removeClass('show')
-//   }
-// })
+
+// close-absolute-pop-up
+$('.close-absolute-pop-up').on('click',function(){
+  $(this).parents('.absolute-fag-pop').removeClass('show')
+})

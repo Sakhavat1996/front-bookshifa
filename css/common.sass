@@ -275,7 +275,7 @@ button
         position: absolute
         background: $white
         +flex_5
-        grid-gap: 30px
+        grid-gap: 20px
         width: 100%
         left: 0
         top: 55px
@@ -300,6 +300,7 @@ button
           display: grid
           grid-template-columns: 200px 1fr
           grid-gap: 45px
+          margin-top: 10px
           p
             +p-r
             font-size: 10px
@@ -321,6 +322,20 @@ button
                 color: $black2
                 word-break: break-all
                 text-align: center
+
+        .close-absolute-pop-up
+          min-width: 80px
+          max-width: max-content
+          min-height: 36px
+          +flex_2
+          padding: 5px 9px
+          background: $blue2
+          border-radius: 10px
+          +p-m
+          font-size: 15px
+          line-height: 22px
+          color: $white
+          margin-left: auto
 
 
     #overlay	
@@ -736,22 +751,23 @@ form
               line-height: 27px
               color: $blue2
               margin: 0
-            
+
             .question
               cursor: pointer
               position: relative
-              &:hover
-                .question-absolute-box
-                  opacity: 1
-                  visibility: visible
+
               .question-absolute-box
                 position: absolute
                 right: -13px
-                top: 26px
+                top: 35px
                 opacity: 0
                 visibility: hidden
                 transition: opacity .3s
-                padding-top: 13px
+                transition: all .3s
+                &.show
+                  opacity: 1
+                  visibility: visible
+
                 .inner-question
                   background: $white
                   +flex_5

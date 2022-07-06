@@ -303,11 +303,13 @@
                                 <img src="img/pen.svg" alt="">
                             </button>
                             <div class="question">
-                                <img src="img/question.svg" alt="">
-                                <div class="question-absolute-box">
+                                <div class="question-img question-pattern">
+                                    <img src="img/question.svg" alt="">
+                                </div>
+                                <div class="question-absolute-box absolute-fag-pop">
                                     <div class="inner-question">
                                         <p>Burada siz diaqnozu fayl olaraq yükləmək əvəzinə, bölmələri dolduraraq diaqnozu yaza bilər və ya şablondan istifadə edə bilərsiniz.</p>
-                                        <button type="button">Bağla</button>
+                                        <button type="button" class="close-absolute-pop-up">Bağla</button>
                                     </div>
                                 </div>
                             </div>
@@ -360,7 +362,7 @@
                                 <p>Şablon 5</p>
                             </a>
                         </div>
-                        <div class="example-pattern-guide">
+                        <div class="example-pattern-guide absolute-fag-pop">
                             <p>Şablon diaqnoz bölmələri nədir?</p>
                             <div class="grid-about">
                                 <p>
@@ -378,6 +380,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <button type="button" class="close-absolute-pop-up">
+                                Bağla
+                            </button>
                         </div>
                     </div>
                     <div class="modal-body">
