@@ -59,6 +59,7 @@
   .modal
     &.show
       padding-right: 0 !important
+      padding-left: 0 !important
       
     &.addModal
       &:not(.sureModal)
@@ -342,6 +343,71 @@
               label
                 font-size: 21px !important
                 line-height: 25px !important
+
+      &.typeModal 
+        .modal-dialog 
+          .modal-content
+            .typeModal-static-box 
+              .same-style-box
+                grid-gap: 20px
+            
+            .typeModal-pattern-box
+              & > p
+                font-size: 20px
+                line-height: 24px
+                margin-bottom: 15px
+              
+              .standart-size
+                padding: 15px 20px
+                textarea
+                  margin-top: 15px
+                
+                &.radiobox
+                  & > p 
+                    font-size: 20px
+                    line-height: 24px
+                  
+                  .custom-label
+                    height: 40px
+                    font-size: 16px
+                    line-height: 20px
+                    .checkmark
+                      height: 20px
+                      width: 20px
+                      top: 10px
+                      right: 10px
+                      &::after
+                        width: 12px
+                        height: 12px
+                
+                &.text-label
+                  font-size: 20px
+                  line-height: 24px
+                
+                &.files-box
+                  grid-gap: 15px
+                  p
+                    font-size: 20px
+                    line-height: 24px
+                &:not(:last-child)
+                  margin-bottom: 15px
+
+            .modal-body 
+              label
+                font-size: 21px
+                line-height: 25px
+                grid-gap: 8px
+                input
+                  min-height: 45px
+                  padding: 12px 10px
+                  font-size: 12px
+                  line-height: 14px
+                
+                textarea
+                  height: 120px
+                  padding: 12px
+                  font-size: 12px
+                  line-height: 14px
 
       .modal-dialog
         max-width: 650px
@@ -1414,14 +1480,103 @@
                   font-size: 14px
                   line-height: 18px
       
+      &.typeModal 
+        .modal-dialog 
+          .modal-content
+            padding: 12px 15px 22px
+            .typeModal-static-box
+              margin-top: 15px
+              grid-gap: 15px
+              .same-style-box
+                grid-gap: 10px
+                padding: 25px 15px
+
+              .add-new-form
+                margin: 10px auto 0
+                font-size: 14px
+                line-height: 21px
+                min-height: 32px
+            
+            .typeModal-pattern-box
+              margin-top: 1rem
+              & > p
+                font-size: 17px
+                line-height: 22px
+                margin-bottom: 15px
+              
+              .standart-size
+                padding: 15px !important
+                textarea
+                  margin-top: 7px
+                
+                &.radiobox
+                  & > p 
+                    font-size: 16px
+                    line-height: 20px
+                  
+                  .custom-label
+                    height: 35px
+                    font-size: 14px
+                    line-height: 18px
+                    .checkmark
+                      height: 16px
+                      width: 16px
+                      top: 9px
+                      right: 9px
+                      &::after
+                        width: 8px
+                        height: 8px
+                        border-radius: 2px
+                
+                &.text-label
+                  font-size: 16px
+                  line-height: 20px
+                
+                &.files-box
+                  grid-gap: 12px
+                  p
+                    font-size: 16px
+                    line-height: 20px
+                
+            .modal-body 
+              label
+                grid-gap: 5px
+                font-size: 15px
+                line-height: 22px
+                input
+                  min-height: 40px
+                  padding: 12px 6px
+                  font-size: 12px
+                  line-height: 16px
+                
+                textarea
+                  height: 100px
+                  padding: 8px
+                  font-size: 12px
+                  line-height: 16px
+            
+            .type-footer
+              margin-top: 25px
+              button
+                font-size: 14px
+                line-height: 21px
+              button.back-to-first-modal
+                font-size: 12px
+                line-height: 18px
+                grid-gap: 10px
+                padding: 0 5px
+                min-height: unset
+
       .modal-dialog
         max-width: 100% !important
-        margin: 0 25px !important
+        margin: 0 10px !important
             
     .modal-header
       .close
-        right: 11px
-        top: 11px
+        right: 12px !important
+        top: 12px !important
+        width: max-content !important
+        height: max-content !important
       .modal-title
         font-size: 15px
         line-height: 22px
@@ -1538,20 +1693,20 @@
                 font-size: 15px
                 line-height: 20px
                 +p-m
-                color: $blue
+                color: $black2
                 +flex_5
                 input
                   height: 40px
                   width: 100%
-                  background: $gray2
-                  border: 2px solid $gray
+                  background: $white
+                  border: 2px solid $border
                   border-radius: 10px
                   padding: 0 10px
                 textarea
                   width: 100%
                   height: 250px
-                  background: $gray2
-                  border: 2px solid $gray
+                  background: $white
+                  border: 2px solid $border
                   border-radius: 10px
                   resize: none
                   padding: 0 10px
@@ -1569,10 +1724,10 @@
                   line-height: 16px
                   width: 110px
 
-            button
-              min-height: 40px
-              font-size: 12px
-              line-height: 16px
+            button[type='submit']
+              min-height: 32px !important
+              font-size: 12px !important
+              line-height: 16px !important
 
   section
     .message-container 

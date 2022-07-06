@@ -1637,6 +1637,7 @@ footer .footer_main_container .footer_author {
   }
   .modal.show {
     padding-right: 0 !important;
+    padding-left: 0 !important;
   }
   .modal.addModal:not(.sureModal) .modal-dialog {
     max-width: 800px;
@@ -1949,6 +1950,70 @@ footer .footer_main_container .footer_author {
   .modal.addModal.downloadModal .modal-dialog .modal-content .modal-body label {
     font-size: 21px !important;
     line-height: 25px !important;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-static-box .same-style-box {
+    grid-gap: 20px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box > p {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size {
+    padding: 15px 20px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size textarea {
+    margin-top: 15px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox > p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox .custom-label {
+    height: 40px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox .custom-label .checkmark {
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    right: 10px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox .custom-label .checkmark::after {
+    width: 12px;
+    height: 12px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.text-label {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.files-box {
+    grid-gap: 15px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.files-box p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .modal-body label {
+    font-size: 21px;
+    line-height: 25px;
+    grid-gap: 8px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .modal-body label input {
+    min-height: 45px;
+    padding: 12px 10px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .modal-body label textarea {
+    height: 120px;
+    padding: 12px;
+    font-size: 12px;
+    line-height: 14px;
   }
   .modal.addModal .modal-dialog {
     max-width: 650px;
@@ -3114,13 +3179,112 @@ footer .footer_main_container .footer_author {
     font-size: 14px;
     line-height: 18px;
   }
+  .modal.addModal.typeModal .modal-dialog .modal-content {
+    padding: 12px 15px 22px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-static-box {
+    margin-top: 15px;
+    grid-gap: 15px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-static-box .same-style-box {
+    grid-gap: 10px;
+    padding: 25px 15px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-static-box .add-new-form {
+    margin: 10px auto 0;
+    font-size: 14px;
+    line-height: 21px;
+    min-height: 32px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box {
+    margin-top: 1rem;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box > p {
+    font-size: 17px;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size {
+    padding: 15px !important;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size textarea {
+    margin-top: 7px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox > p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox .custom-label {
+    height: 35px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox .custom-label .checkmark {
+    height: 16px;
+    width: 16px;
+    top: 9px;
+    right: 9px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.radiobox .custom-label .checkmark::after {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.text-label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.files-box {
+    grid-gap: 12px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .typeModal-pattern-box .standart-size.files-box p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .modal-body label {
+    grid-gap: 5px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .modal-body label input {
+    min-height: 40px;
+    padding: 12px 6px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .modal-body label textarea {
+    height: 100px;
+    padding: 8px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .type-footer {
+    margin-top: 25px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .type-footer button {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .modal.addModal.typeModal .modal-dialog .modal-content .type-footer button.back-to-first-modal {
+    font-size: 12px;
+    line-height: 18px;
+    grid-gap: 10px;
+    padding: 0 5px;
+    min-height: unset;
+  }
   .modal.addModal .modal-dialog {
     max-width: 100% !important;
-    margin: 0 25px !important;
+    margin: 0 10px !important;
   }
   .modal .modal-header .close {
-    right: 11px;
-    top: 11px;
+    right: 12px !important;
+    top: 12px !important;
+    width: -webkit-max-content !important;
+    width: -moz-max-content !important;
+    width: max-content !important;
+    height: -webkit-max-content !important;
+    height: -moz-max-content !important;
+    height: max-content !important;
   }
   .modal .modal-header .modal-title {
     font-size: 15px;
@@ -3247,7 +3411,7 @@ footer .footer_main_container .footer_author {
     line-height: 20px;
     font-family: "p-m", Arial, sans-serif;
     font-weight: 400;
-    color: #1C77FF;
+    color: #333333;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3259,16 +3423,16 @@ footer .footer_main_container .footer_author {
   form .addModal .modal-dialog .modal-content .modal-body label:not(.custom-label) input {
     height: 40px;
     width: 100%;
-    background: #F6F6F6;
-    border: 2px solid #DADADA;
+    background: #ffffff;
+    border: 2px solid #DCEAFF;
     border-radius: 10px;
     padding: 0 10px;
   }
   form .addModal .modal-dialog .modal-content .modal-body label:not(.custom-label) textarea {
     width: 100%;
     height: 250px;
-    background: #F6F6F6;
-    border: 2px solid #DADADA;
+    background: #ffffff;
+    border: 2px solid #DCEAFF;
     border-radius: 10px;
     resize: none;
     padding: 0 10px;
@@ -3285,10 +3449,10 @@ footer .footer_main_container .footer_author {
     line-height: 16px;
     width: 110px;
   }
-  form .addModal .modal-dialog .modal-content .modal-body button {
-    min-height: 40px;
-    font-size: 12px;
-    line-height: 16px;
+  form .addModal .modal-dialog .modal-content .modal-body button[type='submit'] {
+    min-height: 32px !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
   }
   section .message-container .message-box p {
     max-width: 100%;
@@ -3787,6 +3951,26 @@ button {
   color: #4098FF;
 }
 
+.modal.newPatient .modal-dialog .modal-content form .form-first .block-second .input-number-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 65px 1fr;
+      grid-template-columns: 65px 1fr;
+  height: 50px;
+  background: #F6F6F6;
+  border: 1px solid #DADADA;
+  border-radius: 10px;
+  padding: 0 15px;
+}
+
+.modal.newPatient .modal-dialog .modal-content form .form-first .block-second .input-number-container input {
+  height: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  border-radius: unset;
+}
+
 .modal.newPatient .modal-dialog .modal-content form .form-first .advise {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3938,7 +4122,12 @@ button {
   background: white;
 }
 
+.modal.typeModal {
+  padding-right: 17px;
+}
+
 .modal.typeModal .pattern-container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3972,6 +4161,7 @@ button {
   position: absolute;
   left: 0;
   top: 0;
+  cursor: pointer;
 }
 
 .modal.typeModal .pattern-container .pattern-header p {
@@ -4033,6 +4223,7 @@ button {
       grid-template-columns: repeat(5, 1fr);
   grid-gap: 25px;
   padding: 0 35px;
+  overflow-x: auto;
 }
 
 .modal.typeModal .pattern-container .pattern-boxes a {
@@ -4072,6 +4263,92 @@ button {
   color: #333333;
   text-align: center;
   word-break: break-word;
+}
+
+.modal.typeModal .pattern-container .example-pattern-guide {
+  position: absolute;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 30px;
+  width: 100%;
+  left: 0;
+  top: 55px;
+  padding: 15px 40px 30px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.modal.typeModal .pattern-container .example-pattern-guide.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal.typeModal .pattern-container .example-pattern-guide > p {
+  font-family: "p-r", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  word-break: break-all;
+}
+
+.modal.typeModal .pattern-container .example-pattern-guide .grid-about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 1fr;
+      grid-template-columns: 200px 1fr;
+  grid-gap: 45px;
+}
+
+.modal.typeModal .pattern-container .example-pattern-guide .grid-about p {
+  font-family: "p-r", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  word-break: break-all;
+  color: #333333;
+}
+
+.modal.typeModal .pattern-container .example-pattern-guide .grid-about .pattern-examples {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 45px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.modal.typeModal .pattern-container .example-pattern-guide .grid-about .pattern-examples .p-example {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 15px;
+}
+
+.modal.typeModal .pattern-container .example-pattern-guide .grid-about .pattern-examples .p-example p {
+  font-family: "p-r", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #333333;
+  word-break: break-all;
+  text-align: center;
 }
 
 .modal.typeModal #overlay {

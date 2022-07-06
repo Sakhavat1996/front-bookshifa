@@ -126,6 +126,7 @@ editOrSave=(item)=>{
      $(".add-notes").show();
   }
 }
+
 $('.save_btn').on('click',function(){
   $('.same_btns').removeClass('hide')
   $('.second_btns').addClass('hide');
@@ -321,3 +322,23 @@ $('.pattern-boxes .pattern-single-box').on('click',function(){
     }, 500);
   })
 })
+
+$("#phone").on("input", function() {
+  if (/^0/.test(this.value)) {
+    this.value = this.value.replace(/^0/, "")
+  }
+})
+
+$('#phone').inputmask('99-999-99-99')
+
+// pattern onclick show guide div
+// $(document).on('click', function(e){
+//   let accordion = '.example-pattern-guide';
+//   if($(e.target).parents('.question-pattern').length) $(accordion).toggleClass('show');  
+//   else if($(e.target).parents(accordion).length && $(accordion).is(e.target) ){
+//     return null
+//   }
+//   else{
+//     $(accordion).removeClass('show')
+//   }
+// })

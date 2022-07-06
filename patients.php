@@ -113,7 +113,10 @@
                           <div class="block-second">
                             <input type="email" required placeholder="Elektron mail">
                             <p>VƏ YA</p>
-                            <input type="text" required placeholder="Telefon nömrəsi">
+                            <div class="input-number-container">
+                              <input type="text" disabled value="994">
+                              <input type="text" name="phone" id="phone" placeholder="XX-XXX-XX-XX">
+                            </div>
                           </div>
                           <p class="advise">Hər ikisini doldurmağınız məsləhətlidir.</p>
                         </div>

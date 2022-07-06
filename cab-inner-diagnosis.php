@@ -360,6 +360,25 @@
                                 <p>Şablon 5</p>
                             </a>
                         </div>
+                        <div class="example-pattern-guide">
+                            <p>Şablon diaqnoz bölmələri nədir?</p>
+                            <div class="grid-about">
+                                <p>
+                                    Bookshifa tibb sahəsində bir çox fərqli standartla işləyən həkimə  fəaliyyət göstərdiyinə görə fərqli diaqnoz yazma üsullarını təqdim həkimə təqdim edir. 
+                                    Buradan siz öz istəyinizə uyğun şablonu seçərək diaqnozu yaza bilərsiniz. Əgər sizə lazım olan şablon burda yoxdursa, əlavə etmək üçün Bookshifa ilə əlaqə saxlayın.
+                                </p>
+                                <div class="pattern-examples">
+                                    <div class="p-example">
+                                        <div class="example-img"><img src="img/example-pattern.png" alt=""></div>
+                                        <p>Şablon 1</p>
+                                    </div>
+                                    <div class="p-example">
+                                        <div class="example-img"><img src="img/example-pattern.png" alt=""></div>
+                                        <p>Şablon 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-body">
                         <div class="typeModal-static-box">
