@@ -2574,9 +2574,57 @@ footer .footer_main_container .footer_author {
   .modal.addModal.smsModal .modal-dialog .modal-content .modal-body button[type="submit"] {
     margin-top: 4px;
   }
+  .modal.addModal.typeModal .pattern-container .pattern-header .question-pattern {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 23px;
+    height: 23px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-header p {
+    font-size: 17px;
+    line-height: 21px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-header button {
+    grid-gap: 8px;
+    min-width: 100px;
+    min-height: 30px;
+    padding: 5px 10px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-header button p {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-header button img {
+    width: 8px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .pattern-boxes {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    grid-gap: 15px;
+    padding: 20px 10px 10px 0;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .pattern-boxes a {
+    grid-gap: 10px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .pattern-boxes a img {
+    width: 110px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .pattern-boxes a.choose {
+    padding: 5px;
+    border: 2px solid #4098FF;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .pattern-boxes a p {
+    font-size: 12px;
+    line-height: 15px;
+  }
   .modal.addModal.typeModal .pattern-container .example-pattern-guide {
     padding: 12px 20px;
     grid-gap: 1rem;
+    top: 45px;
   }
   .modal.addModal.typeModal .pattern-container .example-pattern-guide > p {
     font-size: 17px;
@@ -3204,7 +3252,7 @@ footer .footer_main_container .footer_author {
     line-height: 22px;
   }
   .modal.addModal.downloadModal .modal-dialog .modal-content {
-    padding: 15px 20px 25px !important;
+    padding: 15px 15px 25px !important;
   }
   .modal.addModal.downloadModal .modal-dialog .modal-content .modal-body {
     margin-top: 20px;
@@ -3239,6 +3287,48 @@ footer .footer_main_container .footer_author {
     padding: 0;
     font-size: 14px;
     line-height: 18px;
+  }
+  .modal.addModal.typeModal .pattern-container {
+    padding: 14px 12px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-header .question-pattern {
+    width: 20px;
+    height: 20px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-header p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-header button {
+    grid-gap: 5px;
+    min-width: 80px;
+    min-height: 24px;
+    padding: 4px 7px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-header button p {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-header button img {
+    width: 8px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-header button.minimize {
+    right: 10px;
+    bottom: 10px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .pattern-boxes {
+    grid-gap: 8px;
+    padding: 20px 10px 3px 0;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .pattern-boxes a {
+    grid-gap: 6px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .pattern-boxes a img {
+    width: 75px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .pattern-boxes a p {
+    font-size: 10px;
+    line-height: 15px;
   }
   .modal.addModal.typeModal .pattern-container .example-pattern-guide {
     padding: 12px 18px;
@@ -3346,7 +3436,12 @@ footer .footer_main_container .footer_author {
   }
   .modal.addModal .modal-dialog {
     max-width: 100% !important;
-    margin: 0 10px !important;
+  }
+  .modal.addModal .modal-dialog .modal-content .modal-body .files-box label .choose_btn {
+    font-size: 12px;
+    line-height: 16px;
+    grid-gap: 5px;
+    width: 96px;
   }
   .modal .modal-header .close {
     right: 12px !important;
@@ -3513,8 +3608,8 @@ footer .footer_main_container .footer_author {
     padding-left: 10px;
   }
   form .addModal .modal-dialog .modal-content .modal-body .files-box label .text-file input {
-    font-size: 12px !important;
-    line-height: 16px !important;
+    font-size: 10px !important;
+    line-height: 15px !important;
   }
   form .addModal .modal-dialog .modal-content .modal-body .files-box label .choose_btn {
     font-size: 12px;
@@ -3871,6 +3966,14 @@ footer .footer_main_container .footer_author {
     line-height: 16px;
     min-width: unset;
   }
+  .modal.addModal.typeModal .pattern-container .pattern-header > p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-header button {
+    padding: 4px;
+    grid-gap: 3px;
+  }
   footer .footer_main_container ul {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -4214,25 +4317,25 @@ button {
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
+  -webkit-transition: padding .5s;
+  transition: padding .5s;
+}
+
+.modal.typeModal .pattern-container.open {
+  padding-bottom: 45px;
 }
 
 .modal.typeModal .pattern-container .pattern-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
 }
 
 .modal.typeModal .pattern-container .pattern-header .question-pattern {
-  position: absolute;
-  left: 0;
-  top: 0;
   cursor: pointer;
 }
 
@@ -4240,7 +4343,7 @@ button {
   font-family: "p-m", Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 25px;
   color: #333333;
   max-width: 200px;
   margin: 0 auto;
@@ -4249,10 +4352,11 @@ button {
 }
 
 .modal.typeModal .pattern-container .pattern-header button {
-  position: absolute;
-  right: 0;
-  top: 0;
   background: none;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4267,20 +4371,26 @@ button {
   min-height: 36px;
   height: unset;
   padding: 5px 15px;
-  font-family: "p-m", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-  color: #4098FF;
   border: 2px solid #4098FF;
   border-radius: 20px;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 
+.modal.typeModal .pattern-container .pattern-header button p {
+  font-family: "p-m", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #4098FF;
+}
+
 .modal.typeModal .pattern-container .pattern-header button:hover {
-  color: #ffffff;
   background: #4098FF;
+}
+
+.modal.typeModal .pattern-container .pattern-header button:hover p {
+  color: #ffffff;
 }
 
 .modal.typeModal .pattern-container .pattern-header button:hover img {
@@ -4288,7 +4398,22 @@ button {
           filter: brightness(0) invert(1);
 }
 
-.modal.typeModal .pattern-container .pattern-boxes {
+.modal.typeModal .pattern-container .pattern-header button.minimize {
+  position: absolute;
+  right: 13px;
+  bottom: 6px;
+}
+
+.modal.typeModal .pattern-container .pattern-header button.minimize img {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.modal.typeModal .pattern-container .pattern-main-container {
+  display: none;
+}
+
+.modal.typeModal .pattern-container .pattern-main-container .pattern-boxes {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[5];
@@ -4298,7 +4423,7 @@ button {
   overflow-x: auto;
 }
 
-.modal.typeModal .pattern-container .pattern-boxes a {
+.modal.typeModal .pattern-container .pattern-main-container .pattern-boxes a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4314,7 +4439,7 @@ button {
   transition: all .3s;
 }
 
-.modal.typeModal .pattern-container .pattern-boxes a.choose {
+.modal.typeModal .pattern-container .pattern-main-container .pattern-boxes a.choose {
   border: 3px solid #4098FF;
   padding: 25px 20px 5px;
   -webkit-box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.15);
@@ -4322,12 +4447,12 @@ button {
   border-radius: 10px;
 }
 
-.modal.typeModal .pattern-container .pattern-boxes a img {
+.modal.typeModal .pattern-container .pattern-main-container .pattern-boxes a img {
   max-width: 120px;
   max-height: 140px;
 }
 
-.modal.typeModal .pattern-container .pattern-boxes a p {
+.modal.typeModal .pattern-container .pattern-main-container .pattern-boxes a p {
   font-family: "p-m", Arial, sans-serif;
   font-weight: 400;
   font-size: 15px;

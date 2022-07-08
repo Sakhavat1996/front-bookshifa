@@ -938,9 +938,48 @@
 
       &.typeModal 
         .pattern-container 
+          .pattern-header 
+            .question-pattern
+              display: flex
+              width: 23px
+              height: 23px
+              
+            p
+              font-size: 17px
+              line-height: 21px
+            
+            button
+              grid-gap: 8px
+              min-width: 100px
+              min-height: 30px
+              padding: 5px 10px
+              p
+                font-size: 13px
+                line-height: 16px
+              img
+                width: 8px
+          
+          .pattern-main-container 
+            .pattern-boxes
+              max-width: max-content
+              grid-gap: 15px
+              padding: 20px 10px 10px 0
+              a
+                grid-gap: 10px
+                img
+                  width: 110px
+                &.choose
+                  padding: 5px
+                  border: 2px solid $blue2
+                  box-shadow: none
+                p
+                  font-size: 12px
+                  line-height: 15px
+
           .example-pattern-guide
             padding: 12px 20px
             grid-gap: 1rem
+            top: 45px
             >p
               font-size: 17px
               line-height: 21px
@@ -1493,7 +1532,7 @@
       &.downloadModal
         .modal-dialog
           .modal-content
-            padding: 15px 20px 25px !important
+            padding: 15px 15px 25px !important
             .modal-body
               margin-top: 20px
               label
@@ -1526,7 +1565,43 @@
                   line-height: 18px
       
       &.typeModal
-        .pattern-container 
+        .pattern-container
+          padding: 14px 12px
+          .pattern-header 
+            .question-pattern
+              width: 20px
+              height: 20px
+              
+            p
+              font-size: 14px
+              line-height: 18px
+            
+            button
+              grid-gap: 5px
+              min-width: 80px
+              min-height: 24px
+              padding: 4px 7px
+              p
+                font-size: 10px
+                line-height: 12px
+              img
+                width: 8px
+              &.minimize
+                right: 10px
+                bottom: 10px
+          
+          .pattern-main-container 
+            .pattern-boxes
+              grid-gap: 8px
+              padding: 20px 10px 3px 0
+              a
+                grid-gap: 6px
+                img
+                  width: 75px
+                p
+                  font-size: 10px
+                  line-height: 15px
+
           .example-pattern-guide
             padding: 12px 18px
             >p
@@ -1628,8 +1703,16 @@
 
       .modal-dialog
         max-width: 100% !important
-        margin: 0 10px !important
-            
+        .modal-content 
+          .modal-body 
+            .files-box 
+              label 
+                .choose_btn
+                  font-size: 12px
+                  line-height: 16px
+                  grid-gap: 5px
+                  width: 96px
+
     .modal-header
       .close
         right: 12px !important
@@ -1775,8 +1858,8 @@
                 padding-left: 10px
                 .text-file
                   input
-                    font-size: 12px !important
-                    line-height: 16px !important
+                    font-size: 10px !important
+                    line-height: 15px !important
                   
                 .choose_btn
                   font-size: 12px
@@ -2127,6 +2210,19 @@
               font-size: 12px
               line-height: 16px
               min-width: unset
+
+  .modal
+    &.addModal
+      &.typeModal 
+        .pattern-container 
+          .pattern-header
+            > p
+              font-size: 12px
+              line-height: 16px
+
+            button
+              padding: 4px
+              grid-gap: 3px
 
   footer
     .footer_main_container 

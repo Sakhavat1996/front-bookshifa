@@ -349,3 +349,20 @@ $('#phone').inputmask('99-999-99-99')
 $('.close-absolute-pop-up').on('click',function(){
   $(this).parents('.absolute-fag-pop').removeClass('show')
 })
+
+// cart-resize-btn ---karti boyut
+
+$('.cart-resize-btn').on('click',function(){
+  let mintext = $(this).find('p').data('mintext');
+  let maxtext = $(this).find('p').data('maxtext');
+  if(!$(this).hasClass('minimize')){
+    $(this).addClass('minimize');
+    $(this).find('p').text(mintext);
+  }
+  else{
+    $(this).removeClass('minimize');
+    $(this).find('p').text(maxtext);
+  }
+  $('.pattern-main-container').slideToggle(800);
+  $('.pattern-container').toggleClass('open');
+})

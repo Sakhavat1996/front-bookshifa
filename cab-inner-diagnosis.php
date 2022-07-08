@@ -338,29 +338,34 @@
                         <div class="pattern-header">
                             <div class="question-pattern"><img src="img/question.svg" alt=""></div>
                             <p>Şablon seç</p>
-                            <button type="button">Kartı böyüt<img src="img/downblue.svg" alt=""></button>
+                            <button type="button" class="cart-resize-btn">
+                                <p data-maxtext="Kartı böyüt" data-mintext="Kartı kiçilt">Kartı böyüt</p>
+                                <img src="img/downblue.svg" alt="">
+                            </button>
                         </div>
-                        <div class="pattern-boxes">
-                            <a href="#" class="pattern-single-box" data-id="0">
-                                <img src="img/pattern.svg" alt="">
-                                <p>Şablon 1</p>
-                            </a>
-                            <a href="#" class="pattern-single-box" data-id="1">
-                                <img src="img/pattern.svg" alt="">
-                                <p>Şablon 2</p>
-                            </a>
-                            <a href="#" class="pattern-single-box" data-id="2">
-                                <img src="img/pattern.svg" alt="">
-                                <p>Şablon 3</p>
-                            </a>
-                            <a href="#" class="pattern-single-box" data-id="3">
-                                <img src="img/pattern.svg" alt="">
-                                <p>Şablon 4</p>
-                            </a>
-                            <a href="#" class="pattern-single-box" data-id="4">
-                                <img src="img/pattern.svg" alt="">
-                                <p>Şablon 5</p>
-                            </a>
+                        <div class="pattern-main-container">
+                            <div class="pattern-boxes">
+                                <a href="#" class="pattern-single-box" data-id="0">
+                                    <img src="img/pattern.svg" alt="">
+                                    <p>Şablon 1</p>
+                                </a>
+                                <a href="#" class="pattern-single-box" data-id="1">
+                                    <img src="img/pattern.svg" alt="">
+                                    <p>Şablon 2</p>
+                                </a>
+                                <a href="#" class="pattern-single-box" data-id="2">
+                                    <img src="img/pattern.svg" alt="">
+                                    <p>Şablon 3</p>
+                                </a>
+                                <a href="#" class="pattern-single-box" data-id="3">
+                                    <img src="img/pattern.svg" alt="">
+                                    <p>Şablon 4</p>
+                                </a>
+                                <a href="#" class="pattern-single-box" data-id="4">
+                                    <img src="img/pattern.svg" alt="">
+                                    <p>Şablon 5</p>
+                                </a>
+                            </div>
                         </div>
                         <div class="example-pattern-guide absolute-fag-pop">
                             <p>Şablon diaqnoz bölmələri nədir?</p>

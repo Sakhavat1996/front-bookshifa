@@ -201,18 +201,19 @@ button
       padding: 15px
       box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
       border-radius: 20px
+      transition: padding .5s
+      &.open
+        padding-bottom: 45px
       .pattern-header
-        +flex_1
-        position: relative
+        display: grid
+        grid-template-columns: repeat(3,1fr)
+        align-items: center
         .question-pattern
-          position: absolute
-          left: 0
-          top: 0
           cursor: pointer
         p
           +p-m
           font-size: 20px
-          line-height: 30px
+          line-height: 25px
           color: $black2
           max-width: 200px
           margin: 0 auto
@@ -221,55 +222,65 @@ button
 
         
         button
-          position: absolute
-          right: 0
-          top: 0
           background: none
+          max-width: max-content
+          margin-left: auto
           +flex_2
           grid-gap: 15px
           min-width: 150px
           min-height: 36px
           height: unset
           padding: 5px 15px
-          +p-m
-          font-size: 15px
-          line-height: 22px
-          color: $blue2
           border: 2px solid $blue2
           border-radius: 20px
           transition: all .5s
-          &:hover
-            color: $white
-            background: $blue2
-            img
-              filter: brightness(0) invert(1)
-
-      .pattern-boxes
-        display: grid
-        grid-template-columns: repeat(5,1fr)
-        grid-gap: 25px
-        padding: 20px 35px 10px
-        overflow-x: auto
-        a
-          +flex_5
-          grid-gap: 17.5px
-          align-items: center
-          transition: all .3s
-          &.choose
-            border: 3px solid $blue2
-            padding: 25px 20px 5px
-            box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.15)
-            border-radius: 10px
-          img
-            max-width: 120px
-            max-height: 140px
           p
             +p-m
             font-size: 15px
-            line-height: 18px
-            color: $black2
-            text-align: center
-            word-break: break-word
+            line-height: 22px
+            color: $blue2
+          &:hover
+            background: $blue2
+            p
+              color: $white
+            img
+              filter: brightness(0) invert(1)
+          
+          &.minimize
+            position: absolute
+            right: 13px
+            bottom: 6px
+            img
+              transform: rotateX(180deg)
+
+      .pattern-main-container
+        display: none
+        .pattern-boxes
+          display: grid
+          grid-template-columns: repeat(5,1fr)
+          grid-gap: 25px
+          padding: 20px 35px 10px
+          overflow-x: auto
+          a
+            +flex_5
+            grid-gap: 17.5px
+            align-items: center
+            transition: all .3s
+            &.choose
+              border: 3px solid $blue2
+              padding: 25px 20px 5px
+              box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.15)
+              border-radius: 10px
+            img
+              max-width: 120px
+              max-height: 140px
+            p
+              +p-m
+              font-size: 15px
+              line-height: 18px
+              color: $black2
+              text-align: center
+              word-break: break-word
 
       .example-pattern-guide
         position: absolute
