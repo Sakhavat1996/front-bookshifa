@@ -764,46 +764,9 @@
     &.addModal
       &.newPatient 
         .modal-dialog
-          max-width: 540px
+          max-width: 400
           .modal-content
             padding: 25px 35px 30px
-            form 
-
-              .form-first
-                grid-gap: 8px
-                .block-first
-                  grid-gap: 7px 
-                input
-                  height: 40px
-                  font-size: 14px
-                  line-height: 18px
-                
-                .advise
-                  font-size: 13px
-                  line-height: 16px
-                  margin-top: 10px
-              
-              .form-second
-                grid-gap: 8px
-                .select-box
-                  select
-                    height: 40px
-                    font-size: 14px
-                    line-height: 18px
-                  
-                  span
-                    font-size: 17px
-                    line-height: 21px
-
-              .form-third
-                grid-gap: 8px
-                .radio-box 
-                  .custom-label
-                    height: 40px
-                    font-size: 14px
-                    line-height: 18px
-                    .checkmark
-                      top: 11.5px
 
       &.noteModal 
         .modal-dialog
@@ -959,7 +922,16 @@
               img
                 width: 8px
           
-          .pattern-main-container 
+          .pattern-main-container
+            .no-pattern-box
+              padding: 25px 0 15px
+              grid-gap: 26px
+              .no-pattern-img
+                max-width: 60px
+              p
+                font-size: 14px
+                line-height: 20px
+
             .pattern-boxes
               max-width: max-content
               grid-gap: 15px
@@ -1410,14 +1382,11 @@
           grid-template-columns: 1fr 1fr
           grid-gap: 15px
           width: 100%
-          a
+          .sign_in_out
             width: 100%
             height: 100%
-            button
-              width: 100%
-              height: 100%
-              font-size: 12px
-              line-height: 18px
+            font-size: 12px
+            line-height: 18px
 
     .header_main_container
       padding: 17px 25px
@@ -1591,6 +1560,15 @@
                 bottom: 10px
           
           .pattern-main-container 
+            .no-pattern-box
+              max-width: 75%
+              grid-gap: 32px
+              .no-pattern-img
+                max-width: 56px
+              p
+                font-size: 12px
+                line-height: 18px
+
             .pattern-boxes
               grid-gap: 8px
               padding: 20px 10px 3px 0
@@ -1771,55 +1749,8 @@
 
       &.newPatient 
         .modal-dialog
-          max-width: 540px
-          .modal-content
-            padding: 25px 18px 30px
-            .modal-body 
-              input
-                background: #ECECEC !important
-              p.label
-                font-size: 12px !important
-                line-height: 16px !important
-              .form-first
-                .block-first
-                  input
-                    height: 40px
-                    font-size: 12px
-                    line-height: 16px
-                
-                .advise
-                  font-size: 11px
-                  line-height: 15px
-              
-              .form-second
-                .select-box
-                  grid-gap: 8px
-                  select
-                    background: none
-                    background-color: #ECECEC
-                    height: 30px
-                    font-size: 11px
-                    line-height: 15px
-                  
-                  span
-                    font-size: 15px
-                    line-height: 18px
-
-              .form-third
-                .radio-box
-                  grid-gap: 10px 
-                  .custom-label
-                    height: 40px 
-                    font-size: 12px 
-                    line-height: 16px 
-                    .checkmark
-                      width: 13px
-                      height: 13px
-                      &::after
-                        width: 5px
-                        height: 5px
-                        top: 3.5px
-
+          max-width: 100%
+          
       .modal-dialog
         max-width: 100%
         margin: 0 25px

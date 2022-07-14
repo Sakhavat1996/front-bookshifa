@@ -1,29 +1,3 @@
-
-
-// new added input end
-
-// onfocus label start
-$(document).on('focusout','.form-group input:not([type="radio"]) , textarea', function(){
-  if($(this).val() != ""){
-    $(this).addClass("has-content");
-  }else{
-    $(this).removeClass("has-content");
-  }
-})
-
-
-// onfocus label end
-
-
-// label onclick (choose payment type) start
-$('.form-label label').on('click', function(){
-  $('.form-label label').removeClass('selected_label')
-  $(this).addClass('selected_label')
-})
-
-// label onclick (choose payment type) end
-
-
 // form start
 const pageLang = document.querySelector('html').getAttribute('lang');
 
@@ -78,6 +52,8 @@ if (pageLang === 'az') {
     required: 'Bu xana mütləq doldurulmalıdır.',
     remote: 'Zəhmət olmasa, düzgün məna daxil edin.',
     email: 'Zəhmət olmasa, düzgün elektron poçt daxil edin.',
+    onlyString: 'Zəhmət olmasa yalnız hərflərdən istifadə edin',
+    phoneNumber: "Пожалуйста, не используйте буквы",
     url: 'Zəhmət olmasa, düzgün URL daxil edin.',
     date: 'Zəhmət olmasa, düzgün tarix daxil edin.',
     dateISO: 'Zəhmət olmasa, düzgün ISO formatlı tarix daxil edin.',
@@ -98,6 +74,7 @@ if (pageLang === 'az') {
     required: 'Это поле необходимо заполнить.',
     remote: 'Пожалуйста, введите правильное значение.',
     email: 'Пожалуйста, введите корректный адрес электронной почты.',
+    onlyString : 'Пожалуйста, используйте только буквы',
     url: 'Пожалуйста, введите корректный URL.',
     date: 'Пожалуйста, введите корректную дату.',
     dateISO: 'Пожалуйста, введите корректную дату в формате ISO.',
@@ -118,6 +95,8 @@ if (pageLang === 'az') {
     required: 'This field is required.',
     remote: 'Please fix this field.',
     email: 'Please enter a valid email address.',
+    onlyString : 'Please use only letters',
+    phoneNumber: "Please don't use letter",
     url: 'Please enter a valid URL.',
     date: 'Please enter a valid date.',
     dateISO: 'Please enter a valid date (ISO).',
@@ -135,17 +114,9 @@ if (pageLang === 'az') {
 });
 }
 
-// pay-for-stat
-$('#pay_form').submit(function(){
-  $('input.number_input').each(function() {
-    $(this).rules("add", 
-        {
-          phoneNumber: true,
-          required: true
-        }
-    )
-  });
-  
+// newPatient-form-start
+$('.form-first').submit(function(){
+  console.log('asdasdasd')  
 })
 .validate({
   ignore: [],
@@ -158,54 +129,33 @@ $('#pay_form').submit(function(){
           onlyString: true ,
           required: true
       },
-      father_name: {
-          onlyString: true ,
-          required: true
-      },
-      email: {
-          required: true
-      },
-      radioname: {
+      phone: {
+        phoneNumber: true,
         required: true
       }
   },
   
   errorPlacement: function (error, element) {
-      $("#pay_form input , #pay_form select").on("change", (function () {
-        $(this).valid();
-      }))
-      if (element.attr("name") === "radioname" )
-        {
-          $('.radio-fraction').after(error)
-          
-        }
-      else if (element.is('select:hidden')) {
+      if (element.is('select:hidden')) {
           error.insertAfter(element.next('.nice-select'));
       } else {
           error.insertAfter(element);
       }
-      
   },
   highlight: function(element) {
-    let tagName = $(element).prop('tagName')
-    let name = $(element).prop('name')
-    if(tagName && tagName.toLowerCase() !== "textarea" && name && name !== "radioname") 
-    {
-      $(element).parents('.form-group').removeClass('valid_group').addClass('red_group');
+    let parent = $(element).parents()
+    if(parent && parent.hasClass('input-number-container')){
+      $(element).parents('.form-group').addClass('special-form-group')
     }
-    else if(name && name === "radioname"){
-      $(element).parents('.radio-fraction').find('.form_title').removeClass('valid').addClass('not_valid')
-    }
+    $(element).parents('.form-group').removeClass('valid_group').addClass('error_group');
+    
   },
   unhighlight: function(element) {
-    let tagName = $(element).prop('tagName')
-    let name = $(element).prop('name')
-    if(tagName && tagName.toLowerCase() !== "textarea" && name && name !== "radioname"){
-      $(element).parents('.form-group').removeClass('red_group').addClass('valid_group');
+    let parent = $(element).parents()
+    if(parent && parent.hasClass('input-number-container')){
+      $(element).parents('.form-group').removeClass('special-form-group')
     }
-    else if(name && name === "radioname"){
-      $(element).parents('.radio-fraction').find('.form_title').removeClass('not_valid').addClass('valid')
-    }
+    $(element).parents('.form-group').removeClass('error_group').addClass('valid_group');
   },
 });
-// pay-form-end
+// newPatient-form-end

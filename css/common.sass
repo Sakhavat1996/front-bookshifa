@@ -16,6 +16,51 @@ section
   min-height: 100vh
   +flex_5
 
+.form-group
+  position: relative
+  &.valid_group
+    &::after
+      position: absolute
+      content: ''
+      width: 24px
+      height: 24px
+      right: 11px
+      top: 13px
+      background-image: url('../img/green-okey.svg')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+    
+  &.error_group
+    input
+      border: 2px solid $red !important
+      background: #FFF2F0 !important
+
+  .error
+    position: relative
+    display: flex
+    flex-direction: column
+    grid-gap: 4px
+    padding-left: 20px
+    margin-top: 8px !important
+    +p-m
+    font-size: 12px
+    line-height: 16px
+    color: $red
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      background-image: url('../img/danger-red.svg')
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
+      width: 16px
+      height: 16px
+    strong
+      font-weight: 500
+
 @keyframes sp-anime 
   100%  
     transform: rotate(360deg) 
@@ -34,161 +79,90 @@ button
     .modal-content
       border: none
       border-radius: 10px
-
-  &.newPatient
-    .modal-dialog
-      max-width: 700px
-      .modal-content
-        padding: 10px 50px 50px
-        form
-          margin-top: 40px
-          .form-first
-            display: grid
-            grid-gap: 20px
-            input
-              width: 100%
-              height: 50px
-              background: $gray2
-              border: 1px solid $gray
-              border-radius: 10px
-              padding: 0 15px
-              +p-m
-              font-size: 20px
-              line-height: 30px
-              &::placeholder
-                color: rgba(103, 103, 103, 0.68)
-            
+  
+  &.addModal
+    &.newPatient
+      .modal-dialog
+        max-width: 472px
+        .modal-content
+          padding: 24px 36px 36px
+          .close
+            top: 24px
+            right: 24px
+          
+          form
+            margin-top: 25px
             .block-first
               display: grid
-              grid-template-columns: 1fr 1fr
-              grid-gap: 15.5px
-            
-            .block-second
-              display: grid
-              grid-template-columns: 1fr 1fr
-              grid-gap: 10px
-              align-items: center
-              margin-top: 15px
-              p
-                display: none
-                +p-m
-                font-size: 20px
-                line-height: 30px
-                color: $blue2
-              
-              .input-number-container
+              grid-template-columns: 1fr
+              grid-gap: 20px
+              label:not(.error)
                 display: grid
-                grid-template-columns: 65px 1fr
-                height: 50px
-                background: $gray2
-                border: 1px solid $gray
-                border-radius: 10px
-                padding: 0 15px
-                input
-                  height: unset
-                  padding: unset
-                  border: unset
-                  background: unset
-                  border-radius: unset
+                grid-gap: 6px
+                +p-m
+                font-size: 16px
+                line-height: 20px
+                color: $black2
+                .form-group
+                  input
+                    width: 100%
+                    height: 50px
+                    background: $white
+                    border: 2px solid $border
+                    border-radius: 10px
+                    padding: 12px 11px
+                    padding-right: 45px
+                    +p-r
+                    font-size: 16px
+                    line-height: 20px
+                    margin: 0
+                    color: $black2
+                    &::placeholder
+                      color: rgba(0, 0, 0, 0.4)
 
-            
-            .advise
+                .input-number-container
+                  display: grid
+                  grid-gap: 9px
+                  grid-template-columns: 60px 1fr
+                  border: 2px solid $border
+                  border-radius: 10px
+                  padding: 4px
+                  &.special-form-group
+                    border: 2px solid $red
+                    background: #FFF2F0
+                    input
+                      border: none !important
+                      background: transparent
+                      &:first-child
+                        border-right: 1px solid $red !important
+                    
+                    label.error
+                      position: absolute
+                      left: -2px
+                      bottom: -24px
+
+                  input
+                    border: none
+                    border-radius: 0
+                    padding: 0
+                    height: 38px
+                    background: transparent
+
+                    &:first-child
+                      text-align: center
+                      padding: 2px 9px 2px 6px
+                      border-right: 2px solid $border
+
+            button[type="submit"]
+              min-height: 48px
+              min-width: 124px
+              margin-top: 40px
               +flex_2
-              +l-m
-              font-size: 15px
-              line-height: 19px
-              color: $blue2
-
-          .form-second
-            display: grid
-            grid-gap: 15px
-            p.label
+              grid-gap: 8px
               +p-m
-              font-size: 15px
-              line-height: 22px
-              color: $blue2
-            
-            .select-box
-              display: flex
-              align-items: center
-              grid-gap: 10px
-              span
-                +p-m
-                font-size: 25px
-                line-height: 30px
-                color: $blue2
-              select
-                position: relative
-                width: 100%
-                height: 50px
-                background: url('../img/down.svg') no-repeat 92% $gray2
-                border: 1px solid $gray
-                border-radius: 10px
-                text-align: center
-                +p-m
-                font-size: 20px
-                line-height: 30px
-                color: rgba(46, 46, 46, 0.9)
-                
-          .form-third
-            display: grid
-            grid-gap: 15px
-            margin-top: 15px
-            p.label
-              +p-m
-              font-size: 15px
-              line-height: 22px
-              color: $blue2
-            
-            .radio-box
-              display: grid
-              grid-gap: 15.5px
-              grid-template-columns: 1fr 1fr
-              .custom-label 
-                display: block
-                position: relative
-                height: 50px
-                background: $gray2
-                border: 1px solid $gray
-                border-radius: 10px
-                cursor: pointer
-                +flex_2
-                +l-m
-                font-size: 20px
-                line-height: 25px
-                color: $blue2
-                -webkit-user-select: none
-                -moz-user-select: none
-                -ms-user-select: none
-                user-select: none
-
-                input
-                  position: absolute
-                  opacity: 0
-                  cursor: pointer
-                  &:checked ~ .checkmark 
-                    background-color: #2196F3
-                  &:checked ~ .checkmark:after 
-                    display: block
-
-                .checkmark 
-                  position: absolute
-                  top: 17.5px
-                  right: 17.5px
-                  height: 15px
-                  width: 15px
-                  background-color: #C4C4C4
-                  border-radius: 50%
-                  &::after
-                    content: ""
-                    position: absolute
-                    display: none
-                    top: 4.5px
-                    right: 3.5px
-                    width: 7px
-                    height: 7px
-                    border-radius: 50%
-                    background: white
+              padding: 9px 12px
+              &.disable
+                background: $gray7
 
   &.typeModal
     padding-left: 0 !important
@@ -282,6 +256,25 @@ button
               text-align: center
               word-break: break-word
 
+        .no-pattern-box
+          padding: 30px 0 15px
+          +flex_2
+          +flex_5
+          grid-gap: 25px
+          max-width: 365px
+          margin: 0 auto
+          .no-pattern-img
+            max-width: 64px
+            img
+              width: 100%
+          
+          p
+            +p-m
+            font-size: 15px
+            line-height: 22px
+            color: $black2
+            text-align: center
+            
       .example-pattern-guide
         position: absolute
         background: $white

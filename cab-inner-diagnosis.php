@@ -366,6 +366,10 @@
                                     <p>Şablon 5</p>
                                 </a>
                             </div>
+                            <div class="no-pattern-box">
+                                <div class="no-pattern-img"><img src="img/no-pattern.svg" alt=""></div>
+                                <p>Sizin hesabınızda şablon yoxdur. Xüsusi şablon əlavə etmək üçün Bookshifa ilə əlaqə saxlayın.</p>
+                            </div>
                         </div>
                         <div class="example-pattern-guide absolute-fag-pop">
                             <p>Şablon diaqnoz bölmələri nədir?</p>

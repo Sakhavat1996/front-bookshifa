@@ -342,7 +342,7 @@ $("#phone").on("input", function() {
   }
 })
 
-$('#phone').inputmask('99-999-99-99')
+// $('#phone').inputmask('99-999-99-99')
 
 
 // close-absolute-pop-up

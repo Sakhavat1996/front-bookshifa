@@ -27,7 +27,7 @@ header
         
         img
           max-width: 50px
-    
+
     .header_center
       display: flex
       align-items: center
@@ -42,7 +42,7 @@ header
           line-height: 25px
           color: $blue
           text-align: center
-    
+
     .header_right
       margin-left: auto
       +flex_2
@@ -70,11 +70,12 @@ header
         +flex_2
         min-width: 110px
         padding: 5px 10px
-        border-radius: 5px
         +p-m
         font-size: 15px
         line-height: 22px
         color: $white
+        border-radius: 5px
+        text-align: center
       
       .notification_btns
         display: flex
@@ -261,18 +262,18 @@ header
 
 .dropdown-menu
   min-width: 100%
-  will-change: unset !important
-  font-size: unset
   &.show
     width: 100%
-  .dropdown-item
-    padding: 5px 10px
-    white-space: nowrap
-    +p-r
-    font-size: 14px
-    line-height: 18px
-    color: $black2
-    clear: unset
+  li
+    a
+      width: 100%
+      padding: 5px 10px
+      white-space: nowrap
+      +p-r
+      font-size: 14px
+      line-height: 18px
+      color: $black2
+      clear: unset
 
 .simplebar-track 
   &.simplebar-vertical

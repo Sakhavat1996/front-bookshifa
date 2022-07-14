@@ -166,12 +166,13 @@ header .header_main_container .header_right .sign_in_out {
           justify-content: center;
   min-width: 110px;
   padding: 5px 10px;
-  border-radius: 5px;
   font-family: "p-m", Arial, sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
   color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
 }
 
 header .header_main_container .header_right .notification_btns {
@@ -481,15 +482,14 @@ header .responsive-ul li a:hover {
 
 .dropdown-menu {
   min-width: 100%;
-  will-change: unset !important;
-  font-size: unset;
 }
 
 .dropdown-menu.show {
   width: 100%;
 }
 
-.dropdown-menu .dropdown-item {
+.dropdown-menu li a {
+  width: 100%;
   padding: 5px 10px;
   white-space: nowrap;
   font-family: "p-r", Arial, sans-serif;
@@ -2401,49 +2401,10 @@ footer .footer_main_container .footer_author {
     line-height: 22px;
   }
   .modal.addModal.newPatient .modal-dialog {
-    max-width: 540px;
+    max-width: 400;
   }
   .modal.addModal.newPatient .modal-dialog .modal-content {
     padding: 25px 35px 30px;
-  }
-  .modal.addModal.newPatient .modal-dialog .modal-content form .form-first {
-    grid-gap: 8px;
-  }
-  .modal.addModal.newPatient .modal-dialog .modal-content form .form-first .block-first {
-    grid-gap: 7px;
-  }
-  .modal.addModal.newPatient .modal-dialog .modal-content form .form-first input {
-    height: 40px;
-    font-size: 14px;
-    line-height: 18px;
-  }
-  .modal.addModal.newPatient .modal-dialog .modal-content form .form-first .advise {
-    font-size: 13px;
-    line-height: 16px;
-    margin-top: 10px;
-  }
-  .modal.addModal.newPatient .modal-dialog .modal-content form .form-second {
-    grid-gap: 8px;
-  }
-  .modal.addModal.newPatient .modal-dialog .modal-content form .form-second .select-box select {
-    height: 40px;
-    font-size: 14px;
-    line-height: 18px;
-  }
-  .modal.addModal.newPatient .modal-dialog .modal-content form .form-second .select-box span {
-    font-size: 17px;
-    line-height: 21px;
-  }
-  .modal.addModal.newPatient .modal-dialog .modal-content form .form-third {
-    grid-gap: 8px;
-  }
-  .modal.addModal.newPatient .modal-dialog .modal-content form .form-third .radio-box .custom-label {
-    height: 40px;
-    font-size: 14px;
-    line-height: 18px;
-  }
-  .modal.addModal.newPatient .modal-dialog .modal-content form .form-third .radio-box .custom-label .checkmark {
-    top: 11.5px;
   }
   .modal.addModal.noteModal .modal-dialog {
     max-width: 540px;
@@ -2597,6 +2558,17 @@ footer .footer_main_container .footer_author {
   }
   .modal.addModal.typeModal .pattern-container .pattern-header button img {
     width: 8px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .no-pattern-box {
+    padding: 25px 0 15px;
+    grid-gap: 26px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .no-pattern-box .no-pattern-img {
+    max-width: 60px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .no-pattern-box p {
+    font-size: 14px;
+    line-height: 20px;
   }
   .modal.addModal.typeModal .pattern-container .pattern-main-container .pattern-boxes {
     max-width: -webkit-max-content;
@@ -3127,11 +3099,7 @@ footer .footer_main_container .footer_author {
     grid-gap: 15px;
     width: 100%;
   }
-  header.notAuth .header_main_container .header_right a {
-    width: 100%;
-    height: 100%;
-  }
-  header.notAuth .header_main_container .header_right a button {
+  header.notAuth .header_main_container .header_right .sign_in_out {
     width: 100%;
     height: 100%;
     font-size: 12px;
@@ -3315,6 +3283,17 @@ footer .footer_main_container .footer_author {
   .modal.addModal.typeModal .pattern-container .pattern-header button.minimize {
     right: 10px;
     bottom: 10px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .no-pattern-box {
+    max-width: 75%;
+    grid-gap: 32px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .no-pattern-box .no-pattern-img {
+    max-width: 56px;
+  }
+  .modal.addModal.typeModal .pattern-container .pattern-main-container .no-pattern-box p {
+    font-size: 12px;
+    line-height: 18px;
   }
   .modal.addModal.typeModal .pattern-container .pattern-main-container .pattern-boxes {
     grid-gap: 8px;
@@ -3506,57 +3485,7 @@ footer .footer_main_container .footer_author {
     height: 160px;
   }
   form .addModal.newPatient .modal-dialog {
-    max-width: 540px;
-  }
-  form .addModal.newPatient .modal-dialog .modal-content {
-    padding: 25px 18px 30px;
-  }
-  form .addModal.newPatient .modal-dialog .modal-content .modal-body input {
-    background: #ECECEC !important;
-  }
-  form .addModal.newPatient .modal-dialog .modal-content .modal-body p.label {
-    font-size: 12px !important;
-    line-height: 16px !important;
-  }
-  form .addModal.newPatient .modal-dialog .modal-content .modal-body .form-first .block-first input {
-    height: 40px;
-    font-size: 12px;
-    line-height: 16px;
-  }
-  form .addModal.newPatient .modal-dialog .modal-content .modal-body .form-first .advise {
-    font-size: 11px;
-    line-height: 15px;
-  }
-  form .addModal.newPatient .modal-dialog .modal-content .modal-body .form-second .select-box {
-    grid-gap: 8px;
-  }
-  form .addModal.newPatient .modal-dialog .modal-content .modal-body .form-second .select-box select {
-    background: none;
-    background-color: #ECECEC;
-    height: 30px;
-    font-size: 11px;
-    line-height: 15px;
-  }
-  form .addModal.newPatient .modal-dialog .modal-content .modal-body .form-second .select-box span {
-    font-size: 15px;
-    line-height: 18px;
-  }
-  form .addModal.newPatient .modal-dialog .modal-content .modal-body .form-third .radio-box {
-    grid-gap: 10px;
-  }
-  form .addModal.newPatient .modal-dialog .modal-content .modal-body .form-third .radio-box .custom-label {
-    height: 40px;
-    font-size: 12px;
-    line-height: 16px;
-  }
-  form .addModal.newPatient .modal-dialog .modal-content .modal-body .form-third .radio-box .custom-label .checkmark {
-    width: 13px;
-    height: 13px;
-  }
-  form .addModal.newPatient .modal-dialog .modal-content .modal-body .form-third .radio-box .custom-label .checkmark::after {
-    width: 5px;
-    height: 5px;
-    top: 3.5px;
+    max-width: 100%;
   }
   form .addModal .modal-dialog {
     max-width: 100%;
@@ -4003,6 +3932,64 @@ section {
           flex-direction: column;
 }
 
+.form-group {
+  position: relative;
+}
+
+.form-group.valid_group::after {
+  position: absolute;
+  content: '';
+  width: 24px;
+  height: 24px;
+  right: 11px;
+  top: 13px;
+  background-image: url("../img/green-okey.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.form-group.error_group input {
+  border: 2px solid #DE4747 !important;
+  background: #FFF2F0 !important;
+}
+
+.form-group .error {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 4px;
+  padding-left: 20px;
+  margin-top: 8px !important;
+  font-family: "p-m", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #DE4747;
+}
+
+.form-group .error::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("../img/danger-red.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+}
+
+.form-group .error strong {
+  font-weight: 500;
+}
+
 @-webkit-keyframes sp-anime {
   100% {
     -webkit-transform: rotate(360deg);
@@ -4050,197 +4037,123 @@ button {
   border-radius: 10px;
 }
 
-.modal.newPatient .modal-dialog {
-  max-width: 700px;
+.modal.addModal.newPatient .modal-dialog {
+  max-width: 472px;
 }
 
-.modal.newPatient .modal-dialog .modal-content {
-  padding: 10px 50px 50px;
+.modal.addModal.newPatient .modal-dialog .modal-content {
+  padding: 24px 36px 36px;
 }
 
-.modal.newPatient .modal-dialog .modal-content form {
-  margin-top: 40px;
+.modal.addModal.newPatient .modal-dialog .modal-content .close {
+  top: 24px;
+  right: 24px;
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-first {
+.modal.addModal.newPatient .modal-dialog .modal-content form {
+  margin-top: 25px;
+}
+
+.modal.addModal.newPatient .modal-dialog .modal-content form .block-first {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   grid-gap: 20px;
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-first input {
+.modal.addModal.newPatient .modal-dialog .modal-content form .block-first label:not(.error) {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 6px;
+  font-family: "p-m", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+}
+
+.modal.addModal.newPatient .modal-dialog .modal-content form .block-first label:not(.error) .form-group input {
   width: 100%;
   height: 50px;
-  background: #F6F6F6;
-  border: 1px solid #DADADA;
+  background: #ffffff;
+  border: 2px solid #DCEAFF;
   border-radius: 10px;
-  padding: 0 15px;
-  font-family: "p-m", Arial, sans-serif;
+  padding: 12px 11px;
+  padding-right: 45px;
+  font-family: "p-r", Arial, sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  color: #333333;
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-first input::-webkit-input-placeholder {
-  color: rgba(103, 103, 103, 0.68);
+.modal.addModal.newPatient .modal-dialog .modal-content form .block-first label:not(.error) .form-group input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-first input:-ms-input-placeholder {
-  color: rgba(103, 103, 103, 0.68);
+.modal.addModal.newPatient .modal-dialog .modal-content form .block-first label:not(.error) .form-group input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-first input::-ms-input-placeholder {
-  color: rgba(103, 103, 103, 0.68);
+.modal.addModal.newPatient .modal-dialog .modal-content form .block-first label:not(.error) .form-group input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-first input::placeholder {
-  color: rgba(103, 103, 103, 0.68);
+.modal.addModal.newPatient .modal-dialog .modal-content form .block-first label:not(.error) .form-group input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-first .block-first {
+.modal.addModal.newPatient .modal-dialog .modal-content form .block-first label:not(.error) .input-number-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 15.5px;
-}
-
-.modal.newPatient .modal-dialog .modal-content form .form-first .block-second {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 15px;
-}
-
-.modal.newPatient .modal-dialog .modal-content form .form-first .block-second p {
-  display: none;
-  font-family: "p-m", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  color: #4098FF;
-}
-
-.modal.newPatient .modal-dialog .modal-content form .form-first .block-second .input-number-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 65px 1fr;
-      grid-template-columns: 65px 1fr;
-  height: 50px;
-  background: #F6F6F6;
-  border: 1px solid #DADADA;
+  grid-gap: 9px;
+  -ms-grid-columns: 60px 1fr;
+      grid-template-columns: 60px 1fr;
+  border: 2px solid #DCEAFF;
   border-radius: 10px;
-  padding: 0 15px;
+  padding: 4px;
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-first .block-second .input-number-container input {
-  height: unset;
-  padding: unset;
-  border: unset;
-  background: unset;
-  border-radius: unset;
+.modal.addModal.newPatient .modal-dialog .modal-content form .block-first label:not(.error) .input-number-container.special-form-group {
+  border: 2px solid #DE4747;
+  background: #FFF2F0;
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-first .advise {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: "l-m", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 19px;
-  color: #4098FF;
+.modal.addModal.newPatient .modal-dialog .modal-content form .block-first label:not(.error) .input-number-container.special-form-group input {
+  border: none !important;
+  background: transparent;
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-second {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 15px;
+.modal.addModal.newPatient .modal-dialog .modal-content form .block-first label:not(.error) .input-number-container.special-form-group input:first-child {
+  border-right: 1px solid #DE4747 !important;
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-second p.label {
-  font-family: "p-m", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-  color: #4098FF;
+.modal.addModal.newPatient .modal-dialog .modal-content form .block-first label:not(.error) .input-number-container.special-form-group label.error {
+  position: absolute;
+  left: -2px;
+  bottom: -24px;
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-second .select-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  grid-gap: 10px;
+.modal.addModal.newPatient .modal-dialog .modal-content form .block-first label:not(.error) .input-number-container input {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  height: 38px;
+  background: transparent;
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-second .select-box span {
-  font-family: "p-m", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 30px;
-  color: #4098FF;
-}
-
-.modal.newPatient .modal-dialog .modal-content form .form-second .select-box select {
-  position: relative;
-  width: 100%;
-  height: 50px;
-  background: url("../img/down.svg") no-repeat 92% #F6F6F6;
-  border: 1px solid #DADADA;
-  border-radius: 10px;
+.modal.addModal.newPatient .modal-dialog .modal-content form .block-first label:not(.error) .input-number-container input:first-child {
   text-align: center;
-  font-family: "p-m", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  color: rgba(46, 46, 46, 0.9);
+  padding: 2px 9px 2px 6px;
+  border-right: 2px solid #DCEAFF;
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-third {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 15px;
-  margin-top: 15px;
-}
-
-.modal.newPatient .modal-dialog .modal-content form .form-third p.label {
-  font-family: "p-m", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-  color: #4098FF;
-}
-
-.modal.newPatient .modal-dialog .modal-content form .form-third .radio-box {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 15.5px;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-}
-
-.modal.newPatient .modal-dialog .modal-content form .form-third .radio-box .custom-label {
-  display: block;
-  position: relative;
-  height: 50px;
-  background: #F6F6F6;
-  border: 1px solid #DADADA;
-  border-radius: 10px;
-  cursor: pointer;
+.modal.addModal.newPatient .modal-dialog .modal-content form button[type="submit"] {
+  min-height: 48px;
+  min-width: 124px;
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4250,51 +4163,14 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: "l-m", Arial, sans-serif;
+  grid-gap: 8px;
+  font-family: "p-m", Arial, sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 25px;
-  color: #4098FF;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  padding: 9px 12px;
 }
 
-.modal.newPatient .modal-dialog .modal-content form .form-third .radio-box .custom-label input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.modal.newPatient .modal-dialog .modal-content form .form-third .radio-box .custom-label input:checked ~ .checkmark {
-  background-color: #2196F3;
-}
-
-.modal.newPatient .modal-dialog .modal-content form .form-third .radio-box .custom-label input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.modal.newPatient .modal-dialog .modal-content form .form-third .radio-box .custom-label .checkmark {
-  position: absolute;
-  top: 17.5px;
-  right: 17.5px;
-  height: 15px;
-  width: 15px;
-  background-color: #C4C4C4;
-  border-radius: 50%;
-}
-
-.modal.newPatient .modal-dialog .modal-content form .form-third .radio-box .custom-label .checkmark::after {
-  content: "";
-  position: absolute;
-  display: none;
-  top: 4.5px;
-  right: 3.5px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: white;
+.modal.addModal.newPatient .modal-dialog .modal-content form button[type="submit"].disable {
+  background: #cbcbcb;
 }
 
 .modal.typeModal {
@@ -4460,6 +4336,44 @@ button {
   color: #333333;
   text-align: center;
   word-break: break-word;
+}
+
+.modal.typeModal .pattern-container .pattern-main-container .no-pattern-box {
+  padding: 30px 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 25px;
+  max-width: 365px;
+  margin: 0 auto;
+}
+
+.modal.typeModal .pattern-container .pattern-main-container .no-pattern-box .no-pattern-img {
+  max-width: 64px;
+}
+
+.modal.typeModal .pattern-container .pattern-main-container .no-pattern-box .no-pattern-img img {
+  width: 100%;
+}
+
+.modal.typeModal .pattern-container .pattern-main-container .no-pattern-box p {
+  font-family: "p-m", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #333333;
+  text-align: center;
 }
 
 .modal.typeModal .pattern-container .example-pattern-guide {

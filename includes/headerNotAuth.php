@@ -11,13 +11,13 @@
         <div class="header_right">
           <a href="/login/az"><button class="sign_in_out">Daxil ol</button></a>
           <div class="dropdown">
-            <a class="sign_in_out dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+            <button class="sign_in_out dropdown-toggle" type="button" data-toggle="dropdown">
               Qeydiyyatdan keçin
-            </a>
+            </button>
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="#">Həkim olaraq</a>
-              <a class="dropdown-item" href="#">Pasiyent olaraq</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Həkim olaraq</a></li>
+              <li><a class="dropdown-item" href="#">Pasiyent olaraq</a></li>
             </div>
             
           </div>
