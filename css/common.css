@@ -725,9 +725,9 @@ footer .footer_main_container .footer_author {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-gap: 48px;
+  grid-gap: 28px;
   overflow: hidden;
-  padding: 26px 0;
+  padding: 6px 0;
 }
 
 .inner-container .inner-main-box .inner-item .cabinet-inner .add_cabinet_box {
@@ -790,6 +790,7 @@ footer .footer_main_container .footer_author {
 }
 
 .inner-container .inner-main-box .inner-item .pdf-container {
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2202,9 +2203,9 @@ footer .footer_main_container .footer_author {
   }
   .info-room .inner-container .inner-main-box .inner-item .cabinet-inner {
     grid-gap: 25px;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .info-room .inner-container .inner-main-box .inner-item .cabinet-inner .add_cabinet_box {
     min-width: 180px;
