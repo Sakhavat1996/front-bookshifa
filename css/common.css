@@ -4230,6 +4230,16 @@ button {
   grid-gap: 15px;
 }
 
+.modal.addModal.newPatient .modal-dialog .modal-content form .form-second .input-number-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal.addModal.newPatient .modal-dialog .modal-content form .form-second .input-number-container input:first-child {
+  width: 74px;
+}
+
 .modal.addModal.newPatient .modal-dialog .modal-content form .form-second p.label {
   font-family: "p-m", Arial, sans-serif;
   font-weight: 400;
