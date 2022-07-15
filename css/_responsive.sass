@@ -764,9 +764,47 @@
     &.addModal
       &.newPatient 
         .modal-dialog
-          max-width: 400
+          max-width: 540px
           .modal-content
             padding: 25px 35px 30px
+            form 
+              .form-first
+                grid-gap: 8px !important
+                .block-first
+                  grid-gap: 7px !important
+                .block-second
+                  margin-top: 5px !important
+                input
+                  height: 40px !important
+                  font-size: 14px !important
+                  line-height: 18px !important
+                
+                .advise
+                  font-size: 13px !important
+                  line-height: 16px !important
+                  margin-top: 10px
+              
+              .form-second
+                grid-gap: 8px !important
+                .select-box
+                  select
+                    height: 40px !important
+                    font-size: 14px !important
+                    line-height: 18px !important
+                  
+                  span
+                    font-size: 17px !important
+                    line-height: 21px !important
+
+              .form-third
+                grid-gap: 8px !important
+                .radio-box 
+                  .custom-label
+                    height: 40px !important
+                    font-size: 14px !important
+                    line-height: 18px !important
+                    .checkmark
+                      top: 11.5px !important
 
       &.noteModal 
         .modal-dialog
@@ -1679,6 +1717,57 @@
                 padding: 0 5px
                 min-height: unset
 
+      &.newPatient 
+        .modal-dialog
+          max-width: 540px !important
+          .modal-content
+            padding: 25px 18px 30px !important
+            .modal-body 
+              input
+                background: #ECECEC !important
+              p.label
+                font-size: 12px !important
+                line-height: 16px !important
+              .form-first
+                .block-first
+                  input
+                    height: 40px !important
+                    font-size: 12px
+                    line-height: 16px
+                
+                .advise
+                  font-size: 11px !important
+                  line-height: 15px !important
+              
+              .form-second
+                .select-box
+                  grid-gap: 8px !important
+                  select
+                    background: none
+                    background-color: #ECECEC
+                    height: 30px !important
+                    font-size: 11px !important
+                    line-height: 15px !important
+                  
+                  span
+                    font-size: 15px !important
+                    line-height: 18px !important
+
+              .form-third
+                .radio-box
+                  grid-gap: 10px  !important
+                  .custom-label
+                    height: 40px  !important
+                    font-size: 12px  !important
+                    line-height: 16px  !important
+                    .checkmark
+                      width: 13px !important
+                      height: 13px !important
+                      &::after
+                        width: 5px !important
+                        height: 5px !important
+                        top: 3.5px !important
+
       .modal-dialog
         max-width: 100% !important
         .modal-content 
@@ -1747,10 +1836,6 @@
                     margin-top: 30px
                     height: 160px
 
-      &.newPatient 
-        .modal-dialog
-          max-width: 100%
-          
       .modal-dialog
         max-width: 100%
         margin: 0 25px

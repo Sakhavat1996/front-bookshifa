@@ -187,17 +187,17 @@ $('.receptForm').on('submit',function(e){
 })
 
 // new modal js
-var $file = $('input[type="file"]');
-$(document).on('change',$file,function(e){
-    var input = e.target;
-    var reader = new FileReader();
-    reader.onload = function(){
-      var name = input.files[0].name;
-      $(input).parents().find('input[type="text"]').val(name);
-      $(input).parents().find('button.delete').show();
-    };
-    reader.readAsDataURL(input.files[0]);
-});
+// var $file = $('input[type="file"]');
+// $(document).on('change',$file,function(e){
+//     var input = e.target;
+//     var reader = new FileReader();
+//     reader.onload = function(){
+//       var name = input.files[0].name;
+//       $(input).parents().find('input[type="text"]').val(name);
+//       $(input).parents().find('button.delete').show();
+//     };
+//     reader.readAsDataURL(input.files[0]);
+// });
 
 $(document).on('click', '.text-file button.delete',function(e){
   $(e.target).parents().find('input[type="text"]').val('');
@@ -323,6 +323,8 @@ $('.pattern-boxes .pattern-single-box').on('click',function(){
   })
 })
 
+
+
 // pattern onclick show guide div
 $(document).on('click', function(e){
   let accordion = '.absolute-fag-pop';
@@ -336,13 +338,6 @@ $(document).on('click', function(e){
 })
 
 // input phone number mask
-$("#phone").on("input", function() {
-  if (/^0/.test(this.value)) {
-    this.value = this.value.replace(/^0/, "")
-  }
-})
-
-// $('#phone').inputmask('99-999-99-99')
 
 
 // close-absolute-pop-up

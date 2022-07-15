@@ -44,7 +44,7 @@ jQuery.validator.addMethod('notSymbol', function (value, element) {
 }, dontAddSymbolsonly[pageLang]);
 
 jQuery.validator.addMethod('phoneNumber', function (value, element) {
-  return this.optional(element) || /^[0-9]+$/i.test(value);
+  return this.optional(element) || /^[0-9 *()*]+$/i.test(value);
 }, numberonly[pageLang]);
 
 if (pageLang === 'az') {
@@ -52,8 +52,8 @@ if (pageLang === 'az') {
     required: 'Bu xana mütləq doldurulmalıdır.',
     remote: 'Zəhmət olmasa, düzgün məna daxil edin.',
     email: 'Zəhmət olmasa, düzgün elektron poçt daxil edin.',
-    onlyString: 'Zəhmət olmasa yalnız hərflərdən istifadə edin',
-    phoneNumber: "Пожалуйста, не используйте буквы",
+    onlyString: 'Zəhmət olmasa yalnız hərflərdən istifadə edin.',
+    phoneNumber: "Zəhmət olmasa,tam doldurun.",
     url: 'Zəhmət olmasa, düzgün URL daxil edin.',
     date: 'Zəhmət olmasa, düzgün tarix daxil edin.',
     dateISO: 'Zəhmət olmasa, düzgün ISO formatlı tarix daxil edin.',
@@ -75,6 +75,7 @@ if (pageLang === 'az') {
     remote: 'Пожалуйста, введите правильное значение.',
     email: 'Пожалуйста, введите корректный адрес электронной почты.',
     onlyString : 'Пожалуйста, используйте только буквы',
+    phoneNumber : 'Пожалуйста, заполните полностью.',
     url: 'Пожалуйста, введите корректный URL.',
     date: 'Пожалуйста, введите корректную дату.',
     dateISO: 'Пожалуйста, введите корректную дату в формате ISO.',
@@ -96,7 +97,7 @@ if (pageLang === 'az') {
     remote: 'Please fix this field.',
     email: 'Please enter a valid email address.',
     onlyString : 'Please use only letters',
-    phoneNumber: "Please don't use letter",
+    phoneNumber: "Please fill in completely.",
     url: 'Please enter a valid URL.',
     date: 'Please enter a valid date.',
     dateISO: 'Please enter a valid date (ISO).',
@@ -115,10 +116,7 @@ if (pageLang === 'az') {
 }
 
 // newPatient-form-start
-$('.form-first').submit(function(){
-  console.log('asdasdasd')  
-})
-.validate({
+$('.form-first').validate({
   ignore: [],
   rules: {
       name: {
@@ -134,7 +132,6 @@ $('.form-first').submit(function(){
         required: true
       }
   },
-  
   errorPlacement: function (error, element) {
       if (element.is('select:hidden')) {
           error.insertAfter(element.next('.nice-select'));
@@ -157,5 +154,9 @@ $('.form-first').submit(function(){
     }
     $(element).parents('.form-group').removeClass('error_group').addClass('valid_group');
   },
+  submitHandler: function() {
+    $('.form-first').hide(500);
+    $('.form-second').show(500)
+ }
 });
 // newPatient-form-end
