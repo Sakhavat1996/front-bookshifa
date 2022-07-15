@@ -328,7 +328,7 @@ $('.pattern-boxes .pattern-single-box').on('click',function(){
 // pattern onclick show guide div
 $(document).on('click', function(e){
   let accordion = '.absolute-fag-pop';
-  if($(e.target).parents('.question-pattern').length) $(accordion).toggleClass('show');  
+  if($(e.target).parents('.question-pattern').length) $(e.target).parents('.modal').find($(accordion)).toggleClass('show');  
   else if($(e.target).parents(accordion).length || $(accordion).is(e.target) ){
     return null
   }
