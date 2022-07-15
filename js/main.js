@@ -340,9 +340,6 @@ $(document).on('click', function(e){
   }
 })
 
-// input phone number mask
-
-
 // close-absolute-pop-up
 $('.close-absolute-pop-up').on('click',function(){
   $(this).parents('.absolute-fag-pop').removeClass('show')
@@ -363,4 +360,18 @@ $('.cart-resize-btn').on('click',function(){
   }
   $('.pattern-main-container').slideToggle(800);
   $('.pattern-container').toggleClass('open');
+})
+
+
+// languages box
+$(document).on('click', function(e){
+  let langContainer = $('.language-container');
+
+  if(!langContainer.has(e.target).length == 0){
+    langContainer.toggleClass('open');
+    console.log(e.target)
+  } 
+  else{
+    langContainer.removeClass('open')
+  }
 })

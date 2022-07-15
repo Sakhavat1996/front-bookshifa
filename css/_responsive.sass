@@ -208,7 +208,15 @@
   header 
     .hamburger
       display: block
+
+    &.isAuth
+      .language-container
+        display: none
     
+    .responsive-ul
+      .language-container
+        display: block 
+        margin-top: 17px
     &:not(.notAuth)
       .header_main_container
         align-items: flex-start
@@ -752,9 +760,44 @@
 
 @media screen and (max-width: 768px)
   header
+    .language-container
+      max-width: max-content
+      .selected-box
+        grid-gap: 5
+        .selected-lang
+          font-size: 14px
+          line-height: 18px
+        
+        .lang-arrow
+          svg
+            width: 18px
+            height: 18px
+      
+      .other-langs
+        a
+          height: 20px
+          font-size: 14px
+          line-height: 18px
+          
+    &.notAuth
+      .header_main_container 
+        display: grid
+        grid-template-columns: auto auto
+        .language-container
+          grid-column: 2
+          grid-row: 1
+          margin-left: auto
+          
+        .header_right
+          grid-column-start: 1
+          grid-column-end: 3
+          margin: 0 auto
+    
     .responsive-ul
       width: 300px
       transform: translateX(300px)
+    
+      
   
   .modal
     .modal-header 
