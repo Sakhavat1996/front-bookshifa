@@ -147,6 +147,8 @@ $('header .hamburger').on('click',function(){
 // header-new-toggle-btns
 $('.header-blue-btn').on('click',function(){
   let target = $(this).data('target');
+  $(this).hasClass('notification_btn') ? $(this).toggleClass('active') : $('.header-blue-btn').removeClass('active');
+
   if($(`.same-absolute#${target}`).hasClass('active')){
     $(`.same-absolute#${target}`).removeClass('active');
   }
@@ -170,6 +172,7 @@ $(document).mouseup(function(e) {
     && !$(e.target).parents('.responsive-ul').length) 
   {
     $('.same-absolute').removeClass('active');
+    $('.header-blue-btn').removeClass('active')
     $('.responsive-ul').removeClass('show');
     hamburger.removeClass('open')
   }

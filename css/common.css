@@ -207,6 +207,28 @@ header .header_main_container .header_right .notification_btns button.header-blu
           justify-content: center;
   border-radius: 10px;
   background: #4098FF;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+header .header_main_container .header_right .notification_btns button.header-blue-btn.notification_btn svg {
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+header .header_main_container .header_right .notification_btns button.header-blue-btn.notification_btn:hover svg {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+header .header_main_container .header_right .notification_btns button.header-blue-btn.notification_btn.active {
+  background: #DCEAFF;
+  border: 1px solid #4098FF;
+}
+
+header .header_main_container .header_right .notification_btns button.header-blue-btn.notification_btn.active svg path {
+  fill: #4098FF;
+  stroke: #4098FF;
 }
 
 header .header_main_container .header_right .notification_btns .absolute-dropdown-box {
@@ -671,7 +693,7 @@ footer .footer_main_container .footer_author {
   line-height: 25px;
   font-family: "p-m", Arial, sans-serif;
   font-weight: 400;
-  color: #336CFB;
+  color: #333333;
 }
 
 .inner-container .inner-head .same_inner p {
@@ -2048,8 +2070,9 @@ footer .footer_main_container .footer_author {
     line-height: 20px;
   }
   section .new-heading-box .send-message {
-    font-size: 17px;
-    line-height: 24px;
+    min-height: 34px;
+    font-size: 16px;
+    line-height: 22px;
   }
   section .new-heading-box .send-message svg {
     margin-top: -2px;
@@ -6071,18 +6094,19 @@ form .addModal .modal-dialog .modal-content .modal-body .next-add-box .question 
 
 .new-heading-box .send-message {
   background: #ffffff;
+  min-height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  grid-gap: 5px;
+  grid-gap: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 0 13px;
   font-family: "p-m", Arial, sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 27px;
   border: 2px solid #4098FF;
   border-radius: 10px;
   -webkit-transition: all .3s;

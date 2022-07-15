@@ -95,6 +95,22 @@ header
           +flex_2
           border-radius: 10px
           background: $blue2
+          transition: all .3s
+          &.notification_btn
+            svg
+              transition: all .4s
+            &:hover
+              svg
+                transform: rotate(30deg)
+
+            &.active
+              background: $border
+              border: 1px solid $blue2
+              svg
+                path
+                  fill: $blue2
+                  stroke: $blue2
+
         
         .absolute-dropdown-box
           position: absolute
