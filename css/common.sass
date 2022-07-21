@@ -83,290 +83,365 @@ button
   
   &.addModal
     // kohne newPatient
-    &.newPatient
-      .modal-dialog
-        max-width: 700px
-        .modal-content
-          padding: 10px 50px 50px
-          form
-            margin-top: 40px
-            .form-first
-              display: grid
-              grid-gap: 20px
-              input
-                width: 100%
-                height: 50px
-                background: $gray2
-                border: 1px solid $gray
-                border-radius: 10px
-                padding: 0 15px
-                +p-m
-                font-size: 20px
-                line-height: 30px
-                &::placeholder
-                  color: rgba(103, 103, 103, 0.68)
-
-              .block-first
-                display: grid
-                grid-template-columns: 1fr 1fr
-                grid-gap: 15.5px
-
-              .block-second
-                display: grid
-                grid-template-columns: 1fr 1fr
-                grid-gap: 10px
-                align-items: center
-                margin-top: 15px
-                .input-number-container
-                  display: flex
-                  input:first-child
-                    width: 74px
-                p
-                  display: none
-                  +p-m
-                  font-size: 20px
-                  line-height: 30px
-                  color: $blue
-
-              .advise
-                +flex_2
-                +l-m
-                font-size: 15px
-                line-height: 19px
-                color: $blue
-
-            .form-second
-              display: grid
-              grid-gap: 15px
-              p.label
-                +p-m
-                font-size: 15px
-                line-height: 22px
-                color: $blue
-
-              .select-box
-                display: flex
-                align-items: center
-                grid-gap: 10px
-                span
-                  +p-m
-                  font-size: 25px
-                  line-height: 30px
-                  color: $blue
-                select
-                  position: relative
-                  width: 100%
-                  height: 50px
-                  background: url('../img/down.svg') no-repeat 92% $gray2
-                  border: 1px solid $gray
-                  border-radius: 10px
-                  text-align: center
-                  +p-m
-                  font-size: 20px
-                  line-height: 30px
-                  color: rgba(46, 46, 46, 0.9)
-
-            .form-third
-              display: grid
-              grid-gap: 15px
-              margin-top: 15px
-              p.label
-                +p-m
-                font-size: 15px
-                line-height: 22px
-                color: $blue
-
-              .radio-box
-                display: grid
-                grid-gap: 15.5px
-                grid-template-columns: 1fr 1fr
-                .custom-label 
-                  display: block
-                  position: relative
-                  height: 50px
-                  background: $gray2
-                  border: 1px solid $gray
-                  border-radius: 10px
-                  cursor: pointer
-                  +flex_2
-                  +l-m
-                  font-size: 20px
-                  line-height: 25px
-                  color: $blue
-                  -webkit-user-select: none
-                  -moz-user-select: none
-                  -ms-user-select: none
-                  user-select: none
-
-                  input
-                    position: absolute
-                    opacity: 0
-                    cursor: pointer
-                    &:checked ~ .checkmark 
-                      background-color: #2196F3
-                    &:checked ~ .checkmark:after 
-                      display: block
-
-                  .checkmark 
-                    position: absolute
-                    top: 17.5px
-                    right: 17.5px
-                    height: 15px
-                    width: 15px
-                    background-color: #C4C4C4
-                    border-radius: 50%
-                    &::after
-                      content: ""
-                      position: absolute
-                      display: none
-                      top: 4.5px
-                      right: 3.5px
-                      width: 7px
-                      height: 7px
-                      border-radius: 50%
-                      background: white
-
-            button[type='submit']
-              margin-top: 20px
-    // yeni newPatient
     // &.newPatient
     //   .modal-dialog
-    //     max-width: 472px
+    //     max-width: 700px
     //     .modal-content
-    //       padding: 24px 36px 36px
-    //       min-height: 544px
-
-    //       .close
-    //         top: 24px
-    //         right: 24px
-          
+    //       padding: 10px 50px 50px
     //       form
-    //         margin-top: 25px
-    //         .block-first
+    //         margin-top: 40px
+    //         .form-first
     //           display: grid
-    //           grid-template-columns: 1fr
     //           grid-gap: 20px
-    //           label:not(.error)
-    //             display: grid
-    //             grid-gap: 6px
-    //             margin-bottom: 0
+    //           input
+    //             width: 100%
+    //             height: 50px
+    //             background: $gray2
+    //             border: 1px solid $gray
+    //             border-radius: 10px
+    //             padding: 0 15px
     //             +p-m
-    //             font-size: 16px
-    //             line-height: 20px
-    //             color: $black2
+    //             font-size: 20px
+    //             line-height: 30px
+    //             &::placeholder
+    //               color: rgba(103, 103, 103, 0.68)
 
-    //             .form-group
-    //               input
-    //                 width: 100%
-    //                 height: 50px
-    //                 background: $white
-    //                 border: 2px solid $border
-    //                 border-radius: 10px
-    //                 padding: 12px 11px
-    //                 padding-right: 45px
-    //                 +p-r
-    //                 font-size: 16px
-    //                 line-height: 20px
-    //                 margin: 0
-    //                 color: $black2
-    //                 &::placeholder
-    //                   color: rgba(0, 0, 0, 0.4)
+    //           .block-first
+    //             display: grid
+    //             grid-template-columns: 1fr 1fr
+    //             grid-gap: 15.5px
 
-    //             .input-number-container
-    //               display: grid
-    //               grid-gap: 9px
-    //               grid-template-columns: 60px 1fr
-    //               border: 2px solid $border
-    //               border-radius: 10px
-    //               padding: 4px
-    //               &.special-form-group
-    //                 border: 2px solid $red
-    //                 background: #FFF2F0
-    //                 input
-    //                   border: none !important
-    //                   background: transparent
-    //                   &:first-child
-    //                     border-right: 1px solid $red !important
-                    
-    //                 label.error
-    //                   position: absolute
-    //                   left: -2px
-    //                   bottom: -26px
-
-    //               input
-    //                 border: none
-    //                 border-radius: 0
-    //                 padding: 0
-    //                 height: 38px
-    //                 background: transparent
-
-    //                 &:first-child
-    //                   text-align: center
-    //                   padding: 2px 9px 2px 6px
-    //                   border-right: 2px solid $border
-
-    //           p.info-form
-    //             color: $gray8
-    //             +p-r
-    //             font-size: 16px
-    //             line-height: 24px
-    //             text-align: center
+    //           .block-second
+    //             display: grid
+    //             grid-template-columns: 1fr 1fr
+    //             grid-gap: 10px
+    //             align-items: center
     //             margin-top: 15px
-
-    //         button[type="submit"]
-    //           min-height: 48px
-    //           min-width: 124px
-    //           margin-top: 12px
-    //           +flex_2
-    //           grid-gap: 8px
-    //           +p-m
-    //           padding: 9px 12px
-    //           &.disable
-    //             background: $gray7
-
-    //         &.form-second
-    //           // display: none
-    //           .second-main-box
-    //             +flex_5
-    //             grid-gap: 16px
-    //             .second-info-box
+    //             .input-number-container
     //               display: flex
-    //               align-items: center
-    //               justify-content: center
-    //               flex-direction: column
-    //               grid-gap: 27px
-    //               padding: 0 10px
-    //               .sec-img
-    //                 max-width: 64px
-    //                 img
-    //                   width: 100%
-                  
-    //               p
-    //                 +p-r
-    //                 font-size: 16px
-    //                 line-height: 24px
-    //                 text-align: center
-    //                 span
-    //                   font-weight: 600
-    //                   color: $black2
-    //                   margin-right: 5px
+    //               input:first-child
+    //                 width: 74px
+    //             p
+    //               display: none
+    //               +p-m
+    //               font-size: 20px
+    //               line-height: 30px
+    //               color: $blue
 
-    //             .otp-inputs
-    //               display: grid
-    //               grid-template-columns: repeat(4 , 1fr)
-    //               grid-gap: 20px
+    //           .advise
+    //             +flex_2
+    //             +l-m
+    //             font-size: 15px
+    //             line-height: 19px
+    //             color: $blue
+
+    //         .form-second
+    //           display: grid
+    //           grid-gap: 15px
+    //           p.label
+    //             +p-m
+    //             font-size: 15px
+    //             line-height: 22px
+    //             color: $blue
+
+    //           .select-box
+    //             display: flex
+    //             align-items: center
+    //             grid-gap: 10px
+    //             span
+    //               +p-m
+    //               font-size: 25px
+    //               line-height: 30px
+    //               color: $blue
+    //             select
+    //               position: relative
+    //               width: 100%
+    //               height: 50px
+    //               background: url('../img/down.svg') no-repeat 92% $gray2
+    //               border: 1px solid $gray
+    //               border-radius: 10px
+    //               text-align: center
+    //               +p-m
+    //               font-size: 20px
+    //               line-height: 30px
+    //               color: rgba(46, 46, 46, 0.9)
+
+    //         .form-third
+    //           display: grid
+    //           grid-gap: 15px
+    //           margin-top: 15px
+    //           p.label
+    //             +p-m
+    //             font-size: 15px
+    //             line-height: 22px
+    //             color: $blue
+
+    //           .radio-box
+    //             display: grid
+    //             grid-gap: 15.5px
+    //             grid-template-columns: 1fr 1fr
+    //             .custom-label 
+    //               display: block
+    //               position: relative
+    //               height: 50px
+    //               background: $gray2
+    //               border: 1px solid $gray
+    //               border-radius: 10px
+    //               cursor: pointer
+    //               +flex_2
+    //               +l-m
+    //               font-size: 20px
+    //               line-height: 25px
+    //               color: $blue
+    //               -webkit-user-select: none
+    //               -moz-user-select: none
+    //               -ms-user-select: none
+    //               user-select: none
+
     //               input
-    //                 width: 80px
-    //                 height: 80px
-    //                 +flex_2
-    //                 border: 2px solid $border
-    //                 border-radius: 8px
-    //                 text-align: center
-    //                 +p-m
-    //                 font-weight: 600
-    //                 font-size: 20px
-    //                 line-height: 30px
-    //                 color: $black2
+    //                 position: absolute
+    //                 opacity: 0
+    //                 cursor: pointer
+    //                 &:checked ~ .checkmark 
+    //                   background-color: #2196F3
+    //                 &:checked ~ .checkmark:after 
+    //                   display: block
+
+    //               .checkmark 
+    //                 position: absolute
+    //                 top: 17.5px
+    //                 right: 17.5px
+    //                 height: 15px
+    //                 width: 15px
+    //                 background-color: #C4C4C4
+    //                 border-radius: 50%
+    //                 &::after
+    //                   content: ""
+    //                   position: absolute
+    //                   display: none
+    //                   top: 4.5px
+    //                   right: 3.5px
+    //                   width: 7px
+    //                   height: 7px
+    //                   border-radius: 50%
+    //                   background: white
+
+    //         button[type='submit']
+    //           margin-top: 20px
+
+    // yeni newPatient
+    &.newPatient
+      .modal-dialog
+        max-width: 472px
+        .modal-content
+          padding: 24px 36px 36px
+          min-height: 544px
+
+          .close
+            top: 24px
+            right: 24px
+          
+          .modal-body
+            display: flex
+            form
+              margin-top: 25px
+              .block-first
+                display: grid
+                grid-template-columns: 1fr
+                grid-gap: 20px
+                label:not(.error)
+                  display: grid
+                  grid-gap: 6px
+                  margin-bottom: 0
+                  +p-m
+                  font-size: 16px
+                  line-height: 20px
+                  color: $black2
+
+                  .form-group
+                    input
+                      width: 100%
+                      height: 50px
+                      background: $white
+                      border: 2px solid $border
+                      border-radius: 10px
+                      padding: 12px 11px
+                      padding-right: 45px
+                      +p-r
+                      font-size: 16px
+                      line-height: 20px
+                      margin: 0
+                      color: $black2
+                      &::placeholder
+                        color: rgba(0, 0, 0, 0.4)
+
+                  .input-number-container
+                    display: grid
+                    grid-gap: 9px
+                    grid-template-columns: 60px 1fr
+                    border: 2px solid $border
+                    border-radius: 10px
+                    padding: 4px
+                    &.special-form-group
+                      border: 2px solid $red
+                      background: #FFF2F0
+                      input
+                        border: none !important
+                        background: transparent
+                        &:first-child
+                          border-right: 1px solid $red !important
+                      
+                      label.error
+                        position: absolute
+                        left: -2px
+                        bottom: -26px
+
+                    input
+                      border: none
+                      border-radius: 0
+                      padding: 0
+                      height: 38px
+                      background: transparent
+
+                      &:first-child
+                        text-align: center
+                        padding: 2px 9px 2px 6px
+                        border-right: 2px solid $border
+
+                p.info-form
+                  color: $gray8
+                  +p-r
+                  font-size: 16px
+                  line-height: 24px
+                  text-align: center
+                  margin: 15px 0 12px
+
+              button[type="submit"]
+                min-height: 48px
+                min-width: 124px
+                +flex_2
+                grid-gap: 8px
+                +p-m
+                padding: 9px 12px
+                &:disabled
+                  background: $gray7
+                  cursor: auto
+
+              &.form-second
+                display: none
+                .second-main-box
+                  +flex_5
+                  height: 100%
+                  grid-gap: 16px
+                  .second-info-box
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    flex-direction: column
+                    grid-gap: 27px
+                    padding: 0 10px
+                    .sec-img
+                      max-width: 64px
+                      img
+                        width: 100%
+                    
+                    p
+                      +p-r
+                      font-size: 16px
+                      line-height: 24px
+                      text-align: center
+                      span
+                        font-weight: 600
+                        color: $black2
+                        margin-right: 5px
+
+                  .otp-inputs
+                    display: grid
+                    grid-template-columns: repeat(4 , 1fr)
+                    grid-gap: 20px
+                    input
+                      width: 80px
+                      height: 80px
+                      +flex_2
+                      border: 2px solid $border
+                      border-radius: 8px
+                      text-align: center
+                      +p-m
+                      font-weight: 600
+                      font-size: 20px
+                      line-height: 30px
+                      color: $black2
+                      &.error
+                        border: 2px solid $red
+                  
+                  .timer-container
+                    display: grid
+                    grid-gap: 12px
+                    > p
+                      +p-m
+                      font-size: 16px
+                      line-height: 24px
+                      text-align: center
+                      color: $gray8
+                      &.up
+                        color: $red
+                    
+                    .resend-box
+                      +flex_2
+                      +flex_5
+                      grid-gap: 5px
+                      p , button
+                        font-size: 16px
+                        line-height: 24px
+                      
+                      p
+                        +p-r
+                        color: $gray8
+
+                      .send-btn-box
+                        +flex_2
+                        grid-gap: 4px
+                        button
+                          background: none
+                          min-height: unset
+                          padding: 0
+                          +p-m
+                          font-weight: 600
+                          text-decoration: underline
+                          color: $blue2
+                          border: none
+                          border-radius: 0
+                          &:disabled
+                            color: $gray7
+                            cursor: auto
+                      
+                      .info-send-duration
+                        display: none
+                        grid-gap: 5px
+                        &.show
+                          display: flex
+                        
+                        span
+                          min-width: 40px
+                          text-align: center
+
+
+                  .second-form-submit-box
+                    +flex_1
+                    margin-top: auto
+
+                    button[type='button']
+                      +flex_1
+                      grid-gap: 8px
+                      background: none
+                      border: none
+                      min-height: unset
+                      margin: unset
+                      p
+                        +p-m
+                        font-size: 16px
+                        line-height: 24px
+                        color: $blue2
 
   &.typeModal
     padding-left: 0 !important

@@ -155,8 +155,10 @@ $('.form-first').validate({
     $(element).parents('.form-group').removeClass('error_group').addClass('valid_group');
   },
   submitHandler: function() {
-    $('.form-first').hide(500);
-    $('.form-second').show(500)
+    $('.form-first').hide();
+    $('.newPatient .modal-title').hide();
+    $('.newPatient .modal-title#confirm-title').removeClass('d-none').show();
+    $('.form-second').show()
  }
 });
 // newPatient-form-end

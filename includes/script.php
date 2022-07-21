@@ -9,5 +9,5 @@
 <script src="js/messages_ru.js"></script>
 <script src="js/main.js"></script>
 <script src="js/accordion.js"></script>
-<script src="js/paymentForm.js"></script>
+<script src="js/otp.js"></script>
 </html>

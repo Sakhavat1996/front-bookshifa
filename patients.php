@@ -98,14 +98,16 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Pasiyent əlavə et</h5>
+                    <p class="modal-title" id="new-patient-title">Pasiyent əlavə et</p>
+                    <p class="modal-title d-none" id="confirm-title">Nömrəni təsdiqlə</p>
+
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <img src="img/close.svg" alt="">
                     </button>
                 </div>
                 <!-- yeni new Patient -->
-                <!-- <div class="modal-body">
-                    <form class="form-first d-none">
+                <div class="modal-body">
+                    <form class="form-first">
                         <div class="block-first">
                           <label for="name">
                             Pasiyentin adı
@@ -144,17 +146,41 @@
                           <p><span class="send-number">+994 050 392 94 31</span> nömrəsinə 4 rəqəmli təsdiqləmə kodu göndərildi.</p>
                         </div>
                         <div class="otp-inputs">
-                          <input type="number" id="digit-1" name="digit-1" data-next="digit-2">
-                          <input type="number" id="digit-2" name="digit-2" data-previous="digit-1" data-next="digit-3">
-                          <input type="number" id="digit-3" name="digit-3" data-previous="digit-2" data-next="digit-4">
-                          <input type="number" id="digit-4" name="digit-4" data-previous="digit-3">
+                          <input type="text" id="digit-1" class="error" maxlength='1' name="digit-1" data-next="digit-2">
+                          <input type="text" id="digit-2" class="error" maxlength='1' name="digit-2" data-previous="digit-1" data-next="digit-3">
+                          <input type="text" id="digit-3" class="error" maxlength='1' name="digit-3" data-previous="digit-2" data-next="digit-4">
+                          <input type="text" id="digit-4" class="error" maxlength='1' name="digit-4" data-previous="digit-3">
+                        </div>
+                        <div class="timer-container">
+                          <p id="countdown"></p>
+                          <div class="resend-box">
+                            <div class="send-btn-box">
+                              <p>Kod gəlməyib?</p>
+                              <button type="button">Yeni kod göndər.</button>
+                            </div>
+                            <p class="info-send-duration"><span>60</span>saniyə sonra yenidən göndərə bilərsiniz.</p>
+                          </div>
+                        </div>
+                        <div class="second-form-submit-box">
+                          <button type="button">
+                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.75 6.85796H3.925L8.4625 1.87555C8.67467 1.64218 8.77675 1.34131 8.74628 1.03914C8.7158 0.736965 8.55527 0.458234 8.3 0.264265C8.04473 0.070295 7.71563 -0.0230245 7.3851 0.00483557C7.05456 0.0326956 6.74967 0.179453 6.5375 0.412823L0.2875 7.26935C0.245451 7.32389 0.207849 7.38118 0.175 7.44076C0.175 7.4979 0.175 7.53218 0.0875002 7.58932C0.0308421 7.72035 0.0011764 7.85983 0 8.00071C0.0011764 8.1416 0.0308421 8.28108 0.0875002 8.41211C0.0875002 8.46924 0.0874998 8.50353 0.175 8.56066C0.207849 8.62025 0.245451 8.67754 0.2875 8.73208L6.5375 15.5886C6.65503 15.7176 6.8022 15.8213 6.96856 15.8924C7.13491 15.9635 7.31636 16.0003 7.5 16C7.79207 16.0005 8.07511 15.9075 8.3 15.7372C8.42657 15.6412 8.5312 15.5234 8.60789 15.3905C8.68458 15.2575 8.73183 15.112 8.74692 14.9623C8.76202 14.8127 8.74466 14.6617 8.69586 14.5182C8.64705 14.3747 8.56775 14.2414 8.4625 14.1259L3.925 9.14347H18.75C19.0815 9.14347 19.3995 9.02307 19.6339 8.80876C19.8683 8.59446 20 8.30379 20 8.00071C20 7.69764 19.8683 7.40697 19.6339 7.19267C19.3995 6.97836 19.0815 6.85796 18.75 6.85796Z" fill="#4098FF"/>
+                            </svg>
+                            <p>
+                             Geri qayıt
+                            </p>
+
+                          </button>
+                          <button type="submit" disabled>
+                            <p>Bitir</p>
+                          </button>
                         </div>
                       </div>
                     </form>
-                </div> -->
+                </div>
 
                 <!-- kohne-newPatient -->
-                <div class="modal-body">
+                <!-- <div class="modal-body">
                     <form>
                         <div class="form-first">
                           <div class="block-first">
@@ -226,7 +252,7 @@
                           Əlavə et
                         </button>
                     </form>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -237,39 +263,103 @@
 <?php  include("includes/script.php");?>
 <script>
   $(function(){
-    var invalidChars = [
-      "-",
-      "+",
-      "e",
-    ];
+    let arr = [];
+    const btnSubmit = $('.second-form-submit-box button[type="submit"]');
     $(".otp-inputs").find('input').each(function() {
-      $(this).attr('maxlength', 1);
       $(this).on('keyup', function(e) {
         var parent = $('.form-second');
         if(e.keyCode === 8 || e.keyCode === 37) {
           var prev = parent.find('input#' + $(this).data('previous'));
-          
-          if(prev.length) {
-            $(prev).select();
-          }
+          arr.splice(prev ,1)
         } 
-        else if((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 65 && e.keyCode <= 90) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode === 39) {
+        else if((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) ) {
           var next = parent.find('input#' + $(this).data('next'));
-          
           if(next.length) {
-            $(next).select();
-          } else {
+            $(next).focus();
+          }
+          else {
             if(parent.data('autosubmit')) {
               parent.submit();
             }
           }
+          arr.push(next)
         }
         else{
-          console.log('cujoylardan basilid')
+          $(this).val('');
         }
+
+        arr.length >= 4 ? btnSubmit.removeAttr('disabled') : btnSubmit.attr('disabled' ,true)
       });
     });
+
+    $(".otp-inputs input").on('focus',function(){
+      $(".otp-inputs input").removeClass('error');
+    })
     
+
+    // resend otp start
+
+    // otp 60 seconds resend function -start
+    function countdown(){
+        var seconds = 59;
+        function tick(){
+          seconds--;
+          $('.info-send-duration span').text("0:" + (seconds < 10 ? "0" : "") + String(seconds))
+          if (seconds > 0) {
+            setTimeout(tick, 1000);
+          } 
+          else {
+            $('.send-btn-box button').removeAttr('disabled');
+            $('.info-send-duration').removeClass('show')
+          }
+        }
+        tick();
+    }
+    // otp 60 seconds resend function - end
+
+    $('.send-btn-box button').on('click',function(){
+      $(this).attr('disabled' , true);
+      $('.info-send-duration').addClass('show');
+      countdown()
+    })
+
+    // resend otp end
+
+
+    // back to first form
+    $('.second-form-submit-box button[type="button"]').on('click',function(){
+      $('.form-first').show();
+      $('.newPatient .modal-title#confirm-title').addClass('d-none');
+      $('.newPatient .modal-title').show();
+      $('.form-second').hide()
+    })
+
+    // phone mask start
     $('#phone').inputmask("(099) 999 99 99")
+    // phone mask end
   })
+
+  // 5min countdown-start
+  const startingMin = 5;
+  let time = startingMin * 60;
+
+  const countDown = document.getElementById('countdown');
+  let refreshIntervalId = setInterval(updateCountdown, 1000);
+
+  function updateCountdown(){
+     let minutes = Math.floor(time / 60);
+     let seconds = time % 60;
+
+     seconds = seconds < 10 ? '0' + seconds : seconds;
+     minutes = minutes < 10 ? '0' + minutes : minutes;
+     countDown.innerHTML = `${minutes} : ${seconds}`;
+     time--;
+     if (time < 0) {
+          clearInterval(refreshIntervalId);
+          countDown.innerHTML = 'Vaxt bitdi';
+          countDown.classList.add('up')
+      }
+  }
+  // 5min countdown-end
+
 </script>
