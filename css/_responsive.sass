@@ -217,6 +217,7 @@
       .language-container
         display: block 
         margin-top: 17px
+
     &:not(.notAuth)
       .header_main_container
         align-items: flex-start
@@ -263,6 +264,11 @@
               path
                 fill: $blue2
                 stroke: $blue2
+            
+            &.active
+              border: none
+              background: transparent
+              
             &.dropdown_btn
               display: none
 
@@ -287,6 +293,8 @@
               grid-gap: 9px
               width: 250px
 
+          .absolute-dropdown-box
+            display: none
   .profile-container
     grid-gap: 25px
     .profile-box

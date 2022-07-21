@@ -88,37 +88,41 @@ header
           +p-m
           font-size: 25px
           line-height: 30px
-          color: $blue2
+          color: $black2
 
         button.header-blue-btn
           width: 50px
           height: 30px
           +flex_2
-          border-radius: 10px
+          border-radius: 5px
           background: $blue2
           transition: all .3s
+          svg
+            transition: all .4s
+          &.dropdown_btn
+            &.active , &:hover
+              svg
+                transform: rotate(180deg)
+
           &.notification_btn
-            svg
-              transition: all .4s
             &:hover
               svg
                 transform: rotate(30deg)
 
-            &.active
-              background: $border
-              border: 1px solid $blue2
-              svg
-                path
-                  fill: $blue2
-                  stroke: $blue2
+          &.active
+            background: $border
+            border: 1px solid $blue2
+            svg
+              path
+                fill: $blue2
+                stroke: $blue2
 
-        
         .absolute-dropdown-box
           position: absolute
           background: $white
           display: grid
-          grid-gap: 15px
-          padding: 10px 25px 26px
+          grid-gap: 5px
+          padding: 10px 25px 16px
           top: 53px
           right: 0
           box-shadow: 0px 2px 10px rgba(47, 119, 255, 0.15)
@@ -134,8 +138,7 @@ header
           
           .room
             +flex_5
-            grid-gap: 20px
-            padding-top: 15px
+            padding-top: 11px
             border-top: 3px solid $border
             a
               display: flex
@@ -145,6 +148,11 @@ header
               font-size: 20px
               line-height: 30px
               color: $blue2
+              padding: 10px
+              transition: all .3s
+              &:hover
+                background: $border
+                border-radius: 10px
               .room-img
                 width: 40px
                 height: 40px
@@ -183,8 +191,13 @@ header
               display: grid
               grid-gap: 8px
               width: 100%
+              padding: 5px
+              transition: all .3s
+              &:hover
+                background: $border
+                border-radius: 10px
               &:not(:last-child)
-                margin-bottom: 25px
+                margin-bottom: 3px
               .note-text
                 +p-m
                 font-size: 20px

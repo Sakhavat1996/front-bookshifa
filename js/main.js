@@ -147,7 +147,13 @@ $('header .hamburger').on('click',function(){
 // header-new-toggle-btns
 $('.header-blue-btn').on('click',function(){
   let target = $(this).data('target');
-  $(this).hasClass('notification_btn') ? $(this).toggleClass('active') : $('.header-blue-btn').removeClass('active');
+  if(!$(this).hasClass('active')){
+    $('.header-blue-btn').removeClass('active')
+    $(this).addClass('active')
+  }
+  else{
+    $(this).removeClass('active')
+  }
 
   if($(`.same-absolute#${target}`).hasClass('active')){
     $(`.same-absolute#${target}`).removeClass('active');

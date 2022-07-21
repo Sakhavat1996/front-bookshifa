@@ -190,7 +190,7 @@ header .header_main_container .header_right .notification_btns p.title {
   font-weight: 400;
   font-size: 25px;
   line-height: 30px;
-  color: #4098FF;
+  color: #333333;
 }
 
 header .header_main_container .header_right .notification_btns button.header-blue-btn {
@@ -205,15 +205,20 @@ header .header_main_container .header_right .notification_btns button.header-blu
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 10px;
+  border-radius: 5px;
   background: #4098FF;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
-header .header_main_container .header_right .notification_btns button.header-blue-btn.notification_btn svg {
+header .header_main_container .header_right .notification_btns button.header-blue-btn svg {
   -webkit-transition: all .4s;
   transition: all .4s;
+}
+
+header .header_main_container .header_right .notification_btns button.header-blue-btn.dropdown_btn.active svg, header .header_main_container .header_right .notification_btns button.header-blue-btn.dropdown_btn:hover svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 header .header_main_container .header_right .notification_btns button.header-blue-btn.notification_btn:hover svg {
@@ -221,12 +226,12 @@ header .header_main_container .header_right .notification_btns button.header-blu
           transform: rotate(30deg);
 }
 
-header .header_main_container .header_right .notification_btns button.header-blue-btn.notification_btn.active {
+header .header_main_container .header_right .notification_btns button.header-blue-btn.active {
   background: #DCEAFF;
   border: 1px solid #4098FF;
 }
 
-header .header_main_container .header_right .notification_btns button.header-blue-btn.notification_btn.active svg path {
+header .header_main_container .header_right .notification_btns button.header-blue-btn.active svg path {
   fill: #4098FF;
   stroke: #4098FF;
 }
@@ -236,8 +241,8 @@ header .header_main_container .header_right .notification_btns .absolute-dropdow
   background: #ffffff;
   display: -ms-grid;
   display: grid;
-  grid-gap: 15px;
-  padding: 10px 25px 26px;
+  grid-gap: 5px;
+  padding: 10px 25px 16px;
   top: 53px;
   right: 0;
   -webkit-box-shadow: 0px 2px 10px rgba(47, 119, 255, 0.15);
@@ -264,8 +269,7 @@ header .header_main_container .header_right .notification_btns .absolute-dropdow
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  grid-gap: 20px;
-  padding-top: 15px;
+  padding-top: 11px;
   border-top: 3px solid #DCEAFF;
 }
 
@@ -282,6 +286,14 @@ header .header_main_container .header_right .notification_btns .absolute-dropdow
   font-size: 20px;
   line-height: 30px;
   color: #4098FF;
+  padding: 10px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+header .header_main_container .header_right .notification_btns .absolute-dropdown-box .room a:hover {
+  background: #DCEAFF;
+  border-radius: 10px;
 }
 
 header .header_main_container .header_right .notification_btns .absolute-dropdown-box .room a .room-img {
@@ -341,10 +353,18 @@ header .header_main_container .header_right .notification_btns .absolute-notes-b
   display: grid;
   grid-gap: 8px;
   width: 100%;
+  padding: 5px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+header .header_main_container .header_right .notification_btns .absolute-notes-box .notes-inner .note-item:hover {
+  background: #DCEAFF;
+  border-radius: 10px;
 }
 
 header .header_main_container .header_right .notification_btns .absolute-notes-box .notes-inner .note-item:not(:last-child) {
-  margin-bottom: 25px;
+  margin-bottom: 3px;
 }
 
 header .header_main_container .header_right .notification_btns .absolute-notes-box .notes-inner .note-item .note-text {
@@ -1995,6 +2015,10 @@ footer .footer_main_container .footer_author {
     fill: #4098FF;
     stroke: #4098FF;
   }
+  header .header_main_container .header_right .notification_btns button.header-blue-btn.active {
+    border: none;
+    background: transparent;
+  }
   header .header_main_container .header_right .notification_btns button.header-blue-btn.dropdown_btn {
     display: none;
   }
@@ -2017,6 +2041,9 @@ footer .footer_main_container .footer_author {
     line-height: 15px;
     grid-gap: 9px;
     width: 250px;
+  }
+  header .header_main_container .header_right .notification_btns .absolute-dropdown-box {
+    display: none;
   }
   .profile-container {
     grid-gap: 25px;
