@@ -146,10 +146,10 @@
                           <p><span class="send-number">+994 050 392 94 31</span> nömrəsinə 4 rəqəmli təsdiqləmə kodu göndərildi.</p>
                         </div>
                         <div class="otp-inputs">
-                          <input type="text" id="digit-1" class="error" maxlength='1' name="digit-1" data-next="digit-2">
-                          <input type="text" id="digit-2" class="error" maxlength='1' name="digit-2" data-previous="digit-1" data-next="digit-3">
-                          <input type="text" id="digit-3" class="error" maxlength='1' name="digit-3" data-previous="digit-2" data-next="digit-4">
-                          <input type="text" id="digit-4" class="error" maxlength='1' name="digit-4" data-previous="digit-3">
+                          <input type="text" id="digit-1" maxlength='1' name="digit-1" data-next="digit-2">
+                          <input type="text" id="digit-2" maxlength='1' name="digit-2" data-previous="digit-1" data-next="digit-3">
+                          <input type="text" id="digit-3" maxlength='1' name="digit-3" data-previous="digit-2" data-next="digit-4">
+                          <input type="text" id="digit-4" maxlength='1' name="digit-4" data-previous="digit-3">
                         </div>
                         <div class="timer-container">
                           <p id="countdown"></p>
@@ -285,7 +285,7 @@
           arr.push(next)
         }
         else{
-          $(this).val('');
+          return false;
         }
 
         arr.length >= 4 ? btnSubmit.removeAttr('disabled') : btnSubmit.attr('disabled' ,true)
